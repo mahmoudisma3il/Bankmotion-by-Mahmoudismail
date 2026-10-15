@@ -1,0 +1,23 @@
+{
+  "code": "N403",
+  "slug": "slot-digits",
+  "name": "عجلة أرقام",
+  "category": "N",
+  "categoryName": "أرقام وبيانات",
+  "description": "كل رقم بيلف زي ماكينة القمار ويقف على الرقم الصح، رقم ورا رقم.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "number",
+    "slot",
+    "roll"
+  ],
+  "params": {
+    "value": "2026",
+    "label": "سنة البداية"
+  },
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — slot-machine-roll / number-wheel",
+  "path": "motions/N403-slot-digits/index.html",
+  "addedIn": "v1"
+}

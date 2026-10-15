@@ -1,0 +1,24 @@
+{
+  "code": "S310",
+  "slug": "card-flip",
+  "name": "قلبة كارت",
+  "category": "S",
+  "categoryName": "انتقالات",
+  "description": "الشاشة كلها بتتقلب زي الكارت في 3D وورا الكارت المشهد الجديد.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "transition",
+    "3d",
+    "flip"
+  ],
+  "params": {
+    "a": "المشهد ١",
+    "b": "المشهد ٢",
+    "at": 1.2
+  },
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — 3D card flip",
+  "path": "motions/S310-card-flip/index.html",
+  "addedIn": "v1"
+}

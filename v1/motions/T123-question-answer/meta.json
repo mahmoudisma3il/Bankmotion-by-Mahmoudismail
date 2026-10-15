@@ -1,0 +1,23 @@
+{
+  "code": "T123",
+  "slug": "question-answer",
+  "name": "سؤال وجواب",
+  "category": "T",
+  "categoryName": "نصوص وتايبوجرافي",
+  "description": "سؤال بيظهر وعلامة الاستفهام بتتنطط، وبعدين السؤال يطلع لفوق ويظهر الجواب بلون مميز.",
+  "duration": 4,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "text",
+    "hook",
+    "qa"
+  ],
+  "params": {
+    "q": "عاوز تعرف السر؟",
+    "a": "التكرار كل يوم"
+  },
+  "source": "تصميم أصلي",
+  "path": "motions/T123-question-answer/index.html",
+  "addedIn": "v1"
+}

@@ -1,0 +1,24 @@
+{
+  "code": "C708",
+  "slug": "sale-ticker",
+  "name": "شريط عروض",
+  "category": "C",
+  "categoryName": "دعوة لإجراء ولوجو ونهايات",
+  "description": "شريطين مايلين بيجروا عكس بعض مكتوب عليهم العرض، ورقم الخصم بيخبط في النص.",
+  "duration": 4,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "sale",
+    "ticker",
+    "marquee",
+    "offer"
+  ],
+  "params": {
+    "band": "خصم ٥٠٪ • عرض اليوم •",
+    "big": "50%"
+  },
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — news-ticker / ticker-takeover",
+  "path": "motions/C708-sale-ticker/index.html",
+  "addedIn": "v1"
+}

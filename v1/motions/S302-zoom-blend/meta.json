@@ -1,0 +1,24 @@
+{
+  "code": "S302",
+  "slug": "zoom-blend",
+  "name": "زوم مدموج",
+  "category": "S",
+  "categoryName": "انتقالات",
+  "description": "المشهد القديم بيتزوم لقدام ويضبب، والجديد بيطلع من جوه واضح. من أشهر انتقالات الريلز.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "transition",
+    "zoom",
+    "blur"
+  ],
+  "params": {
+    "a": "المشهد ١",
+    "b": "المشهد ٢",
+    "at": 1.2
+  },
+  "source": "من «زوم مدموج» في ريل Majedteq + مستوحاة من HyperFrames transitions catalog (Apache-2.0) — zoom-through",
+  "path": "motions/S302-zoom-blend/index.html",
+  "addedIn": "v1"
+}

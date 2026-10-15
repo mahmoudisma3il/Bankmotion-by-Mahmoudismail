@@ -1,0 +1,24 @@
+{
+  "code": "B802",
+  "slug": "film-grain",
+  "name": "حبيبات فيلم",
+  "category": "B",
+  "categoryName": "خلفيات وتأثيرات",
+  "description": "طبقة حبيبات زي أفلام الكاميرا بتتحرك كل فريم. تتحط فوق أي فيديو تدّيله إحساس سينمائي.",
+  "duration": 4,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "background",
+    "grain",
+    "texture",
+    "overlay"
+  ],
+  "params": {
+    "strength": 0.18,
+    "text": "سينمائي"
+  },
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — grain-overlay / grain-field",
+  "path": "motions/B802-film-grain/index.html",
+  "addedIn": "v1"
+}

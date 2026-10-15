@@ -1,0 +1,24 @@
+{
+  "code": "S318",
+  "slug": "clock-wipe",
+  "name": "مسحة عقارب",
+  "category": "S",
+  "categoryName": "انتقالات",
+  "description": "المشهد الجديد بينكشف بلفّة دايرية زي عقرب الساعة.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "transition",
+    "clock",
+    "radial"
+  ],
+  "params": {
+    "a": "المشهد ١",
+    "b": "المشهد ٢",
+    "at": 1.2
+  },
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — clock wipe",
+  "path": "motions/S318-clock-wipe/index.html",
+  "addedIn": "v1"
+}

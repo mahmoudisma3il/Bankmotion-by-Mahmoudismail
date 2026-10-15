@@ -1,0 +1,23 @@
+{
+  "code": "U502",
+  "slug": "notification-pile",
+  "name": "كومة إشعارات",
+  "category": "U",
+  "categoryName": "واجهات وإشعارات",
+  "description": "إشعارات كتير بتنزل ورا بعض وكل واحد بيزق اللي قبله لتحت. إحساس «الطلبات مش بتقف».",
+  "duration": 4,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "ui",
+    "notification",
+    "stack"
+  ],
+  "params": {
+    "items": "طلب جديد #1024|طلب جديد #1025|طلب جديد #1026|طلب جديد #1027|طلب جديد #1028",
+    "app": "المتجر"
+  },
+  "source": "مستوحاة من HyperFrames registry (Apache-2.0) — notification-pileup",
+  "path": "motions/U502-notification-pile/index.html",
+  "addedIn": "v1"
+}

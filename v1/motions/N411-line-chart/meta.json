@@ -1,0 +1,23 @@
+{
+  "code": "N411",
+  "slug": "line-chart",
+  "name": "خط بياني",
+  "category": "N",
+  "categoryName": "أرقام وبيانات",
+  "description": "خط بياني بيترسم من البداية للنهاية والمساحة تحته تظهر، ونقطة آخر قيمة تنوّر مع رقمها.",
+  "duration": 3.5,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "number",
+    "chart",
+    "line"
+  ],
+  "params": {
+    "values": "10,24,18,40,36,62,90",
+    "label": "نمو ٨٠٠٪"
+  },
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — chart-story / mk-line-graph",
+  "path": "motions/N411-line-chart/index.html",
+  "addedIn": "v1"
+}

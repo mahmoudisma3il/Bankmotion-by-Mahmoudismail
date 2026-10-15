@@ -1,0 +1,23 @@
+{
+  "code": "C705",
+  "slug": "cta-morph",
+  "name": "زرار بيتحول",
+  "category": "C",
+  "categoryName": "دعوة لإجراء ولوجو ونهايات",
+  "description": "نقطة بتكبر لزرار «اطلب دلوقتي»، السهم بيتحرك، الزرار ينضغط ويتحول لعلامة صح.",
+  "duration": 3.5,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "cta",
+    "button",
+    "morph"
+  ],
+  "params": {
+    "label": "اطلب دلوقتي",
+    "arrow": "←"
+  },
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — cta-morph-press",
+  "path": "motions/C705-cta-morph/index.html",
+  "addedIn": "v1"
+}

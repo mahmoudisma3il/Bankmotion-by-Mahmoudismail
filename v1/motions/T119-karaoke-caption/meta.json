@@ -1,0 +1,23 @@
+{
+  "code": "T119",
+  "slug": "karaoke-caption",
+  "name": "كابشن كاريوكي",
+  "category": "T",
+  "categoryName": "نصوص وتايبوجرافي",
+  "description": "كابشن تحت الشاشة وكل كلمة بتنوّر بخلفية ملونة وقت ما تتقال. ستايل الريلز المشهور.",
+  "duration": 4,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "caption",
+    "subtitle",
+    "karaoke"
+  ],
+  "params": {
+    "text": "النهارده هوريك أسهل طريقة تعمل بيها مونتاج",
+    "wordTime": 0.38
+  },
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — caption-pill-karaoke",
+  "path": "motions/T119-karaoke-caption/index.html",
+  "addedIn": "v1"
+}

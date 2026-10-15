@@ -1,0 +1,24 @@
+{
+  "code": "S304",
+  "slug": "flash-white",
+  "name": "فلاشة بيضا",
+  "category": "S",
+  "categoryName": "انتقالات",
+  "description": "المشهد بينوّر لحد ما يبقى أبيض كله، وبعدين يفتح على المشهد الجديد.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "transition",
+    "flash",
+    "light"
+  ],
+  "params": {
+    "a": "المشهد ١",
+    "b": "المشهد ٢",
+    "at": 1.2
+  },
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — flash-through-white",
+  "path": "motions/S304-flash-white/index.html",
+  "addedIn": "v1"
+}

@@ -1,0 +1,25 @@
+{
+  "code": "N412",
+  "slug": "donut",
+  "name": "دونات",
+  "category": "N",
+  "categoryName": "أرقام وبيانات",
+  "description": "رسم دونات بيترسم جزء ورا جزء بألوان مختلفة، والرقم الأساسي في النص.",
+  "duration": 3.5,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "number",
+    "chart",
+    "donut",
+    "pie"
+  ],
+  "params": {
+    "values": "55,30,15",
+    "labels": "إنستجرام|تيك توك|فيسبوك",
+    "center": "55%"
+  },
+  "source": "Remotion templates (donut-chart) — إعادة بناء بـ GSAP",
+  "path": "motions/N412-donut/index.html",
+  "addedIn": "v1"
+}

@@ -1,0 +1,23 @@
+{
+  "code": "U509",
+  "slug": "toggle",
+  "name": "زرار تبديل",
+  "category": "U",
+  "categoryName": "واجهات وإشعارات",
+  "description": "زرار تبديل (سويتش) بيتحرك من إيقاف لتشغيل، واللون والكلام بيتغيروا معاه.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "ui",
+    "toggle",
+    "switch"
+  ],
+  "params": {
+    "off": "الطريقة القديمة",
+    "on": "الطريقة الذكية"
+  },
+  "source": "مستوحاة من HyperFrames registry (Apache-2.0) — toggle-flip / settings-toggle-flow",
+  "path": "motions/U509-toggle/index.html",
+  "addedIn": "v1"
+}

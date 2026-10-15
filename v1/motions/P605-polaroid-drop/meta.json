@@ -1,0 +1,22 @@
+{
+  "code": "P605",
+  "slug": "polaroid-drop",
+  "name": "صور بولارويد",
+  "category": "P",
+  "categoryName": "صور وأشخاص وكاميرا",
+  "description": "٣ صور بولارويد بتقع فوق بعض بميلات مختلفة وظل، زي ألبوم ذكريات.",
+  "duration": 3.5,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "photo",
+    "gallery",
+    "polaroid"
+  ],
+  "params": {
+    "caption": "من الكواليس"
+  },
+  "source": "Remotion templates (polaroid-frame) — إعادة بناء بـ GSAP",
+  "path": "motions/P605-polaroid-drop/index.html",
+  "addedIn": "v1"
+}

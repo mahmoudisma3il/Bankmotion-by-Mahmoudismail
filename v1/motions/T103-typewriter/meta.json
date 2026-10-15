@@ -1,0 +1,22 @@
+{
+  "code": "T103",
+  "slug": "typewriter",
+  "name": "آلة كاتبة",
+  "category": "T",
+  "categoryName": "نصوص وتايبوجرافي",
+  "description": "النص بيتكتب حرف حرف مع مؤشر بيرمش. الحروف العربي بتفضل متوصلة صح.",
+  "duration": 4,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "text",
+    "typing"
+  ],
+  "params": {
+    "text": "اكتب الفكرة… وسيب الباقي علينا",
+    "cps": 14
+  },
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — typewriter",
+  "path": "motions/T103-typewriter/index.html",
+  "addedIn": "v1"
+}

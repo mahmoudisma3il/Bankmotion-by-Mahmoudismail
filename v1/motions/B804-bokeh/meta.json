@@ -1,0 +1,22 @@
+{
+  "code": "B804",
+  "slug": "bokeh",
+  "name": "بوكيه",
+  "category": "B",
+  "categoryName": "خلفيات وتأثيرات",
+  "description": "دواير نور مضببة بأحجام مختلفة بتطلع لفوق ببطء. خلفية دافية وناعمة.",
+  "duration": 5,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "background",
+    "bokeh",
+    "lights"
+  ],
+  "params": {
+    "count": 22
+  },
+  "source": "Remotion templates (bokeh-circles) — إعادة بناء بـ GSAP",
+  "path": "motions/B804-bokeh/index.html",
+  "addedIn": "v1"
+}

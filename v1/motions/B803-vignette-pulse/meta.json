@@ -1,0 +1,23 @@
+{
+  "code": "B803",
+  "slug": "vignette-pulse",
+  "name": "فينييت نابض",
+  "category": "B",
+  "categoryName": "خلفيات وتأثيرات",
+  "description": "حواف الشاشة بتغمق وتنور على الإيقاع، بتشد العين للنص.",
+  "duration": 4,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "background",
+    "vignette",
+    "beat"
+  ],
+  "params": {
+    "beat": 0.5,
+    "text": "ركّز"
+  },
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — vignette / beat-pulse-background",
+  "path": "motions/B803-vignette-pulse/index.html",
+  "addedIn": "v1"
+}

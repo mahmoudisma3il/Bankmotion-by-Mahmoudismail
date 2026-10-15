@@ -1,0 +1,23 @@
+{
+  "code": "B807",
+  "slug": "dot-wave",
+  "name": "موجة نقط",
+  "category": "B",
+  "categoryName": "خلفيات وتأثيرات",
+  "description": "شبكة نقط بتعمل موجة نبض من النص للأطراف. خلفية تقنية حديثة.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "background",
+    "grid",
+    "wave"
+  ],
+  "params": {
+    "cols": 12,
+    "rows": 21
+  },
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — stagger-lattice / Remotion grid-pulse",
+  "path": "motions/B807-dot-wave/index.html",
+  "addedIn": "v1"
+}

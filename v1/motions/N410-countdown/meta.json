@@ -1,0 +1,23 @@
+{
+  "code": "N410",
+  "slug": "countdown",
+  "name": "عد تنازلي",
+  "category": "N",
+  "categoryName": "أرقام وبيانات",
+  "description": "٣ … ٢ … ١ كل رقم بيخبط في النص مع موجة دايرة، وفي الآخر كلمة البداية.",
+  "duration": 3.5,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "number",
+    "countdown",
+    "intro"
+  ],
+  "params": {
+    "from": 3,
+    "go": "يلّا!"
+  },
+  "source": "Remotion templates (countdown-intro) — إعادة بناء بـ GSAP",
+  "path": "motions/N410-countdown/index.html",
+  "addedIn": "v1"
+}

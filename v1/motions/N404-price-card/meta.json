@@ -1,0 +1,27 @@
+{
+  "code": "N404",
+  "slug": "price-card",
+  "name": "كارت سعر",
+  "category": "N",
+  "categoryName": "أرقام وبيانات",
+  "description": "كارت منتج بيطلع، السعر القديم يتشطب، والسعر الجديد يعدّ ويثبت ومعاه بادج الخصم.",
+  "duration": 3.5,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "number",
+    "price",
+    "offer",
+    "ecommerce"
+  ],
+  "params": {
+    "title": "آيفون ١٥ برو",
+    "old": "٥٠ ألف",
+    "price": 42,
+    "unit": "ألف",
+    "badge": "-16%"
+  },
+  "source": "من «كارت سعر ٤٢ ألف» في ريل Majedteq",
+  "path": "motions/N404-price-card/index.html",
+  "addedIn": "v1"
+}

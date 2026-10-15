@@ -1,0 +1,21 @@
+{
+  "code": "P611",
+  "slug": "parallax",
+  "name": "بارالاكس طبقات",
+  "category": "P",
+  "categoryName": "صور وأشخاص وكاميرا",
+  "description": "٣ طبقات (خلفية بعيدة، وسط، وشخص قدام) بتتحرك بسرعات مختلفة فيبان عمق 3D.",
+  "duration": 4,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "photo",
+    "parallax",
+    "depth",
+    "camera"
+  ],
+  "params": {},
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — parallax-zoom / camera-rig-depth-stack",
+  "path": "motions/P611-parallax/index.html",
+  "addedIn": "v1"
+}

@@ -1,0 +1,25 @@
+{
+  "code": "C704",
+  "slug": "end-card",
+  "name": "كارت النهاية",
+  "category": "C",
+  "categoryName": "دعوة لإجراء ولوجو ونهايات",
+  "description": "شاشة نهاية فيها «تابعنا» وحسابات السوشيال بتدخل ورا بعض وزرار بينبض.",
+  "duration": 4.5,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "end-card",
+    "outro",
+    "social"
+  ],
+  "params": {
+    "title": "تابعنا لمحتوى أكتر",
+    "h1": "Instagram · @foxstudio",
+    "h2": "TikTok · @foxstudio",
+    "btn": "شارك الفيديو"
+  },
+  "source": "Remotion templates (end-card) — إعادة بناء بـ GSAP",
+  "path": "motions/C704-end-card/index.html",
+  "addedIn": "v1"
+}

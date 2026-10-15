@@ -1,0 +1,22 @@
+{
+  "code": "U508",
+  "slug": "success-check",
+  "name": "علامة صح",
+  "category": "U",
+  "categoryName": "واجهات وإشعارات",
+  "description": "دايرة بتترسم وجواها علامة صح، وبعدها كلمة «تم» بتظهر. للتأكيد أو إتمام الطلب.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "ui",
+    "check",
+    "success"
+  ],
+  "params": {
+    "label": "تم الطلب بنجاح"
+  },
+  "source": "مستوحاة من HyperFrames registry (Apache-2.0) — success-check",
+  "path": "motions/U508-success-check/index.html",
+  "addedIn": "v1"
+}

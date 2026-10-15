@@ -1,0 +1,25 @@
+{
+  "code": "S305",
+  "slug": "block-cover",
+  "name": "بلوكات متتالية",
+  "category": "S",
+  "categoryName": "انتقالات",
+  "description": "عواميد ملونة بتطلع ورا بعض تغطي الشاشة، وبعدين تكمّل لفوق وتكشف المشهد الجديد.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "transition",
+    "blocks",
+    "cover"
+  ],
+  "params": {
+    "a": "المشهد ١",
+    "b": "المشهد ٢",
+    "at": 1.2,
+    "cols": 5
+  },
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — staggered blocks (css-cover)",
+  "path": "motions/S305-block-cover/index.html",
+  "addedIn": "v1"
+}

@@ -1,0 +1,25 @@
+{
+  "code": "P612",
+  "slug": "spotlight",
+  "name": "سبوت لايت",
+  "category": "P",
+  "categoryName": "صور وأشخاص وكاميرا",
+  "description": "الشاشة بتضلم كلها ماعدا دايرة نور بتتحرك وتقف على الحاجة المهمة.",
+  "duration": 3.5,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "photo",
+    "spotlight",
+    "focus",
+    "mask"
+  ],
+  "params": {
+    "x": 540,
+    "y": 820,
+    "r": 330
+  },
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — spotlight-card / vignette",
+  "path": "motions/P612-spotlight/index.html",
+  "addedIn": "v1"
+}

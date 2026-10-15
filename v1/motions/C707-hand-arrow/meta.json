@@ -1,0 +1,22 @@
+{
+  "code": "C707",
+  "slug": "hand-arrow",
+  "name": "سهم بيشاور",
+  "category": "C",
+  "categoryName": "دعوة لإجراء ولوجو ونهايات",
+  "description": "سهم مرسوم باليد بيترسم ويشاور على حاجة (زرار/لينك)، وبعدين يتهز يلفت النظر.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "arrow",
+    "hand-drawn",
+    "callout"
+  ],
+  "params": {
+    "text": "اللينك في البايو"
+  },
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — hw-arrow",
+  "path": "motions/C707-hand-arrow/index.html",
+  "addedIn": "v1"
+}

@@ -1,0 +1,24 @@
+{
+  "code": "S306",
+  "slug": "blinds",
+  "name": "ستارة شرايح",
+  "category": "S",
+  "categoryName": "انتقالات",
+  "description": "شرايح أفقية بتتقفل زي الستارة وبعدين تتفتح على المشهد الجديد.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "transition",
+    "blinds"
+  ],
+  "params": {
+    "a": "المشهد ١",
+    "b": "المشهد ٢",
+    "at": 1.2,
+    "rows": 8
+  },
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — horizontal blinds",
+  "path": "motions/S306-blinds/index.html",
+  "addedIn": "v1"
+}

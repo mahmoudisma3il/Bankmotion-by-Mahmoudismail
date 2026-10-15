@@ -1,0 +1,23 @@
+{
+  "code": "S301",
+  "slug": "side-wipe",
+  "name": "مسحة جانبية",
+  "category": "S",
+  "categoryName": "انتقالات",
+  "description": "المشهد الجديد بيتمسح فوق القديم من اليمين للشمال ومعاه شريط ملون بيقود المسحة.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "transition",
+    "wipe"
+  ],
+  "params": {
+    "a": "المشهد ١",
+    "b": "المشهد ٢",
+    "at": 1.2
+  },
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — directional-wipe",
+  "path": "motions/S301-side-wipe/index.html",
+  "addedIn": "v1"
+}

@@ -1,0 +1,24 @@
+{
+  "code": "N401",
+  "slug": "counter",
+  "name": "عدّاد",
+  "category": "N",
+  "categoryName": "أرقام وبيانات",
+  "description": "رقم بيعدّ من صفر لحد الرقم المطلوب، وبعدين يثبت بنطّة، وتحته الوصف.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "number",
+    "count-up"
+  ],
+  "params": {
+    "to": 1000,
+    "prefix": "",
+    "suffix": "+",
+    "label": "عميل سعيد"
+  },
+  "source": "من «عدّاد» في ريل Majedteq + مستوحاة من HyperFrames (Apache-2.0) — count-up",
+  "path": "motions/N401-counter/index.html",
+  "addedIn": "v1"
+}

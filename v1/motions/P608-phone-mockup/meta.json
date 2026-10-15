@@ -1,0 +1,21 @@
+{
+  "code": "P608",
+  "slug": "phone-mockup",
+  "name": "موبايل بيعرض",
+  "category": "P",
+  "categoryName": "صور وأشخاص وكاميرا",
+  "description": "موبايل بيطلع من تحت بميلة 3D وبيعتدل، وجوه الشاشة محتوى بيسكرول.",
+  "duration": 3.5,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "photo",
+    "device",
+    "phone",
+    "app"
+  ],
+  "params": {},
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — device-frame-stage / parallax-device-dive",
+  "path": "motions/P608-phone-mockup/index.html",
+  "addedIn": "v1"
+}

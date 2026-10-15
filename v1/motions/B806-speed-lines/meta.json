@@ -1,0 +1,23 @@
+{
+  "code": "B806",
+  "slug": "speed-lines",
+  "name": "خطوط سرعة",
+  "category": "B",
+  "categoryName": "خلفيات وتأثيرات",
+  "description": "خطوط سرعة زي الأنمي حوالين نص الشاشة بتلف وترمش، وفي النص كلمة صدمة.",
+  "duration": 3.2,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "background",
+    "anime",
+    "speed",
+    "impact"
+  ],
+  "params": {
+    "text": "واو!"
+  },
+  "source": "تصميم أصلي (ستايل مانجا)",
+  "path": "motions/B806-speed-lines/index.html",
+  "addedIn": "v1"
+}

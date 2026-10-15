@@ -1,0 +1,23 @@
+{
+  "code": "T106",
+  "slug": "hand-underline",
+  "name": "خط تحت الكلمة",
+  "category": "T",
+  "categoryName": "نصوص وتايبوجرافي",
+  "description": "خط مرسوم باليد بيترسم تحت الكلمة من اليمين للشمال.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "text",
+    "svg",
+    "draw"
+  ],
+  "params": {
+    "pre": "ده أهم",
+    "kw": "سطر في الفيديو"
+  },
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — hw-underline",
+  "path": "motions/T106-hand-underline/index.html",
+  "addedIn": "v1"
+}

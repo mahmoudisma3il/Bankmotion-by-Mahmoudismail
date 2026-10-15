@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بنك الحركات — Mahmoud Ismail Bankmotion</title>
+<meta name="description" content="مكتبة حركات موشن جاهزة بالكود (HyperFrames + GSAP) للريلز والفيديوهات القصيرة 9:16 — كل حركة ليها كود ثابت زي S302.">
+<style>
+@font-face{font-family:"Cairo";src:url("fonts/cairo-arabic-wght-normal.woff2") format("woff2");font-weight:200 1000;unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F}
+@font-face{font-family:"Cairo";src:url("fonts/cairo-latin-wght-normal.woff2") format("woff2");font-weight:200 1000;unicode-range:U+0000-00FF,U+2000-206F}
+:root{--bg:#F1EBDF;--panel:#FBF8F2;--ink:#1D1A17;--muted:#7C7268;--line:#E2D9CB;--accent:#E8572A;--accent-soft:#FBE3D9;--ok:#2E7D5B;--ok-soft:#DCEFE5;--no:#B4443A;--shadow:0 1px 2px rgba(40,30,20,.06),0 8px 24px rgba(40,30,20,.06)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121113;--panel:#1B1A1D;--ink:#F3EFE9;--muted:#9C958C;--line:#2C2A2E;--accent:#FF6A33;--accent-soft:#3A2219;--ok:#5CC28F;--ok-soft:#173226;--no:#E07065;--shadow:0 1px 2px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--bg:#121113;--panel:#1B1A1D;--ink:#F3EFE9;--muted:#9C958C;--line:#2C2A2E;--accent:#FF6A33;--accent-soft:#3A2219;--ok:#5CC28F;--ok-soft:#173226;--no:#E07065;--shadow:0 1px 2px rgba(0,0,0,.4)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Cairo",system-ui,sans-serif;font-size:15px;line-height:1.6}
+.wrap{max-width:1400px;margin:0 auto;padding:0 16px}
+header{padding:36px 0 18px}
+.brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+h1{font-size:clamp(30px,5vw,48px);font-weight:900;margin:0;line-height:1.1}
+h1 b{color:var(--accent)}
+.en{font-size:14px;color:var(--muted);direction:ltr;font-weight:700;letter-spacing:.02em}
+.ver{font-size:12px;font-weight:800;background:var(--ink);color:var(--bg);padding:2px 10px;border-radius:999px;direction:ltr}
+.lead{color:var(--muted);max-width:760px;margin:10px 0 0}
+.howto{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:18px}
+.howto div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:14px}
+.howto b{display:block;font-size:13px;color:var(--accent)}
+code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;direction:ltr;unicode-bidi:embed}
+.bar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);padding:12px 0;border-bottom:1px solid var(--line)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.search{flex:1 1 260px;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font:inherit;color:inherit}
+.search:focus{outline:2px solid var(--accent);outline-offset:1px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 13px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip .n{opacity:.6;font-weight:600;margin-inline-start:4px}
+.toggle{font:inherit;font-size:13px;font-weight:700;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:8px 12px;cursor:pointer}
+.toggle[aria-pressed="true"]{background:var(--ok-soft);border-color:var(--ok);color:var(--ok)}
+.section-title{display:flex;align-items:baseline;gap:10px;margin:28px 0 12px}
+.section-title h2{margin:0;font-size:22px;font-weight:900}
+.section-title span{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:border-color .15s}
+.card.yes{border-color:var(--ok);box-shadow:0 0 0 2px var(--ok-soft)}
+.card.no{opacity:.55}
+.thumb{position:relative;aspect-ratio:9/16;background:#222;cursor:pointer;overflow:hidden}
+.thumb img,.thumb video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.thumb.wide img,.thumb.wide video{object-fit:contain;background:#111}
+.thumb iframe{position:absolute;top:0;right:0;width:1080px;height:1920px;border:0;transform-origin:top right;pointer-events:none}
+.num{position:absolute;top:8px;right:8px;background:var(--accent);color:#fff;font-weight:900;font-size:12px;padding:2px 9px;border-radius:999px;direction:ltr;z-index:2}
+.dur{position:absolute;bottom:8px;left:8px;background:rgba(0,0,0,.6);color:#fff;font-size:11px;font-weight:700;padding:1px 7px;border-radius:6px;direction:ltr;z-index:2}
+.play{position:absolute;inset:auto auto 8px 8px}
+.body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:4px;flex:1}
+.ttl{font-weight:900;font-size:15px;line-height:1.35;display:flex;justify-content:space-between;gap:6px;align-items:baseline}
+.ttl .c{font-size:11px;color:var(--muted);font-weight:800;direction:ltr}
+.desc{color:var(--muted);font-size:12.5px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:58px}
+.acts{display:flex;gap:6px;margin-top:8px}
+.acts button{flex:1;font:inherit;font-size:13px;font-weight:800;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:10px;padding:5px 0;cursor:pointer}
+.acts .y[aria-pressed="true"]{background:var(--ok);border-color:var(--ok);color:#fff}
+.acts .n[aria-pressed="true"]{background:var(--no);border-color:var(--no);color:#fff}
+.acts .cp{flex:0 0 38px}
+.tray{position:fixed;inset:auto 0 0 0;z-index:9;background:var(--ink);color:var(--bg);padding:10px 16px;display:none}
+.tray.on{display:block}
+.tray .wrap{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.tray .list{flex:1;min-width:0;font-size:13px;direction:ltr;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tray button{font:inherit;font-weight:800;font-size:13px;border:0;border-radius:10px;padding:7px 14px;cursor:pointer;background:var(--accent);color:#fff}
+.tray button.ghost{background:transparent;color:var(--bg);border:1px solid color-mix(in srgb,var(--bg) 40%,transparent)}
+dialog{border:0;border-radius:20px;padding:0;background:var(--panel);color:var(--ink);width:min(980px,96vw);max-height:94vh}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+.dlg{display:grid;grid-template-columns:minmax(220px,360px) 1fr;gap:0}
+.dlg .stagebox{position:relative;aspect-ratio:9/16;background:#111;overflow:hidden}
+.dlg .stagebox iframe{position:absolute;top:0;right:0;width:1080px;height:1920px;border:0;transform-origin:top right}
+.dlg .stagebox video,.dlg .stagebox img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.dlg .info{padding:22px;overflow:auto;max-height:94vh}
+.dlg h3{margin:0 0 4px;font-size:26px;font-weight:900}
+.dlg table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
+.dlg td{border-bottom:1px solid var(--line);padding:6px 4px;vertical-align:top}
+.dlg td:first-child{white-space:nowrap;color:var(--muted)}
+.pre{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:12.5px;direction:ltr;text-align:left;white-space:pre-wrap;word-break:break-word}
+.dlg .close{position:absolute;top:10px;left:10px;z-index:3;border:0;background:rgba(0,0,0,.55);color:#fff;width:34px;height:34px;border-radius:50%;font-size:18px;cursor:pointer}
+.btn{font:inherit;font-weight:800;font-size:13px;border:1px solid var(--line);border-radius:10px;padding:7px 12px;cursor:pointer;background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn.sec{background:transparent;color:var(--ink);border-color:var(--line)}
+.empty{padding:40px;text-align:center;color:var(--muted)}
+footer{padding:40px 0 90px;color:var(--muted);font-size:13px}
+footer a{color:inherit}
+.toast{position:fixed;bottom:70px;left:50%;transform:translateX(-50%);background:var(--ok);color:#fff;font-weight:800;padding:8px 18px;border-radius:999px;z-index:20;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}
+@media (max-width:640px){.dlg{grid-template-columns:1fr}.dlg .stagebox{max-height:60vh;aspect-ratio:auto;height:60vh}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="brand"><h1>بنك <b>الحركات</b></h1><span class="en">Mahmoud Ismail Bankmotion</span><span class="ver" id="ver"></span></div>
+  <p class="lead">مكتبة حركات موشن جاهزة بالكود للريلز والفيديوهات القصيرة (9:16). كل حركة ليها <b>كود ثابت</b> زي <code>S302</code>، فتقدر تقول لأي AI (Claude أو Codex) «استخدم حركة S302» ويعرف يجيبها من البنك على طول.</p>
+  <div class="howto">
+    <div><b>١. اتفرّج</b>عدّي بالماوس على أي كارت أو اضغط عليه عشان الحركة تشتغل.</div>
+    <div><b>٢. اختار</b>دوس «أي ✓» على اللي عاجبك و«لا ✗» على اللي مش عاجبك. اختياراتك بتتحفظ على جهازك.</div>
+    <div><b>٣. ابعت للـAI</b>اضغط «انسخ للـAI» من الشريط اللي تحت، والصق الكلام في الشات مع فكرة الفيديو.</div>
+  </div>
+</header>
+<div class="bar"><div class="wrap">
+  <div class="row"><input class="search" id="q" type="search" placeholder="دوّر بالاسم أو الكود أو الوصف… (مثلًا: زوم، عدّاد، T104)"><button class="toggle" id="onlyYes" aria-pressed="false">المختارة بس ✓</button></div>
+  <div class="chips" id="chips"></div>
+</div></div>
+<main class="wrap" id="main"></main>
+<footer class="wrap" id="foot"></footer>
+<div class="tray" id="tray"><div class="wrap"><span id="trayCount"></span><span class="list" id="trayList"></span><button id="copySel">انسخ للـAI</button><button class="ghost" id="clearSel">امسح</button></div></div>
+<dialog id="dlg"></dialog>
+<div class="toast" id="toast">اتنسخ ✓</div>
+<script>
+const DATA = /*__DATA__*/;
+const LS = "bankmotion-picks-v1";
+let picks = {}; try { picks = JSON.parse(localStorage.getItem(LS) || "{}"); } catch (e) {}
+const save = () => { try { localStorage.setItem(LS, JSON.stringify(picks)); } catch (e) {} };
+const $ = (s, r = document) => r.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const CATS = [["all", "الكل"], ...Object.entries(DATA.categories).map(([k, v]) => [k, v.name]), ["H", "مكتبة HyperFrames"]];
+let cat = "all", query = "", onlyYes = false;
+$("#ver").textContent = DATA.version;
+
+function toast(t) { const el = $("#toast"); el.textContent = t || "اتنسخ ✓"; el.classList.add("on"); setTimeout(() => el.classList.remove("on"), 1300); }
+async function copy(t, msg) { try { await navigator.clipboard.writeText(t); } catch (e) { const a = document.createElement("textarea"); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand("copy"); } catch (_) {} a.remove(); } toast(msg); }
+
+function all() { return [...DATA.motions, ...DATA.hyperframes]; }
+function matches(m) {
+  if (cat !== "all" && (cat === "H" ? !m.code.startsWith("H") : m.category !== cat)) return false;
+  if (onlyYes && picks[m.code] !== 1) return false;
+  if (!query) return true;
+  const hay = [m.code, m.name, m.title, m.description, (m.tags || []).join(" "), m.slug].join(" ").toLowerCase();
+  return query.toLowerCase().split(/\s+/).every((w) => hay.includes(w));
+}
+function chips() {
+  $("#chips").innerHTML = CATS.map(([k, n]) => {
+    const c = k === "all" ? all().length : k === "H" ? DATA.hyperframes.length : DATA.motions.filter((m) => m.category === k).length;
+    return `<button class="chip" data-k="${k}" aria-pressed="${k === cat}"><bdi>${k !== "all" && k !== "H" ? k + " · " : ""}${esc(n)}</bdi><span class="n">${c}</span></button>`;
+  }).join("");
+}
+function card(m) {
+  const isH = m.code.startsWith("H"), p = picks[m.code];
+  const thumb = isH
+    ? `<div class="thumb ${m.size && m.size.startsWith("1920") ? "wide" : ""}" data-open="${m.code}">${m.poster ? `<img loading="lazy" src="${esc(m.poster)}" alt="">` : ""}<span class="num">${m.code}</span>${m.video ? '<span class="dur">▶</span>' : ""}</div>`
+    : `<div class="thumb" data-open="${m.code}"><img loading="lazy" src="${esc(m.dir)}/poster.jpg" alt=""><span class="num">${m.code}</span><span class="dur">${m.duration}s</span></div>`;
+  return `<article class="card ${p === 1 ? "yes" : p === 0 ? "no" : ""}" data-code="${m.code}">${thumb}
+  <div class="body"><div class="ttl"><span>${esc(isH ? m.title : m.name)}</span><span class="c">${m.code}</span></div>
+  <div class="desc">${esc(m.description)}</div>
+  <div class="acts"><button class="y" data-pick="1" aria-pressed="${p === 1}">أي ✓</button><button class="n" data-pick="0" aria-pressed="${p === 0}">لا ✗</button><button class="cp" data-copy="${m.code}" title="انسخ الكود">⧉</button></div></div></article>`;
+}
+function render() {
+  chips();
+  const list = all().filter(matches);
+  if (!list.length) { $("#main").innerHTML = '<div class="empty">مفيش حركات بالشكل ده. جرّب كلمة تانية.</div>'; return tray(); }
+  const groups = {};
+  list.forEach((m) => { const k = m.code.startsWith("H") ? "H" : m.category; (groups[k] = groups[k] || []).push(m); });
+  $("#main").innerHTML = Object.keys(groups).sort((a, b) => CATS.findIndex((c) => c[0] === a) - CATS.findIndex((c) => c[0] === b)).map((k) => {
+    const name = k === "H" ? "مكتبة HyperFrames (بلوكات وكومبوننتس جاهزة)" : DATA.categories[k].name;
+    const note = k === "H" ? "بتتركّب بأمر <code>npx hyperframes add</code> — الكود H ثابت للأبد" : `الأكواد بتبدأ بحرف <code>${k}</code>`;
+    return `<section><div class="section-title"><h2>${esc(name)}</h2><span>${groups[k].length} حركة · ${note}</span></div><div class="grid">${groups[k].map(card).join("")}</div></section>`;
+  }).join("");
+  tray();
+}
+function tray() {
+  const sel = Object.keys(picks).filter((k) => picks[k] === 1).sort();
+  $("#tray").classList.toggle("on", sel.length > 0);
+  $("#trayCount").textContent = `اخترت ${sel.length}`;
+  $("#trayList").textContent = sel.join(" · ");
+}
+function promptFor(codes) {
+  return `استخدم الحركات دي من بنك الحركات (Mahmoud Ismail Bankmotion): ${codes.join(", ")}\nالبنك: ${DATA.repo}\n(اقرا AGENTS.md وcatalog.json عشان تعرف كل كود فين وإزاي تستخدمه)`;
+}
+// hover preview: one live iframe at a time
+let live = null;
+function fitIframe(box, ifr) { const s = box.clientWidth / 1080; ifr.style.transform = `scale(${s})`; }
+function startPreview(box) {
+  const code = box.dataset.open, m = all().find((x) => x.code === code); if (!m) return;
+  stopPreview();
+  if (m.code.startsWith("H")) { if (!m.video) return; const v = document.createElement("video"); v.src = m.video; v.muted = true; v.loop = true; v.playsInline = true; v.autoplay = true; box.appendChild(v); live = v; return; }
+  const f = document.createElement("iframe"); f.src = m.dir + "/index.html?play"; f.loading = "eager"; f.title = m.name; box.appendChild(f); fitIframe(box, f); live = f;
+}
+function stopPreview() { if (live) { live.remove(); live = null; } }
+document.addEventListener("mouseover", (e) => { const b = e.target.closest(".thumb"); if (b && (!live || live.parentNode !== b)) startPreview(b); });
+document.addEventListener("mouseout", (e) => { const b = e.target.closest(".thumb"); if (b && !b.contains(e.relatedTarget)) stopPreview(); });
+
+function openDlg(code) {
+  const m = all().find((x) => x.code === code); if (!m) return; stopPreview();
+  const isH = code.startsWith("H"), d = $("#dlg");
+  const params = !isH && Object.keys(m.params || {}).length ? `<table>${Object.entries(m.params).map(([k, v]) => `<tr><td class="mono">${esc(k)}</td><td>${esc(typeof v === "string" ? v : JSON.stringify(v))}</td></tr>`).join("")}</table>` : "";
+  const stage = isH ? (m.video ? `<video src="${esc(m.video)}" autoplay muted loop playsinline></video>` : m.poster ? `<img src="${esc(m.poster)}" alt="">` : "")
+                    : `<iframe src="${esc(m.dir)}/index.html?play" title="${esc(m.name)}"></iframe>`;
+  d.innerHTML = `<div class="dlg"><div class="stagebox" id="sb">${stage}<button class="close" id="x" aria-label="اقفل">×</button></div><div class="info">
+    <div class="mono" style="color:var(--accent);font-weight:900">${m.code}</div><h3>${esc(isH ? m.title : m.name)}</h3>
+    <p style="color:var(--muted);margin:0 0 10px">${esc(m.description)}</p>
+    <table><tr><td>القسم</td><td>${esc(isH ? (m.type === "block" ? "HyperFrames block (مشهد كامل)" : "HyperFrames component (عنصر)") : m.categoryName)}</td></tr>
+    <tr><td>المدة</td><td>${m.duration ? m.duration + " ثانية" : "—"}</td></tr><tr><td>المقاس</td><td class="mono">${esc(m.size || "—")}</td></tr>
+    ${isH ? `<tr><td>التركيب</td><td class="mono">${esc(m.install)}</td></tr>` : `<tr><td>الملف</td><td class="mono">${esc(m.path)}</td></tr><tr><td>المصدر</td><td>${esc(m.source)}</td></tr>`}</table>
+    ${params ? "<b>القيم اللي تتغير (P):</b>" + params : ""}
+    <div class="pre" id="pp">${esc(promptFor([m.code]))}</div>
+    <div class="row" style="margin-top:12px"><button class="btn" id="cpP">انسخ للـAI</button>${isH ? `<button class="btn sec" id="cpI">انسخ أمر التركيب</button>` : `<a class="btn sec" href="${esc(m.dir)}/index.html" target="_blank" style="text-decoration:none">افتح لوحدها</a>`}</div>
+  </div></div>`;
+  d.showModal();
+  const f = d.querySelector("iframe"); if (f) { const sb = $("#sb", d); const fit = () => fitIframe(sb, f); fit(); new ResizeObserver(fit).observe(sb); }
+  $("#x", d).onclick = () => d.close();
+  $("#cpP", d).onclick = () => copy(promptFor([m.code]));
+  const ci = $("#cpI", d); if (ci) ci.onclick = () => copy(m.install, "اتنسخ أمر التركيب ✓");
+}
+$("#dlg").addEventListener("close", () => { $("#dlg").innerHTML = ""; });
+$("#dlg").addEventListener("click", (e) => { if (e.target.id === "dlg") $("#dlg").close(); });
+
+document.addEventListener("click", (e) => {
+  const chip = e.target.closest(".chip"); if (chip) { cat = chip.dataset.k; render(); return; }
+  const pk = e.target.closest("[data-pick]");
+  if (pk) { const code = pk.closest(".card").dataset.code, v = +pk.dataset.pick; picks[code] = picks[code] === v ? undefined : v; if (picks[code] === undefined) delete picks[code]; save(); const c = pk.closest(".card"); c.outerHTML = card(all().find((x) => x.code === code)); tray(); return; }
+  const cp = e.target.closest("[data-copy]"); if (cp) { copy(cp.dataset.copy, `اتنسخ ${cp.dataset.copy} ✓`); return; }
+  const th = e.target.closest(".thumb"); if (th) { openDlg(th.dataset.open); return; }
+});
+$("#q").addEventListener("input", (e) => { query = e.target.value.trim(); render(); });
+$("#onlyYes").addEventListener("click", (e) => { onlyYes = !onlyYes; e.currentTarget.setAttribute("aria-pressed", onlyYes); render(); });
+$("#copySel").onclick = () => copy(promptFor(Object.keys(picks).filter((k) => picks[k] === 1).sort()));
+$("#clearSel").onclick = () => { picks = {}; save(); render(); };
+$("#foot").innerHTML = `${DATA.motions.length} حركة أصلية + ${DATA.hyperframes.length} من مكتبة HyperFrames · النسخة ${esc(DATA.version)} · آخر تحديث ${esc(DATA.updated)}<br>
+الحركات مكتوبة بـ HTML + GSAP كـ <a href="https://github.com/heygen-com/hyperframes">HyperFrames compositions</a>. كتير منها مستوحى من HyperFrames (Apache-2.0) وRemotion templates، والمصدر مكتوب في كل حركة. الخط: Cairo (OFL).<br>
+<a href="${esc(DATA.repo)}">${esc(DATA.repo)}</a>`;
+render();
+</script>
+</body>
+</html>

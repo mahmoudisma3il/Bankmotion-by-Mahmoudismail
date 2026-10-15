@@ -1,0 +1,20 @@
+{
+  "code": "B808",
+  "slug": "aurora",
+  "name": "أورورا",
+  "category": "B",
+  "categoryName": "خلفيات وتأثيرات",
+  "description": "شرايط ضوء ملونة زي الشفق القطبي بتتموج ببطء في السما.",
+  "duration": 6.6,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "background",
+    "aurora",
+    "gradient"
+  ],
+  "params": {},
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — aurora",
+  "path": "motions/B808-aurora/index.html",
+  "addedIn": "v1"
+}

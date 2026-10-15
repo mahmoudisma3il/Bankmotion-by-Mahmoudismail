@@ -1,0 +1,24 @@
+{
+  "code": "S308",
+  "slug": "glitch",
+  "name": "جليتش",
+  "category": "S",
+  "categoryName": "انتقالات",
+  "description": "تشويش ديجيتال: الشاشة بتتقطع وتتهز بألوان أحمر وسماوي، وتقلب على المشهد الجديد.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "transition",
+    "glitch",
+    "rgb"
+  ],
+  "params": {
+    "a": "المشهد ١",
+    "b": "المشهد ٢",
+    "at": 1.2
+  },
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — glitch / chromatic-aberration-wipe",
+  "path": "motions/S308-glitch/index.html",
+  "addedIn": "v1"
+}

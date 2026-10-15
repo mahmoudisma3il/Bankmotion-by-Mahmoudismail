@@ -1,0 +1,23 @@
+{
+  "code": "P607",
+  "slug": "focus-pull",
+  "name": "فوكس على الشخص",
+  "category": "P",
+  "categoryName": "صور وأشخاص وكاميرا",
+  "description": "الخلفية بتضبب تدريجيًا والشخص يفضل واضح ويقرب سنة. عزل الشخص عن الخلفية.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "photo",
+    "blur",
+    "depth",
+    "focus"
+  ],
+  "params": {
+    "label": "ركّز هنا"
+  },
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — focus-blur-resolve / rack-focus",
+  "path": "motions/P607-focus-pull/index.html",
+  "addedIn": "v1"
+}

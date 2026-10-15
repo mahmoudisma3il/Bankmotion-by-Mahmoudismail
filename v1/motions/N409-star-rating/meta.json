@@ -1,0 +1,24 @@
+{
+  "code": "N409",
+  "slug": "star-rating",
+  "name": "تقييم نجوم",
+  "category": "N",
+  "categoryName": "أرقام وبيانات",
+  "description": "٥ نجوم بتتملي واحدة ورا التانية بنطّة، والتقييم بيعدّ لحد ٤.٨.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "number",
+    "rating",
+    "stars",
+    "review"
+  ],
+  "params": {
+    "rating": 4.8,
+    "label": "تقييم أكتر من ٢٠٠٠ عميل"
+  },
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — star-rating-fill",
+  "path": "motions/N409-star-rating/index.html",
+  "addedIn": "v1"
+}

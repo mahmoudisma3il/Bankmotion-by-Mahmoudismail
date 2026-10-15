@@ -1,0 +1,23 @@
+{
+  "code": "P610",
+  "slug": "freeze-frame",
+  "name": "لقطة متجمدة",
+  "category": "P",
+  "categoryName": "صور وأشخاص وكاميرا",
+  "description": "فلاش وتجميد للكادر بالأبيض والأسود، والشخص ياخد حدود بيضا، وسهم بيشاور عليه باسمه.",
+  "duration": 3.5,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "photo",
+    "freeze",
+    "callout",
+    "person"
+  ],
+  "params": {
+    "label": "ده أنا"
+  },
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — freeze-frame-dressing",
+  "path": "motions/P610-freeze-frame/index.html",
+  "addedIn": "v1"
+}

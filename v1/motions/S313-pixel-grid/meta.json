@@ -1,0 +1,26 @@
+{
+  "code": "S313",
+  "slug": "pixel-grid",
+  "name": "بكسلة",
+  "category": "S",
+  "categoryName": "انتقالات",
+  "description": "مربعات ملونة بتغطي الشاشة بترتيب عشوائي وبعدين تختفي وتكشف المشهد الجديد.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "transition",
+    "grid",
+    "pixel"
+  ],
+  "params": {
+    "a": "المشهد ١",
+    "b": "المشهد ٢",
+    "at": 1.2,
+    "cols": 6,
+    "rows": 10
+  },
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — grid dissolve / grid-pixelate-wipe",
+  "path": "motions/S313-pixel-grid/index.html",
+  "addedIn": "v1"
+}

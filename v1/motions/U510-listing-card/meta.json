@@ -1,0 +1,26 @@
+{
+  "code": "U510",
+  "slug": "listing-card",
+  "name": "كارت إعلان",
+  "category": "U",
+  "categoryName": "واجهات وإشعارات",
+  "description": "كارت إعلان/منتج بصورة وعنوان وسعر ومكان، بيطلع لفوق وبعدين بادج «مميز» بيختم عليه.",
+  "duration": 3.5,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "ui",
+    "product",
+    "listing",
+    "ecommerce"
+  ],
+  "params": {
+    "title": "تويوتا لاندكروزر ٢٠٢٢",
+    "price": "١٢,٥٠٠ د.ك",
+    "place": "الكويت · حولي",
+    "badge": "مميز"
+  },
+  "source": "تصميم أصلي (مناسب لإعلانات 4Sale)",
+  "path": "motions/U510-listing-card/index.html",
+  "addedIn": "v1"
+}

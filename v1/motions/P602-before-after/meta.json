@@ -1,0 +1,24 @@
+{
+  "code": "P602",
+  "slug": "before-after",
+  "name": "مسحة قبل وبعد",
+  "category": "P",
+  "categoryName": "صور وأشخاص وكاميرا",
+  "description": "خط فاصل بيتحرك على الصورة ويكشف «بعد التعديل» مكان «قبل التعديل»، بمقبض في النص.",
+  "duration": 4,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "photo",
+    "before-after",
+    "wipe",
+    "compare"
+  ],
+  "params": {
+    "before": "قبل التعديل",
+    "after": "بعد التعديل"
+  },
+  "source": "من «مسحة قبل التعديل» في ريل Majedteq + مستوحاة من HyperFrames (Apache-2.0) — before-after-wipe",
+  "path": "motions/P602-before-after/index.html",
+  "addedIn": "v1"
+}

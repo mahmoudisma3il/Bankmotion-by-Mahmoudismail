@@ -1,0 +1,23 @@
+{
+  "code": "B805",
+  "slug": "particles",
+  "name": "جزيئات طايرة",
+  "category": "B",
+  "categoryName": "خلفيات وتأثيرات",
+  "description": "نقط صغيرة كتير بتطير في الهوا بهدوء. لمسة حركة لأي خلفية ثابتة.",
+  "duration": 5,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "background",
+    "particles",
+    "dust"
+  ],
+  "params": {
+    "count": 70,
+    "color": "#FFFFFF"
+  },
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — starfield / particle-burst",
+  "path": "motions/B805-particles/index.html",
+  "addedIn": "v1"
+}

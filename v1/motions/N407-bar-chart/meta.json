@@ -1,0 +1,24 @@
+{
+  "code": "N407",
+  "slug": "bar-chart",
+  "name": "رسم أعمدة",
+  "category": "N",
+  "categoryName": "أرقام وبيانات",
+  "description": "أعمدة بتطلع ورا بعض بأطوال مختلفة والقيمة فوق كل عمود، وآخر عمود ملوّن.",
+  "duration": 3.5,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "number",
+    "chart",
+    "bars"
+  ],
+  "params": {
+    "title": "المبيعات",
+    "values": "35,55,48,72,95",
+    "labels": "يناير|فبراير|مارس|أبريل|مايو"
+  },
+  "source": "مستوحاة من HyperFrames (Apache-2.0) — animated-bar-chart",
+  "path": "motions/N407-bar-chart/index.html",
+  "addedIn": "v1"
+}

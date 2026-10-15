@@ -1,0 +1,23 @@
+{
+  "code": "U504",
+  "slug": "cursor-click",
+  "name": "ماوس بيضغط",
+  "category": "U",
+  "categoryName": "واجهات وإشعارات",
+  "description": "سهم الماوس بيتحرك للزرار ويضغط، والزرار ينضغط وتطلع منه موجة.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "light",
+  "tags": [
+    "ui",
+    "cursor",
+    "click",
+    "button"
+  ],
+  "params": {
+    "label": "اشتري الآن"
+  },
+  "source": "مستوحاة من HyperFrames registry (Apache-2.0) — cursor-click-ripple / press-ripple",
+  "path": "motions/U504-cursor-click/index.html",
+  "addedIn": "v1"
+}

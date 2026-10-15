@@ -1,0 +1,24 @@
+{
+  "code": "S314",
+  "slug": "light-leak",
+  "name": "تسريب ضوء",
+  "category": "S",
+  "categoryName": "انتقالات",
+  "description": "ضوء دافي برتقالي بيعدي على الشاشة زي أفلام الكاميرا القديمة ويقلب المشهد.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "transition",
+    "light",
+    "film"
+  ],
+  "params": {
+    "a": "المشهد ١",
+    "b": "المشهد ٢",
+    "at": 1.2
+  },
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — light-leak",
+  "path": "motions/S314-light-leak/index.html",
+  "addedIn": "v1"
+}
