@@ -31,7 +31,7 @@ const SITE = {
   title: "محمود إسماعيل — بنك الحركات والفيديوهات",
   desc: "بنك حركات موشن جاهز بالكود، وكل فيديو بعمله بطريقته والأدوات اللي اتعمل بيها — عشان تخلّي Claude يعملك فيديوهات كأني أنا اللي عاملها.",
   instagram: "https://www.instagram.com/mahmoudismail.creative/",
-  facebook: "https://www.facebook.com/profile.php?id=61595344242582",
+  facebook: "https://www.facebook.com/mahmoudismail.creative/",
   linkedin: "https://www.linkedin.com/in/mahmoud-ismaiil",
   behance: "https://behance.net/mahmoud_ismaiil",
   portfolio: "https://mahmoud-ismaiil.vercel.app",
@@ -69,7 +69,7 @@ const footer = () => `
   <div class="links">
     <a href="${SITE.portfolio}" target="_blank" rel="noopener">Portfolio<small>mahmoud-ismaiil.vercel.app</small></a>
     <a href="${SITE.instagram}" target="_blank" rel="noopener">Instagram<small>@mahmoudismail.creative</small></a>
-    <a href="${SITE.facebook}" target="_blank" rel="noopener">Facebook<small>Mahmoud Ismail Creative</small></a>
+    <a href="${SITE.facebook}" target="_blank" rel="noopener">Facebook<small>@mahmoudismail.creative</small></a>
     <a href="${SITE.linkedin}" target="_blank" rel="noopener">LinkedIn<small>in/mahmoud-ismaiil</small></a>
     <a href="${SITE.behance}" target="_blank" rel="noopener">Behance<small>mahmoud_ismaiil</small></a>
   </div>
