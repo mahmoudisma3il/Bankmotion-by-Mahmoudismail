@@ -22,8 +22,9 @@ export const CATEGORIES = {
 };
 
 const THEMES = {
-  light: { bg: "#F1EBDF", ink: "#1D1A17", accent: "#E8572A", accent2: "#2E7D5B", muted: "#8A8076", card: "#FFFFFF", skin: "#3A322C" },
-  dark: { bg: "#0E0E11", ink: "#FFFFFF", accent: "#FF5A1F", accent2: "#7CFFB2", muted: "#8B8B95", card: "#1B1B21", skin: "#2A2A31" },
+  // Brand identity (logo and color.pdf): grey + purple #5B4FDB
+  light: { bg: "#E8E8E8", ink: "#131313", accent: "#5B4FDB", accent2: "#2E7D5B", muted: "#6D6D6D", card: "#F0F0F0", skin: "#3A3A3D" },
+  dark: { bg: "#131313", ink: "#FFFFFF", accent: "#7B70F0", accent2: "#7CFFB2", muted: "#9A9AA3", card: "#232328", skin: "#2A2A31" },
 };
 
 const KIT = `

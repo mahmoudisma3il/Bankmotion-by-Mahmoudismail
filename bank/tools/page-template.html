@@ -91,12 +91,20 @@ footer a{color:inherit}
 .toast{position:fixed;bottom:70px;left:50%;transform:translateX(-50%);background:var(--ok);color:#fff;font-weight:800;padding:8px 18px;border-radius:999px;z-index:20;opacity:0;transition:opacity .2s;pointer-events:none}
 .toast.on{opacity:1}
 @media (max-width:640px){.dlg{grid-template-columns:1fr}.dlg .stagebox{max-height:60vh;aspect-ratio:auto;height:60vh}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+.whatsnew{margin-top:16px;background:var(--panel);border:1px solid var(--line);border-inline-start:4px solid var(--accent);border-radius:14px;padding:12px 16px}
+.whatsnew b{color:var(--accent);font-size:13px;display:block}.whatsnew ul{margin:4px 0 0;padding-inline-start:18px;font-size:14px}
+.new{position:absolute;top:8px;left:8px;background:var(--ink);color:#fff;font-weight:800;font-size:11px;padding:2px 9px;border-radius:999px;z-index:2}
+.tagnew{background:var(--ink);color:#fff;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-inline-start:6px}
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.skill{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--shadow)}
+.skill h3{margin:0;font-size:18px;direction:ltr;text-align:right}.skill .by{font-size:12px;color:var(--muted);direction:ltr;text-align:right}
+.skill p{margin:0;font-size:14px;color:var(--muted)}.skill .acts2{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
 </style>
 </head>
 <body>
 <div class="wrap"><div class="site">
   <a class="logo" href="../" aria-label="الرئيسية"><img src="../site/img/logo-BK.svg" alt="Mahmoud Ismail" width="76" height="42"></a>
-  <nav><a href="../#bank" aria-current="page">بنك الحركات</a><a href="../#videos">الفيديوهات</a><a class="work" href="https://mahmoud-ismaiil.vercel.app" target="_blank" rel="noopener">شغلي ↗</a></nav>
+  <nav><a href="../#bank" aria-current="page">بنك الحركات</a><a href="../#videos">الفيديوهات</a><a href="../#tools">الأدوات</a><a class="work" href="https://mahmoud-ismaiil.vercel.app" target="_blank" rel="noopener">شغلي ↗</a></nav>
 </div></div>
 <header class="wrap">
   <div class="brand"><h1>BanK<b>motion</b></h1><span class="en">By Mahmoud Ismail · بنك الحركات</span><span class="ver" id="ver"></span></div>
@@ -106,6 +114,7 @@ footer a{color:inherit}
     <div><b>٢. اختار</b>دوس «أي ✓» على اللي عاجبك و«لا ✗» على اللي مش عاجبك. اختياراتك بتتحفظ على جهازك.</div>
     <div><b>٣. ابعت للـAI</b>اضغط «انسخ للـAI» من الشريط اللي تحت، والصق الكلام في الشات مع فكرة الفيديو.</div>
   </div>
+  <div class="whatsnew" id="wn" hidden></div>
 </header>
 <div class="bar"><div class="wrap">
   <div class="row"><input class="search" id="q" type="search" placeholder="دوّر بالاسم أو الكود أو الوصف… (مثلًا: زوم، عدّاد، T104)"><button class="toggle" id="onlyYes" aria-pressed="false">المختارة بس ✓</button></div>
@@ -123,16 +132,21 @@ let picks = {}; try { picks = JSON.parse(localStorage.getItem(LS) || "{}"); } ca
 const save = () => { try { localStorage.setItem(LS, JSON.stringify(picks)); } catch (e) {} };
 const $ = (s, r = document) => r.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-const CATS = [["all", "الكل"], ...Object.entries(DATA.categories).map(([k, v]) => [k, v.name]), ["H", "مكتبة HyperFrames"]];
+const SK = DATA.skills || [];
+const CATS = [["all", "الكل"], ["NEW", "الجديد في " + DATA.version], ...Object.entries(DATA.categories).map(([k, v]) => [k, v.name]), ["K", "سكيلز للـAI"], ["H", "مكتبة HyperFrames"]];
 let cat = "all", query = "", onlyYes = false;
 $("#ver").textContent = DATA.version;
+if ((DATA.highlights || []).length) { const w = $("#wn"); w.hidden = false; w.innerHTML = `<b>الجديد في ${esc(DATA.version)} · ${esc(DATA.updated)}</b><ul>${DATA.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>`; }
+const isNew = (m) => m.addedIn && m.addedIn === DATA.version;
 
 function toast(t) { const el = $("#toast"); el.textContent = t || "اتنسخ ✓"; el.classList.add("on"); setTimeout(() => el.classList.remove("on"), 1300); }
 async function copy(t, msg) { try { await navigator.clipboard.writeText(t); } catch (e) { const a = document.createElement("textarea"); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand("copy"); } catch (_) {} a.remove(); } toast(msg); }
 
 function all() { return [...DATA.motions, ...DATA.hyperframes]; }
 function matches(m) {
-  if (cat !== "all" && (cat === "H" ? !m.code.startsWith("H") : m.category !== cat)) return false;
+  if (cat === "K") return false;
+  if (cat === "NEW") { if (!isNew(m)) return false; }
+  else if (cat !== "all" && (cat === "H" ? !m.code.startsWith("H") : m.category !== cat)) return false;
   if (onlyYes && picks[m.code] !== 1) return false;
   if (!query) return true;
   const hay = [m.code, m.name, m.title, m.description, (m.tags || []).join(" "), m.slug].join(" ").toLowerCase();
@@ -140,27 +154,36 @@ function matches(m) {
 }
 function chips() {
   $("#chips").innerHTML = CATS.map(([k, n]) => {
-    const c = k === "all" ? all().length : k === "H" ? DATA.hyperframes.length : DATA.motions.filter((m) => m.category === k).length;
-    return `<button class="chip" data-k="${k}" aria-pressed="${k === cat}"><bdi>${k !== "all" && k !== "H" ? k + " · " : ""}${esc(n)}</bdi><span class="n">${c}</span></button>`;
+    const c = k === "all" ? all().length + SK.length : k === "H" ? DATA.hyperframes.length : k === "K" ? SK.length : k === "NEW" ? all().filter(isNew).length + SK.filter(isNew).length : DATA.motions.filter((m) => m.category === k).length;
+    return `<button class="chip" data-k="${k}" aria-pressed="${k === cat}"><bdi>${k.length === 1 && k !== "H" ? k + " · " : ""}${esc(n)}</bdi><span class="n">${c}</span></button>`;
   }).join("");
 }
 function card(m) {
   const isH = m.code.startsWith("H"), p = picks[m.code];
   const thumb = isH
     ? `<div class="thumb ${m.size && m.size.startsWith("1920") ? "wide" : ""}" data-open="${m.code}">${m.poster ? `<img loading="lazy" src="${esc(m.poster)}" alt="">` : ""}<span class="num">${m.code}</span>${m.video ? '<span class="dur">▶</span>' : ""}</div>`
-    : `<div class="thumb" data-open="${m.code}"><img loading="lazy" src="${esc(m.dir)}/poster.jpg" alt=""><span class="num">${m.code}</span><span class="dur">${m.duration}s</span></div>`;
+    : `<div class="thumb" data-open="${m.code}"><img loading="lazy" src="${esc(m.dir)}/poster.jpg" alt=""><span class="num">${m.code}</span>${isNew(m) ? '<span class="new">جديد</span>' : ""}<span class="dur">${m.duration}s</span></div>`;
   return `<article class="card ${p === 1 ? "yes" : p === 0 ? "no" : ""}" data-code="${m.code}">${thumb}
   <div class="body"><div class="ttl"><span>${esc(isH ? m.title : m.name)}</span><span class="c">${m.code}</span></div>
   <div class="desc">${esc(m.description)}</div>
   <div class="acts"><button class="y" data-pick="1" aria-pressed="${p === 1}">أي ✓</button><button class="n" data-pick="0" aria-pressed="${p === 0}">لا ✗</button><button class="cp" data-copy="${m.code}" title="انسخ الكود">⧉</button></div></div></article>`;
 }
+function skillsHtml() {
+  if (!["all", "K", "NEW"].includes(cat) || onlyYes) return "";
+  const q = query.toLowerCase();
+  const list = SK.filter((s) => (cat !== "NEW" || isNew(s)) && (!q || [s.code, s.name, s.by, s.description].join(" ").toLowerCase().includes(q)));
+  if (!list.length) return "";
+  return `<section><div class="section-title"><h2>سكيلز للـAI</h2><span>${list.length} سكيل · ركّبها جنب البنك · الأكواد بتبدأ بحرف <code>K</code></span></div><div class="skills">${list.map((s) => `<article class="skill"><div><span class="mono" style="color:var(--accent);font-weight:900">${esc(s.code)}</span>${isNew(s) ? ' <span class="tagnew">جديد</span>' : ""}</div><h3>${esc(s.name)}</h3><div class="by">by ${esc(s.by)} · ${esc(s.license || "")}</div><p>${esc(s.description)}</p><div class="acts2"><button class="btn" data-install="${esc(s.code)}">انسخ أمر التركيب</button><a class="btn sec" href="${esc(s.url)}" target="_blank" rel="noopener" style="text-decoration:none">GitHub</a></div></article>`).join("")}</div></section>`;
+}
 function render() {
   chips();
   const list = all().filter(matches);
+  const sk = skillsHtml();
+  if (!list.length && sk) { $("#main").innerHTML = sk; return tray(); }
   if (!list.length) { $("#main").innerHTML = '<div class="empty">مفيش حركات بالشكل ده. جرّب كلمة تانية.</div>'; return tray(); }
   const groups = {};
   list.forEach((m) => { const k = m.code.startsWith("H") ? "H" : m.category; (groups[k] = groups[k] || []).push(m); });
-  $("#main").innerHTML = Object.keys(groups).sort((a, b) => CATS.findIndex((c) => c[0] === a) - CATS.findIndex((c) => c[0] === b)).map((k) => {
+  $("#main").innerHTML = sk + Object.keys(groups).sort((a, b) => CATS.findIndex((c) => c[0] === a) - CATS.findIndex((c) => c[0] === b)).map((k) => {
     const name = k === "H" ? "مكتبة HyperFrames (بلوكات وكومبوننتس جاهزة)" : DATA.categories[k].name;
     const note = k === "H" ? "بتتركّب بأمر <code>npx hyperframes add</code> — الكود H ثابت للأبد" : `الأكواد بتبدأ بحرف <code>${k}</code>`;
     return `<section><div class="section-title"><h2>${esc(name)}</h2><span>${groups[k].length} حركة · ${note}</span></div><div class="grid">${groups[k].map(card).join("")}</div></section>`;
@@ -218,6 +241,7 @@ document.addEventListener("click", (e) => {
   const chip = e.target.closest(".chip"); if (chip) { cat = chip.dataset.k; render(); return; }
   const pk = e.target.closest("[data-pick]");
   if (pk) { const code = pk.closest(".card").dataset.code, v = +pk.dataset.pick; picks[code] = picks[code] === v ? undefined : v; if (picks[code] === undefined) delete picks[code]; save(); const c = pk.closest(".card"); c.outerHTML = card(all().find((x) => x.code === code)); tray(); return; }
+  const ins = e.target.closest("[data-install]"); if (ins) { const s = SK.find((x) => x.code === ins.dataset.install); if (s) copy(s.install, "اتنسخ أمر التركيب ✓"); return; }
   const cp = e.target.closest("[data-copy]"); if (cp) { copy(cp.dataset.copy, `اتنسخ ${cp.dataset.copy} ✓`); return; }
   const th = e.target.closest(".thumb"); if (th) { openDlg(th.dataset.open); return; }
 });

@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "code": "K901",
+      "name": "motion-design",
+      "by": "LottieFiles",
+      "license": "MIT",
+      "addedIn": "v2",
+      "description": "سكيل بتعلّم الـAI مبادئ الموشن: التوقيت والـeasing والكوريوجرافي ومبادئ ديزني الـ12. ركّبها جنب البنك عشان الحركات اللي يعملها تبقى بتوقيت مظبوط مش عشوائي.",
+      "url": "https://github.com/LottieFiles/motion-design-skill",
+      "install": "git clone --depth 1 https://github.com/LottieFiles/motion-design-skill /tmp/mds && mkdir -p .claude/skills && cp -R /tmp/mds/skills/motion-design .claude/skills/"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "code": "U513",
+  "slug": "addon-tracker",
+  "name": "شريط الأدوات ✓",
+  "category": "U",
+  "categoryName": "واجهات وإشعارات",
+  "description": "شريط زجاج فوق فيه أيقونات الأدوات، وكل ما تخلص أداة بتاخد علامة ✓ والعدّاد يزيد (1/4 ← 4/4). مثالي لريلز «الأدوات المرقّمة».",
+  "duration": 5,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "ui",
+    "progress",
+    "checklist",
+    "series"
+  ],
+  "params": {
+    "label": "ADD-ONS",
+    "items": "11|M|◎|▶",
+    "total": 4
+  },
+  "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»",
+  "path": "motions/U513-addon-tracker/index.html",
+  "addedIn": "v2"
+}

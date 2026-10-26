@@ -1,8 +1,13 @@
 {
  "name": "BanKmotion By Mahmoud Ismail",
- "version": "v1",
- "updated": "2026-10-14",
+ "version": "v2",
+ "updated": "2026-10-26",
  "repo": "https://github.com/mahmoudisma3il/Mahmoud-Ismail-Bankmotion",
+ "highlights": [
+  "10 حركات جديدة لسلسلة «الأدوات المرقّمة»: شريط الأدوات ✓، توصيل أداتين، رقم القسم الضخم، كبسولة العدّ، كود بيتكتب، منحنى التوقيت، تايملاين وكي فريمز، إضاءة بتغيّر لونها، موبايل والأدوات حواليه، كابشن في كبسولة.",
+  "قسم جديد: سكيلز للـAI — أولها motion-design من LottieFiles (مبادئ التوقيت والـeasing).",
+  "كل الحركات بقت بالهوية الجديدة: رمادي + بنفسجي #5B4FDB، والبنك بقى صفحة واحدة بتتحدّث."
+ ],
  "howToResolve": "Find the code in motions[] (own motions, folder = dir) or hyperframes[] (install with the `install` command). Codes never change.",
  "categories": {
   "T": {
@@ -222,6 +227,30 @@
    "path": "motions/B808-aurora/index.html",
    "addedIn": "v1",
    "dir": "motions/B808-aurora"
+  },
+  {
+   "code": "B809",
+   "slug": "tint-shift",
+   "name": "إضاءة بتغيّر لونها",
+   "category": "B",
+   "categoryName": "خلفيات وتأثيرات",
+   "description": "خلفية غامقة فيها إضاءة ناعمة بتتحرك، ولونها بيتغيّر مع كل قسم (بنفسجي ← أزرق ← أخضر ← دهبي). تحت أي سلسلة مرقّمة.",
+   "duration": 8,
+   "size": "1080x1920",
+   "theme": "dark",
+   "tags": [
+    "background",
+    "gradient",
+    "glow",
+    "section"
+   ],
+   "params": {
+    "colors": "#5B4FDB,#2F6BFF,#1FA37A,#D9A441"
+   },
+   "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»",
+   "path": "motions/B809-tint-shift/index.html",
+   "addedIn": "v2",
+   "dir": "motions/B809-tint-shift"
   },
   {
    "code": "C701",
@@ -720,6 +749,33 @@
    "dir": "motions/N412-donut"
   },
   {
+   "code": "N413",
+   "slug": "step-chip",
+   "name": "كبسولة العدّ",
+   "category": "N",
+   "categoryName": "أرقام وبيانات",
+   "description": "كبسولة صغيرة «04 / 10» الرقم فيها بيتقلب لفوق، وجنبها كبسولة اسم القسم. تتحط في ركن أي مشهد في سلسلة.",
+   "duration": 3,
+   "size": "1080x1920",
+   "theme": "dark",
+   "tags": [
+    "number",
+    "counter",
+    "series",
+    "chip"
+   ],
+   "params": {
+    "from": 3,
+    "to": 4,
+    "total": 10,
+    "tag": "✦ سكيلز للشكل"
+   },
+   "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»",
+   "path": "motions/N413-step-chip/index.html",
+   "addedIn": "v2",
+   "dir": "motions/N413-step-chip"
+  },
+  {
    "code": "P601",
    "slug": "text-behind",
    "name": "نص ورا الشخص",
@@ -1005,6 +1061,33 @@
    "path": "motions/P612-spotlight/index.html",
    "addedIn": "v1",
    "dir": "motions/P612-spotlight"
+  },
+  {
+   "code": "P613",
+   "slug": "phone-hub",
+   "name": "موبايل في النص والأدوات حواليه",
+   "category": "P",
+   "categoryName": "صور وأشخاص وكاميرا",
+   "description": "موبايل في نص الشاشة وحواليه 4 كروت أدوات، خطوط بتترسم من كل أداة للموبايل وكل واحدة تاخد ✓، وتحت «MADE WITH 4/4». قفلة «الريل ده معمول بيهم».",
+   "duration": 5,
+   "size": "1080x1920",
+   "theme": "dark",
+   "tags": [
+    "photo",
+    "phone",
+    "mockup",
+    "outro",
+    "diagram"
+   ],
+   "params": {
+    "items": "ElevenLabs|Magnific|Chrome|Bankmotion",
+    "icons": "II|M|◎|B",
+    "footer": "MADE WITH"
+   },
+   "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»",
+   "path": "motions/P613-phone-hub/index.html",
+   "addedIn": "v2",
+   "dir": "motions/P613-phone-hub"
   },
   {
    "code": "S301",
@@ -2083,6 +2166,58 @@
    "dir": "motions/T124-quote"
   },
   {
+   "code": "T125",
+   "slug": "big-index",
+   "name": "رقم القسم الضخم",
+   "category": "T",
+   "categoryName": "نصوص وتايبوجرافي",
+   "description": "كلمة صغيرة فوق (ADD-ON) ورقم ضخم «01» بيتقلب لحد ما يثبت، وتحته نقط بتوضح إنت فين في السلسلة.",
+   "duration": 3,
+   "size": "1080x1920",
+   "theme": "dark",
+   "tags": [
+    "text",
+    "number",
+    "section",
+    "series"
+   ],
+   "params": {
+    "label": "ADD-ON",
+    "num": 1,
+    "total": 4,
+    "title": "يعمل التعليق الصوتي"
+   },
+   "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»",
+   "path": "motions/T125-big-index/index.html",
+   "addedIn": "v2",
+   "dir": "motions/T125-big-index"
+  },
+  {
+   "code": "T126",
+   "slug": "caption-pill",
+   "name": "كابشن في كبسولة",
+   "category": "T",
+   "categoryName": "نصوص وتايبوجرافي",
+   "description": "كابشن تحت الشاشة جوه كبسولة زجاج، الكلام بيظهر كلمة كلمة والكلمة المهمة بتنوّر بلون مميز. للكابشن بتاع أي ريل فيه تعليق صوتي.",
+   "duration": 4,
+   "size": "1080x1920",
+   "theme": "dark",
+   "tags": [
+    "text",
+    "caption",
+    "subtitle",
+    "pill"
+   ],
+   "params": {
+    "text": "بيفتح المواقع بنفسه ويصوّر الشاشة",
+    "hi": "بنفسه"
+   },
+   "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»",
+   "path": "motions/T126-caption-pill/index.html",
+   "addedIn": "v2",
+   "dir": "motions/T126-caption-pill"
+  },
+  {
    "code": "U501",
    "slug": "notification",
    "name": "إشعار بينزل",
@@ -2376,6 +2511,151 @@
    "path": "motions/U512-badge-burst/index.html",
    "addedIn": "v1",
    "dir": "motions/U512-badge-burst"
+  },
+  {
+   "code": "U513",
+   "slug": "addon-tracker",
+   "name": "شريط الأدوات ✓",
+   "category": "U",
+   "categoryName": "واجهات وإشعارات",
+   "description": "شريط زجاج فوق فيه أيقونات الأدوات، وكل ما تخلص أداة بتاخد علامة ✓ والعدّاد يزيد (1/4 ← 4/4). مثالي لريلز «الأدوات المرقّمة».",
+   "duration": 5,
+   "size": "1080x1920",
+   "theme": "dark",
+   "tags": [
+    "ui",
+    "progress",
+    "checklist",
+    "series"
+   ],
+   "params": {
+    "label": "ADD-ONS",
+    "items": "11|M|◎|▶",
+    "total": 4
+   },
+   "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»",
+   "path": "motions/U513-addon-tracker/index.html",
+   "addedIn": "v2",
+   "dir": "motions/U513-addon-tracker"
+  },
+  {
+   "code": "U514",
+   "slug": "node-link",
+   "name": "توصيل أداتين",
+   "category": "U",
+   "categoryName": "واجهات وإشعارات",
+   "description": "كارتين لأداتين بيطلعوا، وخط متقطّع بيترسم بينهم وكبسولة صغيرة (زي MCP) بتجري عليه. لشرح «الأداة دي بتتوصل بدي».",
+   "duration": 4,
+   "size": "1080x1920",
+   "theme": "dark",
+   "tags": [
+    "ui",
+    "diagram",
+    "connect",
+    "ai",
+    "mcp"
+   ],
+   "params": {
+    "left": "Claude",
+    "right": "ElevenLabs",
+    "pill": "MCP",
+    "leftIcon": "✳",
+    "rightIcon": "II"
+   },
+   "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»",
+   "path": "motions/U514-node-link/index.html",
+   "addedIn": "v2",
+   "dir": "motions/U514-node-link"
+  },
+  {
+   "code": "U515",
+   "slug": "code-type",
+   "name": "كود بيتكتب",
+   "category": "U",
+   "categoryName": "واجهات وإشعارات",
+   "description": "كارت محرّر كود زجاج، السطور بتتكتب حرف حرف ومؤشر بيرمش، وفي الآخر بادج ✓ بتنطّ. لشرح «الـAI بيكتب الكود».",
+   "duration": 5,
+   "size": "1080x1920",
+   "theme": "dark",
+   "tags": [
+    "ui",
+    "code",
+    "typewriter",
+    "developer"
+   ],
+   "params": {
+    "file": "Scene.tsx",
+    "badge": "✓ Opus",
+    "code": "<Sequence from={0}>|  <Title spring={?} />|  <Scene3D engine={?} />|  <Audio src={?} />|</Sequence>"
+   },
+   "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»",
+   "path": "motions/U515-code-type/index.html",
+   "addedIn": "v2",
+   "dir": "motions/U515-code-type"
+  },
+  {
+   "code": "U516",
+   "slug": "ease-curve",
+   "name": "منحنى التوقيت",
+   "category": "U",
+   "categoryName": "واجهات وإشعارات",
+   "description": "رسم بياني لمنحنى ease-in-out بيترسم، ونقطة بتجري عليه، ومربع تحته بيتحرك بنفس التوقيت بالظبط. لشرح مبادئ التوقيت.",
+   "duration": 4,
+   "size": "1080x1920",
+   "theme": "dark",
+   "tags": [
+    "ui",
+    "easing",
+    "graph",
+    "motion-design"
+   ],
+   "params": {
+    "label": "ease-in-out",
+    "c1": "0.65,0",
+    "c2": "0.35,1"
+   },
+   "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة» · مبادئ التوقيت من motion-design skill (LottieFiles, MIT)",
+   "path": "motions/U516-ease-curve/index.html",
+   "addedIn": "v2",
+   "dir": "motions/U516-ease-curve"
+  },
+  {
+   "code": "U517",
+   "slug": "timeline-keys",
+   "name": "تايملاين وكي فريمز",
+   "category": "U",
+   "categoryName": "واجهات وإشعارات",
+   "description": "تايملاين فيه 4 تراكات، الكي فريمز (معيّنات) بتنطّ عليها، وخط الـplayhead بيعدّي وكل كي فريم يلمسه بينوّر. شكل برامج المونتاج اللي المونتير عارفه.",
+   "duration": 4,
+   "size": "1080x1920",
+   "theme": "dark",
+   "tags": [
+    "ui",
+    "timeline",
+    "keyframes",
+    "gsap",
+    "editor"
+   ],
+   "params": {
+    "tracks": 4,
+    "label": "GSAP Timeline"
+   },
+   "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»",
+   "path": "motions/U517-timeline-keys/index.html",
+   "addedIn": "v2",
+   "dir": "motions/U517-timeline-keys"
+  }
+ ],
+ "skills": [
+  {
+   "code": "K901",
+   "name": "motion-design",
+   "by": "LottieFiles",
+   "license": "MIT",
+   "addedIn": "v2",
+   "description": "سكيل بتعلّم الـAI مبادئ الموشن: التوقيت والـeasing والكوريوجرافي ومبادئ ديزني الـ12. ركّبها جنب البنك عشان الحركات اللي يعملها تبقى بتوقيت مظبوط مش عشوائي.",
+   "url": "https://github.com/LottieFiles/motion-design-skill",
+   "install": "git clone --depth 1 https://github.com/LottieFiles/motion-design-skill /tmp/mds && mkdir -p .claude/skills && cp -R /tmp/mds/skills/motion-design .claude/skills/"
   }
  ],
  "hyperframes": [

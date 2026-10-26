@@ -1,0 +1,23 @@
+{
+  "code": "B809",
+  "slug": "tint-shift",
+  "name": "إضاءة بتغيّر لونها",
+  "category": "B",
+  "categoryName": "خلفيات وتأثيرات",
+  "description": "خلفية غامقة فيها إضاءة ناعمة بتتحرك، ولونها بيتغيّر مع كل قسم (بنفسجي ← أزرق ← أخضر ← دهبي). تحت أي سلسلة مرقّمة.",
+  "duration": 8,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "background",
+    "gradient",
+    "glow",
+    "section"
+  ],
+  "params": {
+    "colors": "#5B4FDB,#2F6BFF,#1FA37A,#D9A441"
+  },
+  "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»",
+  "path": "motions/B809-tint-shift/index.html",
+  "addedIn": "v2"
+}

@@ -19,6 +19,10 @@ const hfCount = Array.isArray(catalog.hyperframes) ? catalog.hyperframes.length
 const catCount = Array.isArray(catalog.categories) ? catalog.categories.length
   : Object.keys(catalog.categories || {}).length;
 const { videos = [] } = JSON.parse(read("videos/videos.json"));
+const tools = existsSync(ROOT + "site/tools.json") ? JSON.parse(read("site/tools.json")).items || [] : [];
+const latestTool = tools.reduce((a, t) => (t.addedIn > a ? t.addedIn : a), "");
+const newMotions = motions.filter((m) => m.addedIn === BANK_VERSION).length;
+const newSkills = (catalog.skills || []).filter((x) => x.addedIn === BANK_VERSION).length;
 
 const SITE = {
   name: "Mahmoud Ismail",
@@ -52,6 +56,7 @@ const header = (base, current) => `
   <nav class="nav">
     <a href="${base}#bank"${current === "bank" ? ' aria-current="page"' : ""}>بنك الحركات</a>
     <a href="${base}#videos"${current === "videos" ? ' aria-current="page"' : ""}>الفيديوهات</a>
+    <a href="${base}#tools"${current === "tools" ? ' aria-current="page"' : ""}>الأدوات</a>
     <a class="work" href="${SITE.portfolio}" target="_blank" rel="noopener">شغلي ↗</a>
   </nav>
 </header>`;
@@ -104,6 +109,13 @@ ${header("", "")}
 
 <p class="note">مش هقولك اكتب كومنت وهبعتلك. كل حاجة هنا — خش وشوف براحتك انت محتاج إيه.</p>
 
+${(catalog.highlights || []).length ? `<section class="news" aria-label="الجديد">
+  <div class="news-h"><b>الجديد</b><span class="en" style="text-transform:none">BanKmotion ${esc(BANK_VERSION)} · ${esc(catalog.updated || "")}</span></div>
+  <div class="news-stats">${newMotions ? `<span><b>+${newMotions}</b> حركة جديدة</span>` : ""}${newSkills ? `<span><b>+${newSkills}</b> سكيل</span>` : ""}${tools.length ? `<span><b>${tools.length}</b> أداة</span>` : ""}</div>
+  <ul>${catalog.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>
+  <a class="btn ghost" href="${esc(LATEST)}/">شوف الجديد في البنك ←</a>
+</section>` : ""}
+
 <div class="sec" id="bank"><h2>بنك الحركات</h2><span class="en" style="text-transform:none">BanKmotion · ${esc(BANK_VERSION)}</span></div>
 <a class="bank" href="${esc(LATEST)}/">
   <div class="txt">
@@ -124,6 +136,10 @@ ${header("", "")}
 ${videos.length
   ? `<div class="grid">${videos.map(videoCard).join("")}</div>`
   : `<div class="empty"><b>أول فيديو نازل قريب</b>كل فيديو بنزّله هيبقى ليه صفحة هنا: الفيديو، الطريقة، والأدوات.</div>`}
+
+<div class="sec" id="tools"><h2>الأدوات</h2><span class="en">Tools I use</span></div>
+<p class="sub">الأدوات اللي بستخدمها مع البنك في الفيديوهات. (السكيلز والحركات جوه <a href="${esc(LATEST)}/">البنك</a>.)</p>
+<div class="tools">${tools.map((t) => `<a class="tool" href="${esc(t.url)}" target="_blank" rel="noopener"><span class="en">${esc(t.type)}${t.addedIn === latestTool && latestTool ? " · new" : ""}</span><b>${esc(t.name)}</b><span>${esc(t.use)}</span></a>`).join("")}</div>
 ${footer()}`;
 
 writeFileSync(ROOT + "index.html", home);

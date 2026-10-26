@@ -1,0 +1,24 @@
+{
+  "code": "T126",
+  "slug": "caption-pill",
+  "name": "كابشن في كبسولة",
+  "category": "T",
+  "categoryName": "نصوص وتايبوجرافي",
+  "description": "كابشن تحت الشاشة جوه كبسولة زجاج، الكلام بيظهر كلمة كلمة والكلمة المهمة بتنوّر بلون مميز. للكابشن بتاع أي ريل فيه تعليق صوتي.",
+  "duration": 4,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "text",
+    "caption",
+    "subtitle",
+    "pill"
+  ],
+  "params": {
+    "text": "بيفتح المواقع بنفسه ويصوّر الشاشة",
+    "hi": "بنفسه"
+  },
+  "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»",
+  "path": "motions/T126-caption-pill/index.html",
+  "addedIn": "v2"
+}

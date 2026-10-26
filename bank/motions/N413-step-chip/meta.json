@@ -1,0 +1,26 @@
+{
+  "code": "N413",
+  "slug": "step-chip",
+  "name": "كبسولة العدّ",
+  "category": "N",
+  "categoryName": "أرقام وبيانات",
+  "description": "كبسولة صغيرة «04 / 10» الرقم فيها بيتقلب لفوق، وجنبها كبسولة اسم القسم. تتحط في ركن أي مشهد في سلسلة.",
+  "duration": 3,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "number",
+    "counter",
+    "series",
+    "chip"
+  ],
+  "params": {
+    "from": 3,
+    "to": 4,
+    "total": 10,
+    "tag": "✦ سكيلز للشكل"
+  },
+  "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»",
+  "path": "motions/N413-step-chip/index.html",
+  "addedIn": "v2"
+}

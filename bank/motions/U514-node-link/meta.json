@@ -1,0 +1,28 @@
+{
+  "code": "U514",
+  "slug": "node-link",
+  "name": "توصيل أداتين",
+  "category": "U",
+  "categoryName": "واجهات وإشعارات",
+  "description": "كارتين لأداتين بيطلعوا، وخط متقطّع بيترسم بينهم وكبسولة صغيرة (زي MCP) بتجري عليه. لشرح «الأداة دي بتتوصل بدي».",
+  "duration": 4,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "ui",
+    "diagram",
+    "connect",
+    "ai",
+    "mcp"
+  ],
+  "params": {
+    "left": "Claude",
+    "right": "ElevenLabs",
+    "pill": "MCP",
+    "leftIcon": "✳",
+    "rightIcon": "II"
+  },
+  "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»",
+  "path": "motions/U514-node-link/index.html",
+  "addedIn": "v2"
+}

@@ -1,0 +1,25 @@
+{
+  "code": "U515",
+  "slug": "code-type",
+  "name": "كود بيتكتب",
+  "category": "U",
+  "categoryName": "واجهات وإشعارات",
+  "description": "كارت محرّر كود زجاج، السطور بتتكتب حرف حرف ومؤشر بيرمش، وفي الآخر بادج ✓ بتنطّ. لشرح «الـAI بيكتب الكود».",
+  "duration": 5,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "ui",
+    "code",
+    "typewriter",
+    "developer"
+  ],
+  "params": {
+    "file": "Scene.tsx",
+    "badge": "✓ Opus",
+    "code": "<Sequence from={0}>|  <Title spring={?} />|  <Scene3D engine={?} />|  <Audio src={?} />|</Sequence>"
+  },
+  "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»",
+  "path": "motions/U515-code-type/index.html",
+  "addedIn": "v2"
+}

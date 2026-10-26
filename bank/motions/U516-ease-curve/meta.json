@@ -1,0 +1,25 @@
+{
+  "code": "U516",
+  "slug": "ease-curve",
+  "name": "منحنى التوقيت",
+  "category": "U",
+  "categoryName": "واجهات وإشعارات",
+  "description": "رسم بياني لمنحنى ease-in-out بيترسم، ونقطة بتجري عليه، ومربع تحته بيتحرك بنفس التوقيت بالظبط. لشرح مبادئ التوقيت.",
+  "duration": 4,
+  "size": "1080x1920",
+  "theme": "dark",
+  "tags": [
+    "ui",
+    "easing",
+    "graph",
+    "motion-design"
+  ],
+  "params": {
+    "label": "ease-in-out",
+    "c1": "0.65,0",
+    "c2": "0.35,1"
+  },
+  "source": "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة» · مبادئ التوقيت من motion-design skill (LottieFiles, MIT)",
+  "path": "motions/U516-ease-curve/index.html",
+  "addedIn": "v2"
+}
