@@ -104,10 +104,10 @@ ${header("", "")}
 
 <p class="note">مش هقولك اكتب كومنت وهبعتلك. كل حاجة هنا — خش وشوف براحتك انت محتاج إيه.</p>
 
-<div class="sec" id="bank"><h2>بنك الحركات</h2><span class="en">Motion Bank · ${esc(BANK_VERSION)}</span></div>
+<div class="sec" id="bank"><h2>بنك الحركات</h2><span class="en" style="text-transform:none">BanKmotion · ${esc(BANK_VERSION)}</span></div>
 <a class="bank" href="${esc(LATEST)}/">
   <div class="txt">
-    <span class="en">Open the bank</span>
+    <span class="en" style="text-transform:none;letter-spacing:.04em;font-size:13px">BanKmotion By Mahmoud Ismail</span>
     <h3>مكتبة حركات موشن جاهزة بالكود</h3>
     <p>كل حركة ليها كود ثابت زي <code>${esc(sampleCodes[0] || "S302")}</code> — تطلبه من Claude أو Codex وهو يركّبها في الفيديو بتاعك.</p>
     <div class="stats">

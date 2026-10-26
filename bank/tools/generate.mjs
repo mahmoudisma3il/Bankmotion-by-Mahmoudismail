@@ -1,4 +1,4 @@
-// Mahmoud Ismail Bankmotion — generator
+// BanKmotion By Mahmoud Ismail — generator
 // Turns the motion definitions in src/defs/*.mjs into standalone HyperFrames
 // compositions: motions/<CODE>-<slug>/index.html + meta.json + README.md
 // Usage:  node tools/generate.mjs            (all)
@@ -92,7 +92,7 @@ export function buildHtml(def) {
 <meta name="viewport" content="width=1080, height=1920" />
 <title>${def.code} — ${def.name}</title>
 <!--
-  Mahmoud Ismail Bankmotion · ${def.code} · ${def.name} (${def.slug})
+  BanKmotion By Mahmoud Ismail · ${def.code} · ${def.name} (${def.slug})
   ${def.desc}
   HyperFrames standalone composition · 1080×1920 (9:16) · ${def.dur}s
   Edit the P object (text, colors, numbers) at the top of the script.

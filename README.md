@@ -1,4 +1,4 @@
-# بنك الحركات — Mahmoud Ismail Bankmotion
+# بنك الحركات — BanKmotion By Mahmoud Ismail
 
 مكتبة حركات موشن جرافيك جاهزة بالكود للريلز (9:16)، كل حركة ليها كود ثابت زي `S302` تقدر تطلبه من Claude أو Codex.
 

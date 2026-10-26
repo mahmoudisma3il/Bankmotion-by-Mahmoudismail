@@ -1,4 +1,4 @@
-# AGENTS.md — Mahmoud Ismail Bankmotion (بنك الحركات)
+# AGENTS.md — BanKmotion By Mahmoud Ismail (بنك الحركات)
 
 This folder is a **motion bank**: ready-made, coded motion-graphics moves for short vertical videos (1080×1920, 9:16), built as **HyperFrames compositions** (HTML + GSAP, deterministic, seekable).
 Every motion has a **permanent code** like `S302`. When the user says "use motion S302" (or "حركة S302", "s302", "استخدم 4 و 9"), resolve it from this bank. Never guess what a code means.

@@ -1,4 +1,4 @@
-# قائمة الحركات — Mahmoud Ismail Bankmotion (v1)
+# قائمة الحركات — BanKmotion By Mahmoud Ismail (v1)
 
 96 حركة أصلية + 447 من مكتبة HyperFrames.
 
