@@ -10,7 +10,8 @@ const read = (p) => readFileSync(ROOT + p, "utf8");
 const esc = (s = "") =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-const LATEST = read("LATEST").trim();
+const LATEST = read("LATEST").trim(); // folder of the bank (always "bank")
+const BANK_VERSION = JSON.parse(read(`${LATEST}/bank.config.json`)).version || "";
 const catalog = JSON.parse(read(`${LATEST}/catalog.json`));
 const motions = catalog.motions || [];
 const hfCount = Array.isArray(catalog.hyperframes) ? catalog.hyperframes.length
@@ -103,7 +104,7 @@ ${header("", "")}
 
 <p class="note">مش هقولك اكتب كومنت وهبعتلك. كل حاجة هنا — خش وشوف براحتك انت محتاج إيه.</p>
 
-<div class="sec" id="bank"><h2>بنك الحركات</h2><span class="en">Motion Bank · ${esc(LATEST)}</span></div>
+<div class="sec" id="bank"><h2>بنك الحركات</h2><span class="en">Motion Bank · ${esc(BANK_VERSION)}</span></div>
 <a class="bank" href="${esc(LATEST)}/">
   <div class="txt">
     <span class="en">Open the bank</span>
@@ -159,4 +160,4 @@ ${footer()}`;
   writeFileSync(ROOT + dir + "/index.html", page);
 }
 
-console.log(`ok — home + ${videos.length} video page(s); bank → ${LATEST}/ (${motions.length} motions)`);
+console.log(`ok — home + ${videos.length} video page(s); bank → ${LATEST}/ ${BANK_VERSION} (${motions.length} motions)`);
