@@ -18,7 +18,7 @@
 5. `node tools/build.mjs`، وبعدين `python3 tools/check.py`: لازم كله يطلع ok.
 6. **سجّل في `CHANGELOG.md`** الحركات الجديدة بأكوادها.
 7. **الجهاز:** انسخ البنك كله فوق فولدر `Bank Motion`. تحديث كامل في المكان، ومن غير مسح أي حاجة المستخدم ضافها بنفسه.
-8. **GitHub:** في الريبو `Mahmoud-Ismail-Bankmotion`:
+8. **GitHub:** في الريبو `Bankmotion-by-Mahmoudismail`:
    - حدّث فولدر `bank/` في مكانه (دمج: متمسحش أي حركة قديمة).
    - حدّث جدول النسخ في `README.md`، وبعدين شغّل `node site/build.mjs` من جذر الريبو عشان رقم النسخة والأرقام تتحدّث في الصفحة الرئيسية.
    - Commit: `Bankmotion vN — <عدد> حركة جديدة`، واعمل tag `vN` وGitHub Release.

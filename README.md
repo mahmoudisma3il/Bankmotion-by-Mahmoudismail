@@ -2,7 +2,7 @@
 
 مكتبة حركات موشن جرافيك جاهزة بالكود للريلز (9:16)، كل حركة ليها كود ثابت زي `S302` تقدر تطلبه من Claude أو Codex.
 
-- **الموقع:** https://mahmoudisma3il.github.io/Mahmoud-Ismail-Bankmotion/ — البنك + صفحة لكل فيديو (الطريقة والأدوات). إضافة فيديو: [`ADDING-VIDEOS.md`](ADDING-VIDEOS.md)
+- **الموقع:** https://mahmoudisma3il.github.io/Bankmotion-by-Mahmoudismail/ — البنك + صفحة لكل فيديو (الطريقة والأدوات). إضافة فيديو: [`ADDING-VIDEOS.md`](ADDING-VIDEOS.md)
 - **البنك (صفحة واحدة بتتحدّث):** [`bank/`](bank/)
 - **الفهرس للـAI:** [`bank/catalog.json`](bank/catalog.json) · الدليل: [`bank/AGENTS.md`](bank/AGENTS.md)
 - **قايمة الحركات:** [`bank/MOTIONS.md`](bank/MOTIONS.md)
