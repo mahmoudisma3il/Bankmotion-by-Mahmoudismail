@@ -28,6 +28,8 @@ code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9e
 .nav{display:flex;gap:6px;flex-wrap:wrap}
 .nav a{text-decoration:none;font-weight:700;font-size:15px;padding:6px 14px;border-radius:999px}
 .nav a:hover,.nav a[aria-current="page"]{background:var(--card)}
+.nav a.work{background:var(--accent);color:#fff}
+.nav a.work:hover{background:#4a3fc4}
 
 /* hero */
 .hero{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:28px 0 40px}

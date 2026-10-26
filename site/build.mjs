@@ -50,6 +50,7 @@ const header = (base, current) => `
   <nav class="nav">
     <a href="${base}#bank"${current === "bank" ? ' aria-current="page"' : ""}>بنك الحركات</a>
     <a href="${base}#videos"${current === "videos" ? ' aria-current="page"' : ""}>الفيديوهات</a>
+    <a class="work" href="${SITE.portfolio}" target="_blank" rel="noopener">شغلي ↗</a>
   </nav>
 </header>`;
 
