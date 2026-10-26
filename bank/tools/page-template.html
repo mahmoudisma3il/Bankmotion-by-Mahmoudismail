@@ -97,6 +97,7 @@ footer a{color:inherit}
 .new{position:absolute;top:8px;left:8px;background:var(--ink);color:#fff;font-weight:800;font-size:11px;padding:2px 9px;border-radius:999px;z-index:2}
 .howuse{margin-top:14px;background:rgba(91,79,219,.08);border:1px solid rgba(91,79,219,.2);border-radius:14px;padding:12px 14px;font-size:14px;line-height:1.7}
 .howuse .ht{color:var(--accent);font-size:15px;font-weight:800}.howuse ol{margin:4px 0 6px;padding-inline-start:20px}.howuse small{color:var(--muted)}
+.btn .who{font-weight:600;opacity:.8;font-size:.85em}
 .tagnew{background:var(--ink);color:#fff;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-inline-start:6px}
 .skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
 .skill{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--shadow)}
@@ -176,7 +177,7 @@ function skillsHtml() {
   const q = query.toLowerCase();
   const list = SK.filter((s) => (cat !== "NEW" || isNew(s)) && (!q || [s.code, s.name, s.by, s.description].join(" ").toLowerCase().includes(q)));
   if (!list.length) return "";
-  return `<section><div class="section-title"><h2>سكيلز للـAI</h2><span>${list.length} سكيل · ركّبها جنب البنك · الأكواد بتبدأ بحرف <code>K</code></span></div><div class="skills">${list.map((s) => `<article class="skill"><div><span class="mono" style="color:var(--accent);font-weight:900">${esc(s.code)}</span>${isNew(s) ? ' <span class="tagnew">جديد</span>' : ""}</div><h3>${esc(s.name)}</h3><div class="by">by ${esc(s.by)} · ${esc(s.license || "")}</div><p>${esc(s.description)}</p><div class="acts2"><button class="btn" data-install="${esc(s.code)}">انسخ أمر التركيب</button><a class="btn sec" href="${esc(s.url)}" target="_blank" rel="noopener" style="text-decoration:none">GitHub</a></div></article>`).join("")}</div></section>`;
+  return `<section><div class="section-title"><h2>سكيلز للـAI</h2><span>${list.length} سكيل · ركّبها جنب البنك · الأكواد بتبدأ بحرف <code>K</code></span></div><div class="skills">${list.map((s) => `<article class="skill"><div><span class="mono" style="color:var(--accent);font-weight:900">${esc(s.code)}</span>${isNew(s) ? ' <span class="tagnew">جديد</span>' : ""}</div><h3>${esc(s.name)}</h3><div class="by">by ${esc(s.by)} · ${esc(s.license || "")}</div><p>${esc(s.description)}</p><div class="acts2"><button class="btn" data-install="${esc(s.code)}">انسخ أمر التركيب <small class="who">(مبرمج / Terminal)</small></button><a class="btn sec" href="${esc(s.url)}" target="_blank" rel="noopener" style="text-decoration:none">GitHub</a></div></article>`).join("")}</div></section>`;
 }
 function render() {
   chips();
@@ -229,7 +230,7 @@ function openDlg(code) {
     ${isH ? `<tr><td>التركيب</td><td class="mono">${esc(m.install)}</td></tr>` : `<tr><td>الملف</td><td class="mono">${esc(m.path)}</td></tr><tr><td>المصدر</td><td>${esc(m.source)}</td></tr>`}</table>
     ${params ? "<b>القيم اللي تتغير (P):</b>" + params : ""}
     <div class="pre" id="pp">${esc(promptFor([m.code]))}</div>
-    <div class="row" style="margin-top:12px"><button class="btn" id="cpP">انسخ للـAI</button>${isH ? `<button class="btn sec" id="cpI">انسخ أمر التركيب</button>` : `<a class="btn sec" href="${esc(m.dir)}/index.html" target="_blank" style="text-decoration:none">افتح لوحدها</a>`}</div>
+    <div class="row" style="margin-top:12px"><button class="btn" id="cpP">انسخ للـAI <small class="who">(مونتير / فيديو إديتور)</small></button>${isH ? `<button class="btn sec" id="cpI">انسخ أمر التركيب <small class="who">(مبرمج / Terminal)</small></button>` : `<a class="btn sec" href="${esc(m.dir)}/index.html" target="_blank" style="text-decoration:none">افتح لوحدها</a>`}</div>
     <div class="howuse"><div class="ht">إزاي تستخدمها؟</div><ol>
       <li>دوس <b>«انسخ للـAI»</b>.</li>
       <li>افتح Claude أو Codex والصق الكلام، واكتب فكرتك بكلامك العادي. مثلًا: «عايز ريل ١٥ ثانية عن منتجي، واستخدم الحركة دي في الأول».</li>
