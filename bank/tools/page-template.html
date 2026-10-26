@@ -20,7 +20,7 @@ header{padding:10px 0 18px}
 .site nav a{text-decoration:none;color:var(--ink);font-weight:700;font-size:15px;padding:6px 14px;border-radius:999px;white-space:nowrap}
 .site nav a:hover,.site nav a[aria-current="page"]{background:var(--panel)}
 .site nav a.work{background:var(--accent);color:#fff}
-@media (max-width:480px){.site .logo img{height:34px}.site nav a{padding:5px 9px;font-size:14px}}
+@media (max-width:560px){.site{flex-direction:column;align-items:flex-start;gap:10px}.site .logo img{height:34px}.site nav{flex-wrap:wrap;gap:2px}.site nav a{padding:5px 10px;font-size:14px}}
 .brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
 h1{font-size:clamp(30px,5vw,48px);font-weight:900;margin:0;line-height:1.1}
 h1 b{color:var(--accent)}
@@ -104,7 +104,7 @@ footer a{color:inherit}
 <body>
 <div class="wrap"><div class="site">
   <a class="logo" href="../" aria-label="الرئيسية"><img src="../site/img/logo-BK.svg" alt="Mahmoud Ismail" width="76" height="42"></a>
-  <nav><a href="../#bank" aria-current="page">بنك الحركات</a><a href="../#videos">الفيديوهات</a><a href="../#tools">الأدوات</a><a class="work" href="https://mahmoud-ismaiil.vercel.app" target="_blank" rel="noopener">شغلي ↗</a></nav>
+  <nav><a href="../">الصفحة الأساسية</a><a href="./" aria-current="page">بنك الحركات</a><a href="../#videos">الفيديوهات</a><a href="../#tools">الأدوات</a><a class="work" href="https://mahmoud-ismaiil.vercel.app" target="_blank" rel="noopener">شغلي ↗</a></nav>
 </div></div>
 <header class="wrap">
   <div class="brand"><h1>BanK<b>motion</b></h1><span class="en">By Mahmoud Ismail · بنك الحركات</span><span class="ver" id="ver"></span></div>

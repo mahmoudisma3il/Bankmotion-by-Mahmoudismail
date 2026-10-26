@@ -54,7 +54,8 @@ const header = (base, current) => `
 <header class="top">
   <a class="logo" href="${base}" aria-label="الرئيسية"><img src="${base}site/img/logo-BK.svg" alt="Mahmoud Ismail" width="80" height="44"></a>
   <nav class="nav">
-    <a href="${base}#bank"${current === "bank" ? ' aria-current="page"' : ""}>بنك الحركات</a>
+    <a href="${base}"${current === "home" ? ' aria-current="page"' : ""}>الصفحة الأساسية</a>
+    <a href="${base}${LATEST}/">بنك الحركات</a>
     <a href="${base}#videos"${current === "videos" ? ' aria-current="page"' : ""}>الفيديوهات</a>
     <a href="${base}#tools"${current === "tools" ? ' aria-current="page"' : ""}>الأدوات</a>
     <a class="work" href="${SITE.portfolio}" target="_blank" rel="noopener">شغلي ↗</a>
@@ -98,7 +99,7 @@ for (const m of motions) { if (sampleCodes.length >= 8) break; if (!sampleCodes.
 sampleCodes.length = Math.min(sampleCodes.length, 8);
 
 const home = `${head(SITE.title, SITE.desc, "")}
-${header("", "")}
+${header("", "home")}
 <section class="hero">
   <img class="me" src="site/img/me.webp" alt="محمود إسماعيل" width="132" height="132">
   <div>
