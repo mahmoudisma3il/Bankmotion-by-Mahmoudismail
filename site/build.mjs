@@ -24,6 +24,8 @@ const latestTool = tools.reduce((a, t) => (t.addedIn > a ? t.addedIn : a), "");
 const newMotions = motions.filter((m) => m.addedIn === BANK_VERSION).length;
 const newSkills = (catalog.skills || []).filter((x) => x.addedIn === BANK_VERSION).length;
 
+import { createHash } from "node:crypto";
+const CSS_V = createHash("md5").update(readFileSync(ROOT + "site/site.css")).digest("hex").slice(0, 8);
 const SITE = {
   name: "Mahmoud Ismail",
   title: "محمود إسماعيل — بنك الحركات والفيديوهات",
@@ -45,7 +47,7 @@ const head = (title, desc, base) => `<!doctype html>
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <link rel="icon" href="${base}site/img/logo-BK.svg">
-<link rel="stylesheet" href="${base}site/site.css">
+<link rel="stylesheet" href="${base}site/site.css?v=${CSS_V}">
 </head>
 <body>
 <div class="wrap">`;
