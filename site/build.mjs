@@ -109,11 +109,12 @@ ${header("", "home")}
 </section>
 
 
-${(catalog.highlights || []).length ? `<a class="news-mini" href="${esc(LATEST)}/">
-  <b>الجديد</b><span class="en" style="text-transform:none">BanKmotion ${esc(BANK_VERSION)} · ${esc(catalog.updated || "")}</span>
-  <span class="news-stats">${newMotions ? `<span><b>+${newMotions}</b> حركة جديدة</span>` : ""}${newSkills ? `<span><b>+${newSkills}</b> سكيل</span>` : ""}</span>
-  <span class="go">شوف الجديد ←</span>
-</a>` : ""}
+${(catalog.highlights || []).length ? `<section class="news" aria-label="الجديد">
+  <div class="news-h"><b>الجديد</b><span class="en" style="text-transform:none">BanKmotion ${esc(BANK_VERSION)} · ${esc(catalog.updated || "")}</span></div>
+  <div class="news-stats">${newMotions ? `<span><b>+${newMotions}</b> حركة جديدة</span>` : ""}${newSkills ? `<span><b>+${newSkills}</b> سكيل</span>` : ""}${tools.length ? `<span><b>${tools.length}</b> أداة</span>` : ""}</div>
+  <ul>${catalog.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>
+  <a class="btn ghost" href="${esc(LATEST)}/">شوف الجديد في البنك ←</a>
+</section>` : ""}
 
 <div class="sec"><h2>الأقسام</h2><span class="en">Sections</span></div>
 <div class="sections">
