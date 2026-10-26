@@ -1,0 +1,4 @@
+{
+  "_howto": "كل فيديو جديد = عنصر جديد في videos (الأحدث فوق). حط ملف الفيديو والصورة في videos/<slug>/ وبعدين شغّل: node site/build.mjs — شوف ADDING-VIDEOS.md",
+  "videos": []
+}
