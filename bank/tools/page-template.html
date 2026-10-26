@@ -18,7 +18,8 @@ header{padding:10px 0 18px}
 .site .logo img{height:42px;width:auto;display:block}
 .site nav{display:flex;gap:4px;flex-wrap:nowrap}
 .site nav a{text-decoration:none;color:var(--ink);font-weight:700;font-size:15px;padding:6px 14px;border-radius:999px;white-space:nowrap}
-.site nav a:hover,.site nav a[aria-current="page"]{background:var(--panel)}
+.site nav a:hover{background:rgba(91,79,219,.07)}
+.site nav a[aria-current="page"]{background:rgba(91,79,219,.12);-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);box-shadow:inset 0 0 0 1px rgba(91,79,219,.22),inset 0 1px 0 rgba(255,255,255,.7),0 4px 14px rgba(91,79,219,.12);color:#3f35b8}
 .site nav a.work{background:var(--accent);color:#fff}
 @media (max-width:560px){.site{flex-direction:column;align-items:flex-start;gap:10px}.site .logo img{height:34px}.site nav{flex-wrap:wrap;gap:2px}.site nav a{padding:5px 10px;font-size:14px}}
 .brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
