@@ -108,7 +108,6 @@ ${header("", "home")}
   </div>
 </section>
 
-<p class="note">مش هقولك اكتب كومنت وهبعتلك. كل حاجة هنا — خش وشوف براحتك انت محتاج إيه.</p>
 
 ${(catalog.highlights || []).length ? `<a class="news-mini" href="${esc(LATEST)}/">
   <b>الجديد</b><span class="en" style="text-transform:none">BanKmotion ${esc(BANK_VERSION)} · ${esc(catalog.updated || "")}</span>
