@@ -4,7 +4,7 @@
   "name": "إشعار بينزل",
   "category": "U",
   "categoryName": "واجهات وإشعارات",
-  "description": "إشعار موبايل بينزل من فوق بنطّة، باسم التطبيق والعنوان والرسالة.",
+  "description": "إشعار موبايل بينزل من فوق بنطّة، فيه اسم التطبيق والعنوان والرسالة.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -19,7 +19,7 @@
     "body": "حد عرض ٤٢ ألف على العربية",
     "time": "الآن"
   },
-  "source": "مستوحاة من HyperFrames registry (Apache-2.0) — native-notification-pop / macos-notification",
+  "source": "مستوحاة من HyperFrames registry (Apache-2.0): native-notification-pop / macos-notification",
   "path": "motions/U501-notification/index.html",
   "addedIn": "v1"
 }

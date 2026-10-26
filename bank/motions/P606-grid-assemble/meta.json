@@ -1,10 +1,10 @@
 {
   "code": "P606",
   "slug": "grid-assemble",
-  "name": "جريد بيتجمع",
+  "name": "جريد صور",
   "category": "P",
-  "categoryName": "صور وأشخاص وكاميرا",
-  "description": "٩ صور مربعة بتطير من أماكن عشوائية وتتجمع في جريد منظم من النص للأطراف.",
+  "categoryName": "صور وناس وكاميرا",
+  "description": "9 صور مربعة بتطير من أماكن عشوائية وتتجمع في جريد.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -14,7 +14,7 @@
     "gallery"
   ],
   "params": {},
-  "source": "مستوحاة من HyperFrames (Apache-2.0) — grid-card-assemble",
+  "source": "مستوحاة من HyperFrames (Apache-2.0): grid-card-assemble",
   "path": "motions/P606-grid-assemble/index.html",
   "addedIn": "v1"
 }

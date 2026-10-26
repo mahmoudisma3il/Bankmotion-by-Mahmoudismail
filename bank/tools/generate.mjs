@@ -12,13 +12,13 @@ const DEFS = path.join(ROOT, "src", "defs");
 const OUT = path.join(ROOT, "motions");
 
 export const CATEGORIES = {
-  T: { name: "نصوص وتايبوجرافي", en: "Text & typography" },
+  T: { name: "كلام وتايبوجرافي", en: "Text & typography" },
   S: { name: "انتقالات", en: "Transitions" },
-  N: { name: "أرقام وبيانات", en: "Numbers & data" },
+  N: { name: "أرقام وإحصائيات", en: "Numbers & data" },
   U: { name: "واجهات وإشعارات", en: "UI & notifications" },
-  P: { name: "صور وأشخاص وكاميرا", en: "Photo, people & camera" },
-  C: { name: "دعوة لإجراء ولوجو ونهايات", en: "CTA, logo & end cards" },
-  B: { name: "خلفيات وتأثيرات", en: "Backgrounds & effects" },
+  P: { name: "صور وناس وكاميرا", en: "Photo, people & camera" },
+  C: { name: "لوجو ونهايات وزراير", en: "CTA, logo & end cards" },
+  B: { name: "خلفيات ومؤثرات", en: "Backgrounds & effects" },
 };
 
 const THEMES = {

@@ -28,8 +28,8 @@ import { createHash } from "node:crypto";
 const CSS_V = createHash("md5").update(readFileSync(ROOT + "site/site.css")).digest("hex").slice(0, 8);
 const SITE = {
   name: "Mahmoud Ismail",
-  title: "محمود إسماعيل — بنك الحركات والفيديوهات",
-  desc: "بنك حركات موشن جاهز بالكود، وكل فيديو بعمله بطريقته والأدوات اللي اتعمل بيها — عشان تخلّي Claude يعملك فيديوهات كأني أنا اللي عاملها.",
+  title: "محمود إسماعيل · بنك الحركات والفيديوهات",
+  desc: "بنك حركات موشن جاهزة بالكود، وصفحة لكل فيديو بعمله فيها الطريقة والأدوات. عشان Claude يعملك فيديوهات كأني أنا اللي عاملها.",
   instagram: "https://www.instagram.com/mahmoudismail.creative/",
   facebook: "https://www.facebook.com/mahmoudismail.creative/",
   linkedin: "https://www.linkedin.com/in/mahmoud-ismaiil",
@@ -108,7 +108,7 @@ ${header("", "home")}
   <img class="me" src="site/img/me.webp" alt="محمود إسماعيل" width="132" height="132">
   <div>
     <h1>خلّي Claude يعملك فيديوهات <u>كأني أنا اللي عاملها</u></h1>
-    <p>أنا محمود، مصمم ومونتير. هنا بنك الحركات بتاعي، وكل فيديو بنزّله بتلاقي صفحته: الفيديو، الطريقة خطوة بخطوة، والأدوات اللي اتعمل بيها.</p>
+    <p>أنا محمود، مصمم ومونتير. هنا هتلاقي بنك الحركات بتاعي، وكل فيديو بنزّله ليه صفحة فيها هو اتعمل إزاي وبأنهي أدوات.</p>
   </div>
 </section>
 
@@ -125,21 +125,21 @@ ${(catalog.highlights || []).length ? `<section class="news" aria-label="الج�
   <a class="scard dark" href="${esc(LATEST)}/">
     <span class="en" style="text-transform:none">BanKmotion · ${esc(BANK_VERSION)}</span>
     <h3>بنك الحركات</h3>
-    <p>مكتبة حركات موشن جاهزة بالكود. كل حركة ليها كود ثابت تطلبه من Claude أو Codex.</p>
+    <p>حركات موشن جاهزة بالكود. كل حركة ليها كود تطلبه من Claude أو Codex.</p>
     <div class="nums"><span><b>${motions.length}</b> حركة</span>${(catalog.skills || []).length ? `<span><b>${catalog.skills.length}</b> سكيل</span>` : ""}${hfCount ? `<span><b>${hfCount}</b> HyperFrames</span>` : ""}</div>
     <span class="go">ادخل البنك ←</span>
   </a>
   <a class="scard" href="videos/">
     <span class="en">Videos</span>
     <h3>الفيديوهات</h3>
-    <p>كل فيديو بنزّله ليه صفحة: الفيديو، الطريقة خطوة بخطوة، والأدوات والحركات اللي اتعمل بيها.</p>
+    <p>كل فيديو بنزّله ليه صفحة فيها الطريقة خطوة بخطوة، والأدوات والحركات اللي استخدمتها.</p>
     <div class="nums">${videos.length ? `<span><b>${videos.length}</b> فيديو</span>` : `<span>أول فيديو نازل قريب</span>`}</div>
     <span class="go">شوف الفيديوهات ←</span>
   </a>
   <a class="scard" href="tools/">
     <span class="en">Tools</span>
     <h3>الأدوات</h3>
-    <p>الأدوات اللي بستخدمها مع البنك: صوت وصور و3D وفيزيا وأنيميشن.</p>
+    <p>الأدوات اللي بشتغل بيها مع البنك: للصوت والصور والـ3D والأنيميشن.</p>
     <div class="nums"><span><b>${tools.length}</b> أداة</span></div>
     <span class="go">شوف الأدوات ←</span>
   </a>
@@ -149,20 +149,20 @@ ${footer()}`;
 writeFileSync(ROOT + "index.html", home);
 
 // ---- videos page ----
-const videosPage = `${head("الفيديوهات — " + SITE.name, "كل فيديو: الفيديو، الطريقة، والأدوات.", "../")}
+const videosPage = `${head("الفيديوهات · " + SITE.name, "كل فيديو وطريقته والأدوات اللي اتعمل بيها.", "../")}
 ${header("../", "videos")}
-<div class="pagehead"><span class="en">Videos · How they were made</span><h1>الفيديوهات</h1><p>كل فيديو بنزّله ليه صفحة: الفيديو نفسه، الطريقة خطوة بخطوة، والأدوات والحركات اللي اتعمل بيها.</p></div>
+<div class="pagehead"><span class="en">Videos · How they were made</span><h1>الفيديوهات</h1><p>كل فيديو بنزّله ليه صفحة فيها الفيديو، وطريقته خطوة بخطوة، والأدوات والحركات اللي استخدمتها.</p></div>
 ${videos.length
   ? `<div class="grid">${videos.map((v, i) => videoCard(v, i, "")).join("")}</div>`
-  : `<div class="empty"><b>أول فيديو نازل قريب</b>كل فيديو بنزّله هيبقى ليه صفحة هنا.</div>`}
+  : `<div class="empty"><b>أول فيديو نازل قريب</b>أول ما ينزل هتلاقي صفحته هنا.</div>`}
 ${footer()}`;
 writeFileSync(ROOT + "videos/index.html", videosPage);
 
 // ---- tools page ----
 mkdirSync(ROOT + "tools", { recursive: true });
-const toolsPage = `${head("الأدوات — " + SITE.name, "الأدوات اللي بستخدمها مع البنك في الفيديوهات.", "../")}
+const toolsPage = `${head("الأدوات · " + SITE.name, "الأدوات اللي بشتغل بيها مع البنك في الفيديوهات.", "../")}
 ${header("../", "tools")}
-<div class="pagehead"><span class="en">Tools I use</span><h1>الأدوات</h1><p>الأدوات اللي بستخدمها مع البنك في الفيديوهات. السكيلز والحركات مكانها جوه <a href="../${esc(LATEST)}/">البنك</a>.</p></div>
+<div class="pagehead"><span class="en">Tools I use</span><h1>الأدوات</h1><p>الأدوات اللي بشتغل بيها مع البنك في الفيديوهات. السكيلز والحركات تلاقيها جوه <a href="../${esc(LATEST)}/">البنك</a>.</p></div>
 <div class="tools">${tools.map((t) => `<a class="tool" href="${esc(t.url)}" target="_blank" rel="noopener"><span class="en">${esc(t.type)}${t.addedIn === latestTool && latestTool ? " · new" : ""}</span><b>${esc(t.name)}</b><span>${esc(t.use)}</span></a>`).join("")}</div>
 ${footer()}`;
 writeFileSync(ROOT + "tools/index.html", toolsPage);
@@ -172,7 +172,7 @@ const bankLink = (code) => `../../${LATEST}/#${encodeURIComponent(code)}`;
 for (const v of videos) {
   const dir = `videos/${v.slug}`;
   if (!existsSync(ROOT + dir)) { console.warn(`! missing folder ${dir}`); continue; }
-  const page = `${head(`${v.title} — ${SITE.name}`, v.summary || SITE.desc, "../../")}
+  const page = `${head(`${v.title} · ${SITE.name}`, v.summary || SITE.desc, "../../")}
 ${header("../../", "videos")}
 <article class="vpage">
   <div class="player">

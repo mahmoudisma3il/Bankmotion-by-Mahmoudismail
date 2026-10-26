@@ -4,7 +4,7 @@
   "name": "تسريب ضوء",
   "category": "S",
   "categoryName": "انتقالات",
-  "description": "ضوء دافي برتقالي بيعدي على الشاشة زي أفلام الكاميرا القديمة ويقلب المشهد.",
+  "description": "نور برتقالي دافي بيعدّي على الشاشة زي أفلام الكاميرات القديمة، ويقلب المشهد.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -18,7 +18,7 @@
     "b": "المشهد ٢",
     "at": 1.2
   },
-  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — light-leak",
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0): light-leak",
   "path": "motions/S314-light-leak/index.html",
   "addedIn": "v1"
 }

@@ -3,8 +3,8 @@
   "slug": "quote",
   "name": "اقتباس",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "علامات تنصيص كبيرة بتظهر، وبعدها الاقتباس كلمة كلمة واسم القائل.",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "علامات تنصيص كبيرة بتظهر، وبعدها الاقتباس كلمة كلمة، وفي الآخر اسم صاحبه.",
   "duration": 4,
   "size": "1080x1920",
   "theme": "light",
@@ -15,9 +15,9 @@
   ],
   "params": {
     "quote": "أحسن استثمار هو إنك تتعلم حاجة جديدة كل يوم",
-    "author": "— محمود إسماعيل"
+    "author": "محمود إسماعيل"
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — testimonial-card",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): testimonial-card",
   "path": "motions/T124-quote/index.html",
   "addedIn": "v1"
 }

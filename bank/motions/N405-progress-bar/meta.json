@@ -1,10 +1,10 @@
 {
   "code": "N405",
   "slug": "progress-bar",
-  "name": "شريط تقدّم",
+  "name": "شريط بيتملي",
   "category": "N",
-  "categoryName": "أرقام وبيانات",
-  "description": "شريط بيتملي لحد النسبة المطلوبة والرقم بيعدّ معاه.",
+  "categoryName": "أرقام وإحصائيات",
+  "description": "شريط بيتملي لحد النسبة اللي عايزها، والرقم بيعدّ معاه.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -17,7 +17,7 @@
     "label": "نسبة الإنجاز",
     "value": 78
   },
-  "source": "مستوحاة من HyperFrames (Apache-2.0) — stat-bars-and-fills",
+  "source": "مستوحاة من HyperFrames (Apache-2.0): stat-bars-and-fills",
   "path": "motions/N405-progress-bar/index.html",
   "addedIn": "v1"
 }

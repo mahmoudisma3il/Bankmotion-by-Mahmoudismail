@@ -1,10 +1,10 @@
 {
   "code": "T104",
   "slug": "beat-slam",
-  "name": "خبطة كلمات",
+  "name": "كلمات على الإيقاع",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "كل كلمة بتخبط في نص الشاشة لوحدها على الإيقاع، والكلمة الأخيرة بلون مميز. ممتازة للهوك.",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "كل كلمة بتخبط في نص الشاشة لوحدها على الإيقاع، وآخر كلمة بلون مختلف. بتنفع في أول الفيديو.",
   "duration": 3.2,
   "size": "1080x1920",
   "theme": "dark",
@@ -17,7 +17,7 @@
     "words": "ركّز|على|الفكرة|مش|الأداة",
     "beat": 0.45
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — kinetic-beat-slam",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): kinetic-beat-slam",
   "path": "motions/T104-beat-slam/index.html",
   "addedIn": "v1"
 }

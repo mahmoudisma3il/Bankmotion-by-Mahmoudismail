@@ -4,7 +4,7 @@
   "name": "قطعات على البيت",
   "category": "S",
   "categoryName": "انتقالات",
-  "description": "٣ قطعات سريعة على الإيقاع، كل قطعة بزووم خبطة وفلاش صغير. ممتازة مع المزيكا.",
+  "description": "3 قطعات سريعة على الإيقاع، كل قطعة بزوم خبطة وفلاش صغير. حلوة مع المزيكا.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -20,7 +20,7 @@
     "c": "٣",
     "beat": 0.5
   },
-  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — beat-freeze-cut / beat-accent",
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0): beat-freeze-cut / beat-accent",
   "path": "motions/S320-beat-punch/index.html",
   "addedIn": "v1"
 }

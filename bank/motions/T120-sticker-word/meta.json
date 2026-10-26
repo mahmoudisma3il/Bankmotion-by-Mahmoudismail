@@ -1,10 +1,10 @@
 {
   "code": "T120",
   "slug": "sticker-word",
-  "name": "كلمة بستيكر",
+  "name": "ستيكر جنب الكلمة",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "الجملة تظهر، وستيكر صغير بيلزق مايل جنب الكلمة بخبطة وهزة.",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "الجملة بتظهر، وستيكر صغير بيتلزق مايل جنب كلمة منها ويتهز.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -17,7 +17,7 @@
     "text": "أحسن عرض في الموسم",
     "sticker": "جديد"
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — badge-pop / caption-emoji-pop",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): badge-pop / caption-emoji-pop",
   "path": "motions/T120-sticker-word/index.html",
   "addedIn": "v1"
 }

@@ -1,10 +1,10 @@
 {
   "code": "T115",
   "slug": "neon",
-  "name": "نيون بيرمش",
+  "name": "نيون",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "نص نيون بيرمش أول ما يولّع وبعدين ينوّر ثابت بإضاءة حواليه.",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "كلام نيون بيرمش أول ما يولّع، وبعدين يثبت منوّر.",
   "duration": 3.5,
   "size": "1080x1920",
   "theme": "dark",
@@ -17,7 +17,7 @@
     "text": "مفتوح ٢٤ ساعة",
     "color": "#FF3EA5"
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — caption-neon-glow",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): caption-neon-glow",
   "path": "motions/T115-neon/index.html",
   "addedIn": "v1"
 }

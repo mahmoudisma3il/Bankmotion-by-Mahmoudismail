@@ -3,8 +3,8 @@
   "slug": "line-mask",
   "name": "سطر سطر من تحت",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "كل سطر بيطلع من تحت خط وهمي (ماسك)، سطر ورا التاني. شكل نضيف ومحترف.",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "كل سطر بيطلع من تحت خط مخفي، سطر ورا التاني. شكل نضيف.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -16,7 +16,7 @@
   "params": {
     "lines": "مش محتاج|برامج تقيلة|محتاج فكرة"
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — line-by-line-slide",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): line-by-line-slide",
   "path": "motions/T111-line-mask/index.html",
   "addedIn": "v1"
 }

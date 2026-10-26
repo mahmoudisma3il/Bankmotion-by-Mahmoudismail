@@ -1,10 +1,10 @@
 {
   "code": "P601",
   "slug": "text-behind",
-  "name": "نص ورا الشخص",
+  "name": "كلام ورا الشخص",
   "category": "P",
-  "categoryName": "صور وأشخاص وكاميرا",
-  "description": "كلمة ضخمة بتطلع من تحت وتقف ورا الشخص (الشخص قدام النص). محتاجة صورة الشخص مقصوصة PNG.",
+  "categoryName": "صور وناس وكاميرا",
+  "description": "كلمة ضخمة بتطلع من تحت وتقف ورا الشخص، والشخص قدامها. محتاجة صورة الشخص مقصوصة PNG.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -18,7 +18,7 @@
     "text": "الأفضل",
     "sub": ""
   },
-  "source": "من «النص ورا الشخص» في ريل Majedteq + مستوحاة من HyperFrames (Apache-2.0) — parallax-zoom",
+  "source": "من «النص ورا الشخص» في ريل Majedteq + مستوحاة من HyperFrames (Apache-2.0): parallax-zoom",
   "path": "motions/P601-text-behind/index.html",
   "addedIn": "v1"
 }

@@ -1,10 +1,10 @@
 {
   "code": "U507",
   "slug": "comment-card",
-  "name": "كارت تعليق",
+  "name": "تعليق عميل",
   "category": "U",
   "categoryName": "واجهات وإشعارات",
-  "description": "كارت تعليق من عميل بيطلع بنطّة بالصورة والاسم والكلام وعدد اللايكات.",
+  "description": "كارت تعليق من عميل بيطلع بنطّة، فيه صورته واسمه وكلامه وعدد اللايكات.",
   "duration": 3.5,
   "size": "1080x1920",
   "theme": "light",
@@ -18,7 +18,7 @@
     "comment": "أحسن خدمة اتعاملت معاها بجد، والتوصيل كان في نفس اليوم!",
     "likes": "٢٤٥"
   },
-  "source": "مستوحاة من HyperFrames registry (Apache-2.0) — yt-comment-card / testimonial-proof-card",
+  "source": "مستوحاة من HyperFrames registry (Apache-2.0): yt-comment-card / testimonial-proof-card",
   "path": "motions/U507-comment-card/index.html",
   "addedIn": "v1"
 }

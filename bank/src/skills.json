@@ -6,7 +6,7 @@
       "by": "LottieFiles",
       "license": "MIT",
       "addedIn": "v2",
-      "description": "سكيل بتعلّم الـAI مبادئ الموشن: التوقيت والـeasing والكوريوجرافي ومبادئ ديزني الـ12. ركّبها جنب البنك عشان الحركات اللي يعملها تبقى بتوقيت مظبوط مش عشوائي.",
+      "description": "بتعلّم الـAI مبادئ الموشن: التوقيت، والـeasing، وترتيب الحركات، ومبادئ ديزني الـ12. لما تركّبها جنب البنك، الحركات اللي الـAI بيعملها بتطلع بتوقيت مظبوط بدل ما تبقى عشوائية.",
       "url": "https://github.com/LottieFiles/motion-design-skill",
       "install": "git clone --depth 1 https://github.com/LottieFiles/motion-design-skill /tmp/mds && mkdir -p .claude/skills && cp -R /tmp/mds/skills/motion-design .claude/skills/"
     }

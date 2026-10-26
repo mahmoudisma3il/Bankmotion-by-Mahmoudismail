@@ -1,10 +1,10 @@
 {
   "code": "T113",
   "slug": "word-slot",
-  "name": "كلمة بتتبدل",
+  "name": "آخر كلمة بتتغير",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "جملة ثابتة وفي آخرها كلمة بتلف زي ماكينة: أسرع ← أسهل ← أذكى.",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "جملة ثابتة وآخر كلمة فيها بتلف وتتغير: أسرع، أسهل، أذكى.",
   "duration": 4,
   "size": "1080x1920",
   "theme": "light",
@@ -17,7 +17,7 @@
     "pre": "خلّي شغلك",
     "words": "أسرع|أسهل|أذكى"
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — kinetic-type-swap / vertical-spring-ticker",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): kinetic-type-swap / vertical-spring-ticker",
   "path": "motions/T113-word-slot/index.html",
   "addedIn": "v1"
 }

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>بنك الحركات — BanKmotion By Mahmoud Ismail</title>
-<meta name="description" content="مكتبة حركات موشن جاهزة بالكود (HyperFrames + GSAP) للريلز والفيديوهات القصيرة 9:16 — كل حركة ليها كود ثابت زي S302.">
+<title>بنك الحركات · BanKmotion By Mahmoud Ismail</title>
+<meta name="description" content="حركات موشن جاهزة بالكود للريلز (9:16). كل حركة ليها كود زي S302 تطلبه من Claude أو Codex.">
 <link rel="icon" type="image/png" sizes="64x64" href="../site/img/favicon-64.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../site/img/favicon-32.png">
 <link rel="apple-touch-icon" href="../site/img/apple-touch-icon.png">
@@ -104,6 +104,7 @@ footer a{color:inherit}
 .noprev{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:14px;text-align:center;background:linear-gradient(160deg,#ECEBFB,#DCD9F6);color:#2d2a5c}
 .noprev b{font-size:15px;direction:ltr}.noprev span{font-size:12px;opacity:.8}.noprev small{font-size:11px;color:var(--accent);font-weight:700}
 .noprev.big b{font-size:26px}.noprev.big span{font-size:15px}.noprev.big small{font-size:14px}
+.dev{margin-top:12px;font-size:12px;color:var(--muted);line-height:1.7;border-top:1px dashed var(--line);padding-top:8px}.dev b{display:block;font-size:12px;color:var(--muted)}.dev .mono{font-size:11.5px}
 .tagnew{background:var(--ink);color:#fff;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-inline-start:6px}
 .skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
 .skill{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--shadow)}
@@ -118,16 +119,16 @@ footer a{color:inherit}
 </div></div>
 <header class="wrap">
   <div class="brand"><h1>BanK<b>motion</b></h1><span class="en">By Mahmoud Ismail · بنك الحركات</span><span class="ver" id="ver"></span></div>
-  <p class="lead">مكتبة حركات موشن جاهزة بالكود للريلز والفيديوهات القصيرة (9:16). كل حركة ليها <b>كود ثابت</b> زي <code>S302</code>، فتقدر تقول لأي AI (Claude أو Codex) «استخدم حركة S302» ويعرف يجيبها من البنك على طول.</p>
+  <p class="lead">حركات موشن جاهزة بالكود للريلز (9:16). كل حركة ليها كود ثابت زي <code>S302</code>. تقول لـ Claude أو Codex «استخدم S302» وهو يجيبها من هنا.</p>
   <div class="howto">
-    <div><b>١. اتفرّج</b>عدّي بالماوس على أي كارت أو اضغط عليه عشان الحركة تشتغل.</div>
-    <div><b>٢. اختار</b>دوس «أي ✓» على اللي عاجبك و«لا ✗» على اللي مش عاجبك. اختياراتك بتتحفظ على جهازك.</div>
-    <div><b>٣. ابعت للـAI</b>اضغط «انسخ للـAI» من الشريط اللي تحت، والصق الكلام في الشات مع فكرة الفيديو.</div>
+    <div><b>١. اتفرّج</b>عدّي بالماوس على الكارت أو دوس عليه، والحركة هتشتغل.</div>
+    <div><b>٢. اختار</b>دوس «أيوه ✓» على اللي عجبك و«لأ ✗» على اللي لأ. اختياراتك بتتحفظ على جهازك.</div>
+    <div><b>٣. ابعتها للـAI</b>دوس «انسخ للـAI» من الشريط اللي تحت، والصقها في الشات مع فكرة الفيديو بتاعك.</div>
   </div>
   <div class="whatsnew" id="wn" hidden></div>
 </header>
 <div class="bar"><div class="wrap">
-  <div class="row"><input class="search" id="q" type="search" placeholder="دوّر بالاسم أو الكود أو الوصف… (مثلًا: زوم، عدّاد، T104)"><button class="toggle" id="onlyYes" aria-pressed="false">المختارة بس ✓</button></div>
+  <div class="row"><input class="search" id="q" type="search" placeholder="دوّر باسم الحركة أو الكود (زي: زوم، عدّاد، T104)"><button class="toggle" id="onlyYes" aria-pressed="false">اللي اخترته بس ✓</button></div>
   <div class="chips" id="chips"></div>
 </div></div>
 <main class="wrap" id="main"></main>
@@ -159,7 +160,7 @@ function matches(m) {
   else if (cat !== "all" && (cat === "H" ? !m.code.startsWith("H") : m.category !== cat)) return false;
   if (onlyYes && picks[m.code] !== 1) return false;
   if (!query) return true;
-  const hay = [m.code, m.name, m.title, m.description, (m.tags || []).join(" "), m.slug].join(" ").toLowerCase();
+  const hay = [m.code, m.name, m.title, m.description, m.descriptionEn, (m.tags || []).join(" "), m.slug].join(" ").toLowerCase();
   return query.toLowerCase().split(/\s+/).every((w) => hay.includes(w));
 }
 function chips() {
@@ -176,26 +177,26 @@ function card(m) {
   return `<article class="card ${p === 1 ? "yes" : p === 0 ? "no" : ""}" data-code="${m.code}">${thumb}
   <div class="body"><div class="ttl"><span>${esc(isH ? m.title : m.name)}</span><span class="c">${m.code}</span></div>
   <div class="desc">${esc(m.description)}</div>
-  <div class="acts"><button class="y" data-pick="1" aria-pressed="${p === 1}">أي ✓</button><button class="n" data-pick="0" aria-pressed="${p === 0}">لا ✗</button><button class="cp" data-copy="${m.code}" title="انسخ الكود">⧉</button></div></div></article>`;
+  <div class="acts"><button class="y" data-pick="1" aria-pressed="${p === 1}">أيوه ✓</button><button class="n" data-pick="0" aria-pressed="${p === 0}">لأ ✗</button><button class="cp" data-copy="${m.code}" title="انسخ الكود">⧉</button></div></div></article>`;
 }
 function skillsHtml() {
   if (!["all", "K", "NEW"].includes(cat) || onlyYes) return "";
   const q = query.toLowerCase();
   const list = SK.filter((s) => (cat !== "NEW" || isNew(s)) && (!q || [s.code, s.name, s.by, s.description].join(" ").toLowerCase().includes(q)));
   if (!list.length) return "";
-  return `<section><div class="section-title"><h2>سكيلز للـAI</h2><span>${list.length} سكيل · ركّبها جنب البنك · الأكواد بتبدأ بحرف <code>K</code></span></div><div class="skills">${list.map((s) => `<article class="skill"><div><span class="mono" style="color:var(--accent);font-weight:900">${esc(s.code)}</span>${isNew(s) ? ' <span class="tagnew">جديد</span>' : ""}</div><h3>${esc(s.name)}</h3><div class="by">by ${esc(s.by)} · ${esc(s.license || "")}</div><p>${esc(s.description)}</p><div class="acts2"><button class="btn" data-install="${esc(s.code)}">انسخ أمر التركيب</button><a class="btn sec" href="${esc(s.url)}" target="_blank" rel="noopener" style="text-decoration:none">GitHub</a></div></article>`).join("")}</div></section>`;
+  return `<section><div class="section-title"><h2>سكيلز للـAI</h2><span>${list.length} سكيل · بتتركّب جنب البنك عشان الـAI يشتغل أحسن · أكوادها بتبدأ بـ <code>K</code></span></div><div class="skills">${list.map((s) => `<article class="skill"><div><span class="mono" style="color:var(--accent);font-weight:900">${esc(s.code)}</span>${isNew(s) ? ' <span class="tagnew">جديد</span>' : ""}</div><h3>${esc(s.name)}</h3><div class="by">by ${esc(s.by)} · ${esc(s.license || "")}</div><p>${esc(s.description)}</p><div class="acts2"><button class="btn" data-install="${esc(s.code)}">انسخ أمر التركيب</button><a class="btn sec" href="${esc(s.url)}" target="_blank" rel="noopener" style="text-decoration:none">GitHub</a></div></article>`).join("")}</div></section>`;
 }
 function render() {
   chips();
   const list = all().filter(matches);
   const sk = skillsHtml();
   if (!list.length && sk) { $("#main").innerHTML = sk; return tray(); }
-  if (!list.length) { $("#main").innerHTML = '<div class="empty">مفيش حركات بالشكل ده. جرّب كلمة تانية.</div>'; return tray(); }
+  if (!list.length) { $("#main").innerHTML = '<div class="empty">ملقيناش حاجة. جرّب كلمة تانية.</div>'; return tray(); }
   const groups = {};
   list.forEach((m) => { const k = m.code.startsWith("H") ? "H" : m.category; (groups[k] = groups[k] || []).push(m); });
   $("#main").innerHTML = sk + Object.keys(groups).sort((a, b) => CATS.findIndex((c) => c[0] === a) - CATS.findIndex((c) => c[0] === b)).map((k) => {
-    const name = k === "H" ? "مكتبة HyperFrames (بلوكات وكومبوننتس جاهزة)" : DATA.categories[k].name;
-    const note = k === "H" ? "بتتركّب بأمر <code>npx hyperframes add</code> — الكود H ثابت للأبد" : `الأكواد بتبدأ بحرف <code>${k}</code>`;
+    const name = k === "H" ? "مكتبة HyperFrames" : DATA.categories[k].name;
+    const note = k === "H" ? "مشاهد وعناصر جاهزة من مكتبة HyperFrames · أكوادها بتبدأ بـ <code>H</code>" : `الأكواد بتبدأ بحرف <code>${k}</code>`;
     return `<section><div class="section-title"><h2>${esc(name)}</h2><span>${groups[k].length} حركة · ${note}</span></div><div class="grid">${groups[k].map(card).join("")}</div></section>`;
   }).join("");
   tray();
@@ -203,11 +204,11 @@ function render() {
 function tray() {
   const sel = Object.keys(picks).filter((k) => picks[k] === 1).sort();
   $("#tray").classList.toggle("on", sel.length > 0);
-  $("#trayCount").textContent = `اخترت ${sel.length}`;
+  $("#trayCount").textContent = `اخترت ${sel.length} حركة`;
   $("#trayList").textContent = sel.join(" · ");
 }
 function promptFor(codes) {
-  return `استخدم الحركات دي من بنك الحركات (BanKmotion By Mahmoud Ismail): ${codes.join(", ")}\nالبنك: ${DATA.repo}\n(اقرا AGENTS.md وcatalog.json عشان تعرف كل كود فين وإزاي تستخدمه)`;
+  return `استخدم الحركات دي من بنك الحركات (BanKmotion By Mahmoud Ismail): ${codes.join(", ")}\nالبنك: ${DATA.repo}\nاقرا AGENTS.md وcatalog.json هتلاقي كل كود فين وإزاي تستخدمه.`;
 }
 // hover preview: one live iframe at a time
 let live = null;
@@ -226,22 +227,23 @@ function openDlg(code) {
   const m = all().find((x) => x.code === code); if (!m) return; stopPreview();
   const isH = code.startsWith("H"), d = $("#dlg");
   const params = !isH && Object.keys(m.params || {}).length ? `<table>${Object.entries(m.params).map(([k, v]) => `<tr><td class="mono">${esc(k)}</td><td>${esc(typeof v === "string" ? v : JSON.stringify(v))}</td></tr>`).join("")}</table>` : "";
-  const stage = isH ? (m.video ? `<video src="${esc(m.video)}" autoplay muted loop playsinline></video>` : m.poster ? `<img src="${esc(m.poster)}" alt="">` : `<div class="noprev big"><b>${esc(m.title)}</b><span>مكتبة HyperFrames مش موفّرة معاينة للعنصر ده.</span><small>انسخ للـAI وهو هيركّبه ويوريك شكله.</small></div>`)
+  const stage = isH ? (m.video ? `<video src="${esc(m.video)}" autoplay muted loop playsinline></video>` : m.poster ? `<img src="${esc(m.poster)}" alt="">` : `<div class="noprev big"><b>${esc(m.title)}</b><span>مكتبة HyperFrames مش عاملة معاينة للعنصر ده.</span><small>انسخه للـAI وهو يركّبه ويوريك شكله.</small></div>`)
                     : `<iframe src="${esc(m.dir)}/index.html?play" title="${esc(m.name)}"></iframe>`;
   d.innerHTML = `<div class="dlg"><div class="stagebox" id="sb">${stage}<button class="close" id="x" aria-label="اقفل">×</button></div><div class="info">
     <div class="mono" style="color:var(--accent);font-weight:900">${m.code}</div><h3>${esc(isH ? m.title : m.name)}</h3>
     <p style="color:var(--muted);margin:0 0 10px">${esc(m.description)}</p>
-    <table><tr><td>القسم</td><td>${esc(isH ? (m.type === "block" ? "HyperFrames block (مشهد كامل)" : "HyperFrames component (عنصر)") : m.categoryName)}</td></tr>
-    <tr><td>المدة</td><td>${m.duration ? m.duration + " ثانية" : "—"}</td></tr><tr><td>المقاس</td><td class="mono">${esc(m.size || "—")}</td></tr>
-    ${isH ? `<tr><td>التركيب</td><td class="mono">${esc(m.install)}</td></tr>` : `<tr><td>الملف</td><td class="mono">${esc(m.path)}</td></tr><tr><td>المصدر</td><td>${esc(m.source)}</td></tr>`}</table>
-    ${params ? "<b>القيم اللي تتغير (P):</b>" + params : ""}
+    <table><tr><td>القسم</td><td>${esc(isH ? (m.type === "block" ? "مشهد كامل من HyperFrames" : "عنصر من HyperFrames") : m.categoryName)}</td></tr>
+    <tr><td>المدة</td><td>${m.duration ? m.duration + " ثانية" : "-"}</td></tr><tr><td>المقاس</td><td class="mono">${esc(m.size || "-")}</td></tr>
+    </table>
+    ${params ? "<b>الحاجات اللي تقدر تغيّرها (P):</b>" + params : ""}
     <div class="pre" id="pp">${esc(promptFor([m.code]))}</div>
     <div class="row" style="margin-top:12px"><button class="btn" id="cpP">انسخ للـAI <small class="who">(مونتير / فيديو إديتور)</small></button>${isH ? `<button class="btn sec" id="cpI">انسخ أمر التركيب <small class="who">(مبرمج / Terminal)</small></button>` : `<a class="btn sec" href="${esc(m.dir)}/index.html" target="_blank" style="text-decoration:none">افتح لوحدها</a>`}</div>
     <div class="howuse"><div class="ht">إزاي تستخدمها؟</div><ol>
       <li>دوس <b>«انسخ للـAI»</b>.</li>
-      <li>افتح Claude أو Codex والصق الكلام، واكتب فكرتك بكلامك العادي. مثلًا: «عايز ريل ١٥ ثانية عن منتجي، واستخدم الحركة دي في الأول».</li>
-      <li>هو هيجيب الحركة من البنك ويغيّر الكلام والألوان على حسب اللي قلته${isH ? "" : " (القيم اللي فوق في جدول P)"}، ويطلّعلك الفيديو.</li>
-    </ol><small>مش محتاج تفهم كود — كل حركة ليها كود ثابت زي <code>${esc(m.code)}</code>، وده اللي الـAI بيدوّر بيه.</small></div>
+      <li>افتح Claude أو Codex والصقه، وقوله عايز إيه بكلامك. مثلًا: «عايز ريل ١٥ ثانية عن منتجي، وابدأ بالحركة دي».</li>
+      <li>هيجيب الحركة من البنك، ويغيّر الكلام والألوان زي ما قلتله${isH ? "" : " (الحاجات اللي في جدول P فوق)"}، ويطلّعلك الفيديو.</li>
+    </ol><small>مش محتاج تفهم كود. كل حركة ليها كود ثابت زي <code>${esc(m.code)}</code>، والـAI بيدوّر بيه.</small></div>
+    <div class="dev"><b>للمطوّرين والكريدت</b>${isH ? `التركيب: <span class="mono">${esc(m.install)}</span><br>المصدر: مكتبة HyperFrames (Apache-2.0)` : `الملف: <span class="mono">${esc(m.path)}</span><br>المصدر: ${esc(m.source)}`}</div>
   </div></div>`;
   d.showModal();
   const f = d.querySelector("iframe"); if (f) { const sb = $("#sb", d); const fit = () => fitIframe(sb, f); fit(); new ResizeObserver(fit).observe(sb); }
@@ -264,8 +266,8 @@ $("#q").addEventListener("input", (e) => { query = e.target.value.trim(); render
 $("#onlyYes").addEventListener("click", (e) => { onlyYes = !onlyYes; e.currentTarget.setAttribute("aria-pressed", onlyYes); render(); });
 $("#copySel").onclick = () => copy(promptFor(Object.keys(picks).filter((k) => picks[k] === 1).sort()));
 $("#clearSel").onclick = () => { picks = {}; save(); render(); };
-$("#foot").innerHTML = `${DATA.motions.length} حركة أصلية + ${DATA.hyperframes.length} من مكتبة HyperFrames · النسخة ${esc(DATA.version)} · آخر تحديث ${esc(DATA.updated)}<br>
-الحركات مكتوبة بـ HTML + GSAP كـ <a href="https://github.com/heygen-com/hyperframes">HyperFrames compositions</a>. كتير منها مستوحى من HyperFrames (Apache-2.0) وRemotion templates، والمصدر مكتوب في كل حركة. الخط: Dubai.<br>
+$("#foot").innerHTML = `${DATA.motions.length} حركة من تصميمي + ${DATA.hyperframes.length} من مكتبة HyperFrames · النسخة ${esc(DATA.version)} · آخر تحديث ${esc(DATA.updated)}<br>
+الحركات معمولة بـ HTML وGSAP على طريقة <a href="https://github.com/heygen-com/hyperframes">HyperFrames</a>. في حركات كتير مستوحاة من HyperFrames (Apache-2.0) وقوالب Remotion، ومصدر كل حركة مكتوب جواها.<br>
 <a href="${esc(DATA.repo)}">${esc(DATA.repo)}</a>`;
 render();
 </script>

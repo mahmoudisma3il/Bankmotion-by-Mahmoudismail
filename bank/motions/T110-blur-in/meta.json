@@ -1,10 +1,10 @@
 {
   "code": "T110",
   "slug": "blur-in",
-  "name": "ظهور بالبلور",
+  "name": "طالع من الضباب",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "الكلمات بتظهر من ضباب ناعم لحد ما تبقى واضحة. هادية وفخمة.",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "الكلمات بتطلع من ضباب خفيف لحد ما تبان واضحة. حركة هادية.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -16,7 +16,7 @@
   "params": {
     "text": "التفاصيل الصغيرة بتفرق"
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — blur-in / soft-blur-in",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): blur-in / soft-blur-in",
   "path": "motions/T110-blur-in/index.html",
   "addedIn": "v1"
 }

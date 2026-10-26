@@ -3,8 +3,8 @@
   "slug": "aurora",
   "name": "أورورا",
   "category": "B",
-  "categoryName": "خلفيات وتأثيرات",
-  "description": "شرايط ضوء ملونة زي الشفق القطبي بتتموج ببطء في السما.",
+  "categoryName": "خلفيات ومؤثرات",
+  "description": "شرايط نور ملوّنة زي الشفق القطبي بتتموّج براحة.",
   "duration": 6.6,
   "size": "1080x1920",
   "theme": "dark",
@@ -14,7 +14,7 @@
     "gradient"
   ],
   "params": {},
-  "source": "مستوحاة من HyperFrames (Apache-2.0) — aurora",
+  "source": "مستوحاة من HyperFrames (Apache-2.0): aurora",
   "path": "motions/B808-aurora/index.html",
   "addedIn": "v1"
 }

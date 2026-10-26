@@ -4,7 +4,7 @@
   "name": "دايرة بتفتح",
   "category": "S",
   "categoryName": "انتقالات",
-  "description": "دايرة بتكبر من نص الشاشة وتكشف المشهد الجديد.",
+  "description": "دايرة بتكبر من نص الشاشة وتفتح على المشهد الجديد.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -20,7 +20,7 @@
     "x": "50%",
     "y": "50%"
   },
-  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — iris-reveal",
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0): iris-reveal",
   "path": "motions/S303-iris/index.html",
   "addedIn": "v1"
 }

@@ -4,7 +4,7 @@
   "name": "بادج خصم",
   "category": "U",
   "categoryName": "واجهات وإشعارات",
-  "description": "بادج دايري بأشعة بتلف وراه بيخبط في الشاشة بخصم كبير ويهتز.",
+  "description": "بادج دايري وراه أشعة بتلف، بيخبط في الشاشة بخصم كبير ويتهز.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -19,7 +19,7 @@
     "value": "٥٠٪",
     "bottom": "لفترة محدودة"
   },
-  "source": "مستوحاة من HyperFrames registry (Apache-2.0) — badge-pop / sun-burst",
+  "source": "مستوحاة من HyperFrames registry (Apache-2.0): badge-pop / sun-burst",
   "path": "motions/U512-badge-burst/index.html",
   "addedIn": "v1"
 }

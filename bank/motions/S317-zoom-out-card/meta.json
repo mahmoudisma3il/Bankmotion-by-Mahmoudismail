@@ -1,10 +1,10 @@
 {
   "code": "S317",
   "slug": "zoom-out-card",
-  "name": "زوم أوت لكارت",
+  "name": "المشهد يبقى كارت",
   "category": "S",
   "categoryName": "انتقالات",
-  "description": "المشهد بيصغر لحد ما يبقى كارت بحواف دايرية ويطير لفوق، والمشهد الجديد ورا.",
+  "description": "المشهد بيصغر لحد ما يبقى كارت بحواف دايرية ويطير لفوق، والجديد وراه.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -18,7 +18,7 @@
     "b": "المشهد ٢",
     "at": 1.2
   },
-  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — zoom out / pull-back-reveal",
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0): zoom out / pull-back-reveal",
   "path": "motions/S317-zoom-out-card/index.html",
   "addedIn": "v1"
 }

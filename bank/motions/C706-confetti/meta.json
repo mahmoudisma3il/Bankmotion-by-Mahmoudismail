@@ -3,8 +3,8 @@
   "slug": "confetti",
   "name": "كونفيتي",
   "category": "C",
-  "categoryName": "دعوة لإجراء ولوجو ونهايات",
-  "description": "انفجار ورق ملون (كونفيتي) من تحت الشاشة بيطير ويقع بالجاذبية، مع كلمة احتفال.",
+  "categoryName": "لوجو ونهايات وزراير",
+  "description": "ورق ملوّن بيطير من تحت الشاشة ويقع، ومعاه كلمة احتفال.",
   "duration": 3.5,
   "size": "1080x1920",
   "theme": "light",
@@ -17,7 +17,7 @@
     "text": "مبروك!",
     "count": 90
   },
-  "source": "مستوحاة من HyperFrames (Apache-2.0) — confetti",
+  "source": "مستوحاة من HyperFrames (Apache-2.0): confetti",
   "path": "motions/C706-confetti/index.html",
   "addedIn": "v1"
 }

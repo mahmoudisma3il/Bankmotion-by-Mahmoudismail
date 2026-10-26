@@ -1,10 +1,10 @@
 {
   "code": "N406",
   "slug": "progress-ring",
-  "name": "حلقة تقدّم",
+  "name": "دايرة بتتملي",
   "category": "N",
-  "categoryName": "أرقام وبيانات",
-  "description": "دايرة بتترسم لحد النسبة والرقم في نصها بيعدّ.",
+  "categoryName": "أرقام وإحصائيات",
+  "description": "دايرة بتترسم لحد النسبة، والرقم في نصها بيعدّ.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -17,7 +17,7 @@
     "value": 85,
     "label": "رضا العملاء"
   },
-  "source": "مستوحاة من HyperFrames (Apache-2.0) — conic-progress-ring",
+  "source": "مستوحاة من HyperFrames (Apache-2.0): conic-progress-ring",
   "path": "motions/N406-progress-ring/index.html",
   "addedIn": "v1"
 }

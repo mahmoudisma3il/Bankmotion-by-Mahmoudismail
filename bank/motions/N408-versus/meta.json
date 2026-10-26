@@ -1,10 +1,10 @@
 {
   "code": "N408",
   "slug": "versus",
-  "name": "مقارنة قبل وبعد",
+  "name": "قبل وبعد بالأرقام",
   "category": "N",
-  "categoryName": "أرقام وبيانات",
-  "description": "الشاشة متقسمة نصين: قبل وبعد، كل نص بيدخل من ناحية، و VS بتنطّ في النص، والأرقام بتعدّ.",
+  "categoryName": "أرقام وإحصائيات",
+  "description": "الشاشة نصين: قبل وبعد. كل نص بيدخل من ناحية، وVS بتنطّ في النص، والأرقام بتعدّ.",
   "duration": 3.5,
   "size": "1080x1920",
   "theme": "light",
@@ -20,7 +20,7 @@
     "v2": 87,
     "unit": "طلب"
   },
-  "source": "مستوحاة من HyperFrames (Apache-2.0) — comparison-split",
+  "source": "مستوحاة من HyperFrames (Apache-2.0): comparison-split",
   "path": "motions/N408-versus/index.html",
   "addedIn": "v1"
 }

@@ -3,8 +3,8 @@
   "slug": "word-pop",
   "name": "كلمة كلمة",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "الجملة بتظهر كلمة ورا كلمة بنطّة خفيفة. أساسية لأي هوك أو كابشن.",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "الجملة بتطلع كلمة ورا كلمة، وكل كلمة بتنطّ نطّة صغيرة. تنفع لأي هوك أو كابشن.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -16,7 +16,7 @@
   "params": {
     "text": "كل كلمة بتظهر لوحدها مع الإيقاع"
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — per-word-rise / spring-pop",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): per-word-rise / spring-pop",
   "path": "motions/T101-word-pop/index.html",
   "addedIn": "v1"
 }

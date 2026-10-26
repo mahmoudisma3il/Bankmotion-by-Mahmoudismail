@@ -3,8 +3,8 @@
   "slug": "star-rating",
   "name": "تقييم نجوم",
   "category": "N",
-  "categoryName": "أرقام وبيانات",
-  "description": "٥ نجوم بتتملي واحدة ورا التانية بنطّة، والتقييم بيعدّ لحد ٤.٨.",
+  "categoryName": "أرقام وإحصائيات",
+  "description": "5 نجوم بتتملي واحدة ورا التانية، والتقييم بيعدّ لحد 4.8.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -18,7 +18,7 @@
     "rating": 4.8,
     "label": "تقييم أكتر من ٢٠٠٠ عميل"
   },
-  "source": "مستوحاة من HyperFrames (Apache-2.0) — star-rating-fill",
+  "source": "مستوحاة من HyperFrames (Apache-2.0): star-rating-fill",
   "path": "motions/N409-star-rating/index.html",
   "addedIn": "v1"
 }

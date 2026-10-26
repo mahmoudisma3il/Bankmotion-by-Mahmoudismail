@@ -1,10 +1,10 @@
 {
   "code": "B801",
   "slug": "gradient-drift",
-  "name": "تدرج متحرك",
+  "name": "ألوان بتتحرك",
   "category": "B",
-  "categoryName": "خلفيات وتأثيرات",
-  "description": "بقع لونية كبيرة مضببة بتتحرك ببطء. خلفية حلوة تحت أي نص.",
+  "categoryName": "خلفيات ومؤثرات",
+  "description": "بقع ألوان كبيرة مضبّبة بتتحرك براحة. خلفية حلوة تحت أي كلام.",
   "duration": 6,
   "size": "1080x1920",
   "theme": "dark",
@@ -16,7 +16,7 @@
   "params": {
     "colors": "#FF5A1F,#7B5EA7,#3D84A8,#F5B921"
   },
-  "source": "مستوحاة من HyperFrames (Apache-2.0) — mesh-gradient / aurora-drift",
+  "source": "مستوحاة من HyperFrames (Apache-2.0): mesh-gradient / aurora-drift",
   "path": "motions/B801-gradient-drift/index.html",
   "addedIn": "v1"
 }

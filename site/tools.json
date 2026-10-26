@@ -1,15 +1,75 @@
 {
   "_howto": "الأدوات اللي بنستخدمها في الفيديوهات (برّه البنك). السكيلز والحركات مكانها جوه البنك. أضف أداة جديدة هنا وشغّل node site/build.mjs — وحط addedIn بتاريخ الشهر عشان تظهر «جديد».",
   "items": [
-    { "name": "Claude", "type": "AI", "use": "بيكتب كود الحركة ويركّب الفيديو كله من البنك", "url": "https://claude.ai", "addedIn": "2026-10" },
-    { "name": "HyperFrames", "type": "Engine", "use": "المحرّك اللي البنك مبني عليه — فيديو من HTML", "url": "https://github.com/heygen-com/hyperframes", "addedIn": "2026-10" },
-    { "name": "GSAP", "type": "Animation", "use": "تايملاين الأنيميشن جوه كل حركة — مجاني بالكامل", "url": "https://gsap.com", "addedIn": "2026-10" },
-    { "name": "Three.js", "type": "3D", "use": "مشاهد 3D حقيقية في المتصفح", "url": "https://threejs.org", "addedIn": "2026-10" },
-    { "name": "React Three Fiber", "type": "3D", "use": "Three.js بطريقة React", "url": "https://github.com/pmndrs/react-three-fiber", "addedIn": "2026-10" },
-    { "name": "react-three-rapier", "type": "Physics", "use": "فيزيا: وقوع وتصادم وارتداد", "url": "https://github.com/pmndrs/react-three-rapier", "addedIn": "2026-10" },
-    { "name": "react-postprocessing", "type": "Effects", "use": "Bloom وعمق ميدان وجرين فوق الـ3D", "url": "https://github.com/pmndrs/react-postprocessing", "addedIn": "2026-10" },
-    { "name": "ElevenLabs", "type": "Voice", "use": "التعليق الصوتي", "url": "https://elevenlabs.io", "addedIn": "2026-10" },
-    { "name": "Magnific", "type": "Images", "use": "صور وخلفيات للفيديو", "url": "https://magnific.ai", "addedIn": "2026-10" },
-    { "name": "Openverse", "type": "Audio", "use": "أصوات ومؤثرات بترخيص مفتوح", "url": "https://openverse.org", "addedIn": "2026-10" }
+    {
+      "name": "Claude",
+      "type": "AI",
+      "use": "بيكتب كود الحركة ويركّب الفيديو كله من البنك",
+      "url": "https://claude.ai",
+      "addedIn": "2026-10"
+    },
+    {
+      "name": "HyperFrames",
+      "type": "Engine",
+      "use": "البنك مبني عليه. بيحوّل صفحة HTML لفيديو",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "addedIn": "2026-10"
+    },
+    {
+      "name": "GSAP",
+      "type": "Animation",
+      "use": "اللي بيحرّك كل حاجة جوه الحركات، وبقى مجاني",
+      "url": "https://gsap.com",
+      "addedIn": "2026-10"
+    },
+    {
+      "name": "Three.js",
+      "type": "3D",
+      "use": "مشاهد 3D في المتصفح",
+      "url": "https://threejs.org",
+      "addedIn": "2026-10"
+    },
+    {
+      "name": "React Three Fiber",
+      "type": "3D",
+      "use": "Three.js بس بطريقة React",
+      "url": "https://github.com/pmndrs/react-three-fiber",
+      "addedIn": "2026-10"
+    },
+    {
+      "name": "react-three-rapier",
+      "type": "Physics",
+      "use": "فيزيا: حاجات بتقع وتخبط وتنط",
+      "url": "https://github.com/pmndrs/react-three-rapier",
+      "addedIn": "2026-10"
+    },
+    {
+      "name": "react-postprocessing",
+      "type": "Effects",
+      "use": "Bloom وعمق ميدان وجرين فوق الـ3D",
+      "url": "https://github.com/pmndrs/react-postprocessing",
+      "addedIn": "2026-10"
+    },
+    {
+      "name": "ElevenLabs",
+      "type": "Voice",
+      "use": "التعليق الصوتي",
+      "url": "https://elevenlabs.io",
+      "addedIn": "2026-10"
+    },
+    {
+      "name": "Magnific",
+      "type": "Images",
+      "use": "صور وخلفيات للفيديو",
+      "url": "https://magnific.ai",
+      "addedIn": "2026-10"
+    },
+    {
+      "name": "Openverse",
+      "type": "Audio",
+      "use": "أصوات ومؤثرات مجانية بترخيص مفتوح",
+      "url": "https://openverse.org",
+      "addedIn": "2026-10"
+    }
   ]
 }

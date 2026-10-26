@@ -1,10 +1,10 @@
 {
   "code": "T121",
   "slug": "flip-3d",
-  "name": "قلبة ثلاثية الأبعاد",
+  "name": "قلبة 3D",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "كل كلمة بتتقلب لقدام في 3D وهي بتظهر.",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "كل كلمة بتتقلب لقدام في 3D وهي داخلة.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -16,7 +16,7 @@
   "params": {
     "text": "شكل جديد كل مرة"
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — hacker-flip-3d",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): hacker-flip-3d",
   "path": "motions/T121-flip-3d/index.html",
   "addedIn": "v1"
 }

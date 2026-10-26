@@ -3,8 +3,8 @@
   "slug": "growing-percent",
   "name": "نسبة بتكبر",
   "category": "N",
-  "categoryName": "أرقام وبيانات",
-  "description": "النسبة بتعدّ وفي نفس الوقت الرقم بيكبر، وفي الآخر علامة % بتنطّ.",
+  "categoryName": "أرقام وإحصائيات",
+  "description": "النسبة بتعدّ والرقم بيكبر في نفس الوقت، وفي الآخر علامة % بتنطّ.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -17,7 +17,7 @@
     "to": 90,
     "label": "وفّرنا من الوقت"
   },
-  "source": "مستوحاة من HyperFrames (Apache-2.0) — counting-dynamic-scale",
+  "source": "مستوحاة من HyperFrames (Apache-2.0): counting-dynamic-scale",
   "path": "motions/N402-growing-percent/index.html",
   "addedIn": "v1"
 }

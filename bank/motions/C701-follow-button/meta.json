@@ -3,8 +3,8 @@
   "slug": "follow-button",
   "name": "زرار متابعة",
   "category": "C",
-  "categoryName": "دعوة لإجراء ولوجو ونهايات",
-  "description": "كارت بروفايل بزرار «متابعة»، الماوس بيضغط عليه فيتحول لـ«تمت المتابعة» بلون تاني.",
+  "categoryName": "لوجو ونهايات وزراير",
+  "description": "كارت بروفايل فيه زرار «متابعة»، الماوس بيدوس عليه فيبقى «تمت المتابعة» بلون تاني.",
   "duration": 3.5,
   "size": "1080x1920",
   "theme": "dark",
@@ -19,7 +19,7 @@
     "btn": "متابعة",
     "done": "تمت المتابعة ✓"
   },
-  "source": "مستوحاة من HyperFrames (Apache-2.0) — instagram-follow / x-follow-card",
+  "source": "مستوحاة من HyperFrames (Apache-2.0): instagram-follow / x-follow-card",
   "path": "motions/C701-follow-button/index.html",
   "addedIn": "v1"
 }

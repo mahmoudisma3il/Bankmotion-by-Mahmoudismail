@@ -1,10 +1,10 @@
 {
   "code": "T109",
   "slug": "decode",
-  "name": "فك الشفرة",
+  "name": "حروف بتلف",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "حروف عشوائية بتلف لحد ما تستقر على الكلمة الصح. شكل تقني.",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "حروف عشوائية بتلف لحد ما تقف على الكلمة الصح. شكلها تقني.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -16,7 +16,7 @@
   "params": {
     "text": "الذكاء الاصطناعي"
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — scramble-reveal / matrix-decode",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): scramble-reveal / matrix-decode",
   "path": "motions/T109-decode/index.html",
   "addedIn": "v1"
 }

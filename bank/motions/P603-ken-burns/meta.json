@@ -3,8 +3,8 @@
   "slug": "ken-burns",
   "name": "كين بيرنز",
   "category": "P",
-  "categoryName": "صور وأشخاص وكاميرا",
-  "description": "زووم بطيء مع حركة خفيفة على الصورة. بيدّي أي صورة ثابتة إحساس فيديو.",
+  "categoryName": "صور وناس وكاميرا",
+  "description": "زوم بطيء وحركة خفيفة على الصورة، فالصورة الثابتة تبان كأنها فيديو.",
   "duration": 4,
   "size": "1080x1920",
   "theme": "light",
@@ -19,7 +19,7 @@
     "to": 1.25,
     "panX": -60
   },
-  "source": "مستوحاة من HyperFrames (Apache-2.0) — cinematic-zoom / Remotion ken-burns",
+  "source": "مستوحاة من HyperFrames (Apache-2.0): cinematic-zoom / Remotion ken-burns",
   "path": "motions/P603-ken-burns/index.html",
   "addedIn": "v1"
 }

@@ -1,10 +1,10 @@
 {
   "code": "S319",
   "slug": "color-dip",
-  "name": "غطسة لون",
+  "name": "غطسة في اللون",
   "category": "S",
   "categoryName": "انتقالات",
-  "description": "الشاشة بتغطس في لون البراند ثانية وبعدين تطلع على المشهد الجديد.",
+  "description": "الشاشة بتغطس في لون البراند ثانية، وتطلع على المشهد الجديد.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -19,7 +19,7 @@
     "at": 1.2,
     "color": "#E8572A"
   },
-  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — color dip",
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0): color dip",
   "path": "motions/S319-color-dip/index.html",
   "addedIn": "v1"
 }

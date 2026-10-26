@@ -1,10 +1,10 @@
 {
   "code": "P602",
   "slug": "before-after",
-  "name": "مسحة قبل وبعد",
+  "name": "قبل وبعد بالسحب",
   "category": "P",
-  "categoryName": "صور وأشخاص وكاميرا",
-  "description": "خط فاصل بيتحرك على الصورة ويكشف «بعد التعديل» مكان «قبل التعديل»، بمقبض في النص.",
+  "categoryName": "صور وناس وكاميرا",
+  "description": "خط بيتحرك على الصورة ويكشف «بعد التعديل» مكان «قبل التعديل»، وفي نصه مقبض.",
   "duration": 4,
   "size": "1080x1920",
   "theme": "light",
@@ -18,7 +18,7 @@
     "before": "قبل التعديل",
     "after": "بعد التعديل"
   },
-  "source": "من «مسحة قبل التعديل» في ريل Majedteq + مستوحاة من HyperFrames (Apache-2.0) — before-after-wipe",
+  "source": "من «مسحة قبل التعديل» في ريل Majedteq + مستوحاة من HyperFrames (Apache-2.0): before-after-wipe",
   "path": "motions/P602-before-after/index.html",
   "addedIn": "v1"
 }

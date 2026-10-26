@@ -1,10 +1,10 @@
 {
   "code": "T102",
   "slug": "keyword-box",
-  "name": "كلمة تسبّق",
+  "name": "كلمة في بوكس",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "الجملة تظهر، وبعدها الكلمة المهمة تتحط في بوكس ملوّن بخبطة. زي «المونتاج صار أسرع».",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "الجملة بتظهر، وبعدها الكلمة المهمة بتدخل في بوكس ملوّن بخبطة. زي «المونتاج بقى أسرع».",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -17,7 +17,7 @@
     "pre": "المونتاج صار",
     "kw": "أسرع"
   },
-  "source": "من فكرة «كلمة تسبّق» في ريل Majedteq + مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — inline-highlight",
+  "source": "من فكرة «كلمة تسبّق» في ريل Majedteq + مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): inline-highlight",
   "path": "motions/T102-keyword-box/index.html",
   "addedIn": "v1"
 }

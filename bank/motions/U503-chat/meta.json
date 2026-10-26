@@ -1,10 +1,10 @@
 {
   "code": "U503",
   "slug": "chat",
-  "name": "محادثة شات",
+  "name": "شات",
   "category": "U",
   "categoryName": "واجهات وإشعارات",
-  "description": "رسايل شات بتظهر ورا بعض، ونقط «بيكتب…» قبل كل رد.",
+  "description": "رسايل شات بتظهر ورا بعض، وقبل كل رد بتظهر نقط «بيكتب…».",
   "duration": 5,
   "size": "1080x1920",
   "theme": "light",
@@ -16,7 +16,7 @@
   "params": {
     "msgs": "me:عندك الموديل ده؟|them:أيوه متوفر|me:بكام؟|them:٤٢ ألف بس النهارده"
   },
-  "source": "مستوحاة من HyperFrames registry (Apache-2.0) — chat-thread / typing-indicator",
+  "source": "مستوحاة من HyperFrames registry (Apache-2.0): chat-thread / typing-indicator",
   "path": "motions/U503-chat/index.html",
   "addedIn": "v1"
 }

@@ -1,10 +1,10 @@
 {
   "code": "T118",
   "slug": "title-lockup",
-  "name": "عنوان بكيكر",
+  "name": "عنوان بكلمة صغيرة فوقه",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "كلمة صغيرة فوق (كيكر) بخط ملوّن، تحتها العنوان كلمة كلمة، وتحته سطر فرعي. مقدمة جاهزة.",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "كلمة صغيرة ملوّنة فوق، وتحتها العنوان كلمة كلمة، وتحته سطر صغير. بداية فيديو جاهزة.",
   "duration": 3.5,
   "size": "1080x1920",
   "theme": "light",
@@ -18,7 +18,7 @@
     "title": "إزاي تعمل ريل في ١٠ دقايق",
     "sub": "من غير ولا برنامج"
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — titlecard-lockup",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): titlecard-lockup",
   "path": "motions/T118-title-lockup/index.html",
   "addedIn": "v1"
 }

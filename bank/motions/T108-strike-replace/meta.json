@@ -1,10 +1,10 @@
 {
   "code": "T108",
   "slug": "strike-replace",
-  "name": "شطب واستبدال",
+  "name": "شطب وتبديل",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "كلمة بتتشطب بخط، وتطلع تحتها الكلمة البديلة بخبطة. ممتازة للأسعار أو «بدل كذا».",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "الكلمة بتتشطب، وتحتها بتطلع الكلمة الجديدة بخبطة. بتنفع للأسعار أو «بدل ده خد ده».",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -17,7 +17,7 @@
     "old": "ساعتين مونتاج",
     "neu": "١٠ دقايق"
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — strikethrough-replace",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): strikethrough-replace",
   "path": "motions/T108-strike-replace/index.html",
   "addedIn": "v1"
 }

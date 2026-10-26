@@ -4,7 +4,7 @@
   "name": "ويب بان",
   "category": "S",
   "categoryName": "انتقالات",
-  "description": "حركة كاميرا سريعة جدًا لجنب مع موشن بلور، والمشهد الجديد يدخل بنفس السرعة.",
+  "description": "الكاميرا بتجري لجنب بسرعة ومعاها موشن بلور، والمشهد الجديد بيدخل بنفس السرعة.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -18,7 +18,7 @@
     "b": "المشهد ٢",
     "at": 1.2
   },
-  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — whip-pan",
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0): whip-pan",
   "path": "motions/S307-whip-pan/index.html",
   "addedIn": "v1"
 }

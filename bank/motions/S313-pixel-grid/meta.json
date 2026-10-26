@@ -4,7 +4,7 @@
   "name": "بكسلة",
   "category": "S",
   "categoryName": "انتقالات",
-  "description": "مربعات ملونة بتغطي الشاشة بترتيب عشوائي وبعدين تختفي وتكشف المشهد الجديد.",
+  "description": "مربعات ملوّنة بتغطي الشاشة بالعشوائي، وبعدين تختفي ويبان المشهد الجديد.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -20,7 +20,7 @@
     "cols": 6,
     "rows": 10
   },
-  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — grid dissolve / grid-pixelate-wipe",
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0): grid dissolve / grid-pixelate-wipe",
   "path": "motions/S313-pixel-grid/index.html",
   "addedIn": "v1"
 }

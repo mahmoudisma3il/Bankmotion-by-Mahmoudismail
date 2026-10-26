@@ -3,8 +3,8 @@
   "slug": "camera-shake",
   "name": "هزة كاميرا",
   "category": "P",
-  "categoryName": "صور وأشخاص وكاميرا",
-  "description": "الكادر كله بيتهز هزة قوية مع كلمة صدمة. لأي لحظة مفاجأة.",
+  "categoryName": "صور وناس وكاميرا",
+  "description": "الكادر كله بيتهز جامد ومعاه كلمة صدمة. لأي لحظة مفاجأة.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -16,7 +16,7 @@
   "params": {
     "text": "إيه ده؟!"
   },
-  "source": "مستوحاة من HyperFrames (Apache-2.0) — camera-shake",
+  "source": "مستوحاة من HyperFrames (Apache-2.0): camera-shake",
   "path": "motions/P609-camera-shake/index.html",
   "addedIn": "v1"
 }

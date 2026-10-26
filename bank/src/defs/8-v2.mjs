@@ -1,14 +1,14 @@
-// v2 — حركات جديدة (أكتوبر 2026)
+// v2: حركات جديدة (أكتوبر 2026)
 // كلها تصميم أصلي لبنك الحركات. الأفكار مستوحاة من أساليب ريلز «الأدوات المرقّمة» اللي بتشرح أدوات AI للمونتيرين.
 const V = "v2";
-const INSP = "تصميم أصلي — مستوحى من أسلوب ريلز «الأدوات المرقّمة»";
+const INSP = "تصميم أصلي: مستوحى من أسلوب ريلز «الأدوات المرقّمة»";
 const GLOW = `<div class="glow" id="glow"></div>`;
 const GLOW_CSS = `.glow{position:absolute;inset:-20%;background:radial-gradient(circle at 70% 30%,color-mix(in srgb,var(--accent) 55%,transparent),transparent 55%),radial-gradient(circle at 20% 80%,color-mix(in srgb,var(--accent2) 30%,transparent),transparent 50%);filter:blur(40px);opacity:.55}`;
 
 export default [
 {
   code: "U513", slug: "addon-tracker", name: "شريط الأدوات ✓", tags: ["ui","progress","checklist","series"], addedIn: V,
-  desc: "شريط زجاج فوق فيه أيقونات الأدوات، وكل ما تخلص أداة بتاخد علامة ✓ والعدّاد يزيد (1/4 ← 4/4). مثالي لريلز «الأدوات المرقّمة».",
+  desc: "شريط زجاج فوق فيه أيقونات الأدوات، وكل ما أداة تخلص تاخد ✓ والعدّاد يزيد من 1/4 لحد 4/4. معمول لريلز الأدوات المرقّمة.",
   dur: 5, theme: "dark", params: { label: "ADD-ONS", items: "11|M|◎|▶", total: 4 },
   css: GLOW_CSS + `.bar{position:absolute;top:260px;left:70px;right:70px;height:150px;border-radius:75px;background:rgba(255,255,255,.07);border:2px solid rgba(255,255,255,.14);backdrop-filter:blur(20px);display:flex;align-items:center;gap:26px;padding:0 44px;direction:ltr}
 .lb{font-family:ui-monospace,Menlo,monospace;font-size:34px;letter-spacing:.2em;color:var(--muted);font-weight:700;margin-right:10px}
@@ -28,7 +28,7 @@ tl.to("#glow",{rotation:25,duration:5,ease:"none"},0);`,
 },
 {
   code: "U514", slug: "node-link", name: "توصيل أداتين", tags: ["ui","diagram","connect","ai","mcp"], addedIn: V,
-  desc: "كارتين لأداتين بيطلعوا، وخط متقطّع بيترسم بينهم وكبسولة صغيرة (زي MCP) بتجري عليه. لشرح «الأداة دي بتتوصل بدي».",
+  desc: "كارتين لأداتين بيطلعوا، وخط متقطّع بيترسم بينهم وعليه كبسولة صغيرة زي MCP بتجري. لما تحب تقول إن الأداة دي بتتوصل بدي.",
   dur: 4, theme: "dark", params: { left: "Claude", right: "ElevenLabs", pill: "MCP", leftIcon: "✳", rightIcon: "II" },
   css: GLOW_CSS + `.tile{position:absolute;top:760px;width:300px;text-align:center}.tile .bx{width:300px;height:300px;border-radius:72px;display:flex;align-items:center;justify-content:center;font-size:150px;font-weight:900;box-shadow:0 30px 80px rgba(0,0,0,.45)}
 .tile .nm{margin-top:34px;font-size:54px;font-weight:800;direction:ltr}#a{right:110px}#a .bx{background:#F3E3D6;color:#D9714A}#b{left:110px}#b .bx{background:#fff;color:#111}
@@ -44,8 +44,8 @@ svg{position:absolute;left:0;top:0;width:1080px;height:1920px}.pl{position:absol
   source: INSP,
 },
 {
-  code: "T125", slug: "big-index", name: "رقم القسم الضخم", tags: ["text","number","section","series"], addedIn: V,
-  desc: "كلمة صغيرة فوق (ADD-ON) ورقم ضخم «01» بيتقلب لحد ما يثبت، وتحته نقط بتوضح إنت فين في السلسلة.",
+  code: "T125", slug: "big-index", name: "رقم القسم الكبير", tags: ["text","number","section","series"], addedIn: V,
+  desc: "كلمة صغيرة فوق زي ADD-ON، وتحتها رقم كبير «01» بيتقلب لحد ما يثبت، وتحته نقط بتقولك إنت فين في السلسلة.",
   dur: 3, theme: "dark", params: { label: "ADD-ON", num: 1, total: 4, title: "يعمل التعليق الصوتي" },
   css: GLOW_CSS + `.wrap{position:absolute;top:620px;right:110px;left:110px;direction:ltr;text-align:left}.lb{font-family:ui-monospace,Menlo,monospace;font-size:46px;letter-spacing:.25em;color:var(--accent);font-weight:800}
 .num{font-size:420px;font-weight:900;line-height:1;letter-spacing:-.02em;overflow:hidden;height:420px}.dots{display:flex;gap:22px;margin-top:40px}.dots i{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.2)}.dots i.on{background:var(--ink)}
@@ -60,7 +60,7 @@ tl.from("#lb",{opacity:0,x:-60,duration:.4},.1).from("#n",{yPercent:100,duration
 },
 {
   code: "N413", slug: "step-chip", name: "كبسولة العدّ", tags: ["number","counter","series","chip"], addedIn: V,
-  desc: "كبسولة صغيرة «04 / 10» الرقم فيها بيتقلب لفوق، وجنبها كبسولة اسم القسم. تتحط في ركن أي مشهد في سلسلة.",
+  desc: "كبسولة صغيرة مكتوب فيها «04 / 10» والرقم بيتقلب لفوق، وجنبها اسم القسم. بتتحط في ركن أي مشهد في سلسلة.",
   dur: 3, theme: "dark", params: { from: 3, to: 4, total: 10, tag: "✦ سكيلز للشكل" },
   css: `.row{position:absolute;top:220px;left:80px;right:80px;display:flex;justify-content:space-between;align-items:center}
 .ch{direction:ltr;font-family:ui-monospace,Menlo,monospace;font-size:52px;font-weight:800;padding:14px 34px;border-radius:40px;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.18);display:flex;gap:16px}
@@ -75,7 +75,7 @@ tl.from("#ch",{x:-200,opacity:0,duration:.5,ease:"power3.out"},.1).from("#tg",{x
 },
 {
   code: "U515", slug: "code-type", name: "كود بيتكتب", tags: ["ui","code","typewriter","developer"], addedIn: V,
-  desc: "كارت محرّر كود زجاج، السطور بتتكتب حرف حرف ومؤشر بيرمش، وفي الآخر بادج ✓ بتنطّ. لشرح «الـAI بيكتب الكود».",
+  desc: "شاشة كود زجاج، السطور بتتكتب حرف حرف والمؤشر بيرمش، وفي الآخر بادج ✓ بتنطّ. لما تحب توري إن الـAI بيكتب الكود.",
   dur: 5, theme: "dark", params: { file: "Scene.tsx", badge: "✓ Opus", code: "<Sequence from={0}>|  <Title spring={?} />|  <Scene3D engine={?} />|  <Audio src={?} />|</Sequence>" },
   css: GLOW_CSS + `.ed{position:absolute;top:620px;left:70px;right:70px;border-radius:40px;background:rgba(20,20,26,.78);border:2px solid rgba(255,255,255,.12);box-shadow:0 40px 100px rgba(0,0,0,.5);direction:ltr;text-align:left;overflow:hidden}
 .hd{display:flex;align-items:center;gap:14px;padding:26px 34px;border-bottom:2px solid rgba(255,255,255,.08);font-family:ui-monospace,Menlo,monospace;font-size:32px;color:var(--muted)}.hd i{width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,.25)}
@@ -91,7 +91,7 @@ tl.to("#cr",{opacity:0,duration:.01,repeat:9,yoyo:true,repeatDelay:.25},.2);`,
 },
 {
   code: "U516", slug: "ease-curve", name: "منحنى التوقيت", tags: ["ui","easing","graph","motion-design"], addedIn: V,
-  desc: "رسم بياني لمنحنى ease-in-out بيترسم، ونقطة بتجري عليه، ومربع تحته بيتحرك بنفس التوقيت بالظبط. لشرح مبادئ التوقيت.",
+  desc: "منحنى ease-in-out بيترسم ونقطة بتجري عليه، وتحته مربع بيتحرك بنفس التوقيت. لشرح التوقيت والـeasing.",
   dur: 4, theme: "dark", params: { label: "ease-in-out", c1: "0.65,0", c2: "0.35,1" },
   css: GLOW_CSS + `.card{position:absolute;top:560px;left:80px;right:80px;height:760px;border-radius:44px;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.12);overflow:hidden}
 svg{position:absolute;left:0;top:0;width:920px;height:760px}.lb{position:absolute;right:40px;bottom:30px;font-family:ui-monospace,Menlo,monospace;font-size:36px;color:var(--muted);direction:ltr}
@@ -109,7 +109,7 @@ tl.from(".card",{opacity:0,y:80,duration:.5},.1).to("#cv",{strokeDashoffset:0,du
 },
 {
   code: "U517", slug: "timeline-keys", name: "تايملاين وكي فريمز", tags: ["ui","timeline","keyframes","gsap","editor"], addedIn: V,
-  desc: "تايملاين فيه 4 تراكات، الكي فريمز (معيّنات) بتنطّ عليها، وخط الـplayhead بيعدّي وكل كي فريم يلمسه بينوّر. شكل برامج المونتاج اللي المونتير عارفه.",
+  desc: "تايملاين فيه 4 تراكات، الكي فريمز بتنطّ عليها، والـplayhead بيعدّي وكل كي فريم يلمسه بينوّر. نفس شكل برامج المونتاج.",
   dur: 4, theme: "dark", params: { tracks: 4, label: "GSAP Timeline" },
   css: GLOW_CSS + `.tlc{position:absolute;top:620px;left:70px;right:70px;height:640px;border-radius:40px;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.12);padding:60px 50px;direction:ltr}
 .tr{position:relative;height:90px;border-radius:20px;background:rgba(255,255,255,.07);margin-bottom:42px}.k{position:absolute;top:50%;width:38px;height:38px;margin:-19px 0 0 -19px;background:var(--accent);transform:rotate(45deg) scale(0);border-radius:6px}
@@ -125,8 +125,8 @@ keys.forEach(k=>{const at=1.4+2.2*(k.x/W);tl.add(()=>k.e.classList.add("hit"),at
   source: INSP,
 },
 {
-  code: "B809", slug: "tint-shift", name: "إضاءة بتغيّر لونها", tags: ["background","gradient","glow","section"], addedIn: V,
-  desc: "خلفية غامقة فيها إضاءة ناعمة بتتحرك، ولونها بيتغيّر مع كل قسم (بنفسجي ← أزرق ← أخضر ← دهبي). تحت أي سلسلة مرقّمة.",
+  code: "B809", slug: "tint-shift", name: "نور بيغيّر لونه", tags: ["background","gradient","glow","section"], addedIn: V,
+  desc: "خلفية غامقة فيها نور ناعم بيتحرك ولونه بيتغير مع كل قسم: بنفسجي، أزرق، أخضر، دهبي. تحت أي سلسلة مرقّمة.",
   dur: 8, theme: "dark", params: { colors: "#5B4FDB,#2F6BFF,#1FA37A,#D9A441" },
   css: `.l{position:absolute;width:1300px;height:1300px;border-radius:50%;filter:blur(160px);opacity:.6}#a{left:-300px;top:-200px}#b{right:-400px;bottom:-300px;opacity:.35}.grain{position:absolute;inset:0;background:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:6px 6px;opacity:.35}`,
   html: `<div class="l" id="a"></div><div class="l" id="b"></div><div class="grain"></div>`,
@@ -136,8 +136,8 @@ tl.to("#a",{x:260,y:380,duration:8,ease:"sine.inOut"},0).to("#b",{x:-200,y:-300,
   source: INSP,
 },
 {
-  code: "P613", slug: "phone-hub", name: "موبايل في النص والأدوات حواليه", tags: ["photo","phone","mockup","outro","diagram"], addedIn: V,
-  desc: "موبايل في نص الشاشة وحواليه 4 كروت أدوات، خطوط بتترسم من كل أداة للموبايل وكل واحدة تاخد ✓، وتحت «MADE WITH 4/4». قفلة «الريل ده معمول بيهم».",
+  code: "P613", slug: "phone-hub", name: "موبايل والأدوات حواليه", tags: ["photo","phone","mockup","outro","diagram"], addedIn: V,
+  desc: "موبايل في النص وحواليه 4 كروت أدوات، خطوط بتترسم من كل أداة للموبايل وكل واحدة تاخد ✓، وتحت «MADE WITH 4/4». قفلة للريل اللي بتقول إنه معمول بالأدوات دي.",
   dur: 5, theme: "dark", params: { items: "ElevenLabs|Magnific|Chrome|Bankmotion", icons: "II|M|◎|B", footer: "MADE WITH" },
   css: GLOW_CSS + `.ph{position:absolute;left:390px;top:620px;width:300px;height:600px;border-radius:56px;background:#0b0b0e;border:10px solid #2a2a30;box-shadow:0 40px 120px rgba(0,0,0,.6);overflow:hidden}.ph .sc{position:absolute;inset:0;background:linear-gradient(170deg,var(--accent),#1a1a22 70%)}
 .nd{position:absolute;width:190px;text-align:center}.nd .bx{position:relative;width:150px;height:150px;margin:0 auto;border-radius:40px;background:var(--card);border:2px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:900}
@@ -157,7 +157,7 @@ tl.from("#ph",{y:300,opacity:0,duration:.7,ease:"power3.out"},.1).from("#ft",{op
 },
 {
   code: "T126", slug: "caption-pill", name: "كابشن في كبسولة", tags: ["text","caption","subtitle","pill"], addedIn: V,
-  desc: "كابشن تحت الشاشة جوه كبسولة زجاج، الكلام بيظهر كلمة كلمة والكلمة المهمة بتنوّر بلون مميز. للكابشن بتاع أي ريل فيه تعليق صوتي.",
+  desc: "كابشن تحت جوه كبسولة زجاج، الكلام بيظهر كلمة كلمة والكلمة المهمة بتنوّر بلون تاني. لأي ريل فيه تعليق صوتي.",
   dur: 4, theme: "dark", params: { text: "بيفتح المواقع بنفسه ويصوّر الشاشة", hi: "بنفسه" },
   css: GLOW_CSS + `.capw{position:absolute;bottom:420px;left:70px;right:70px;display:flex;justify-content:center}.cap{max-width:940px;padding:26px 50px;border-radius:60px;background:rgba(20,20,26,.72);border:2px solid rgba(255,255,255,.14);backdrop-filter:blur(16px);font-size:68px;font-weight:900;line-height:1.5;text-align:center}
 .cap .w{opacity:.25}.cap .w.hi{color:var(--accent2)}`,

@@ -1,10 +1,10 @@
 {
   "code": "S312",
   "slug": "diagonal-split",
-  "name": "شقّة قطرية",
+  "name": "شق بالقطر",
   "category": "S",
   "categoryName": "انتقالات",
-  "description": "المشهد القديم بيتشق نصين بالقطر وكل نص يطير ناحية، والجديد يبان من ورا.",
+  "description": "المشهد القديم بيتشق نصين بالقطر وكل نص يطير ناحية، والجديد يبان من وراه.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -17,7 +17,7 @@
     "b": "المشهد ٢",
     "at": 1.2
   },
-  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — diagonal split",
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0): diagonal split",
   "path": "motions/S312-diagonal-split/index.html",
   "addedIn": "v1"
 }

@@ -1,10 +1,10 @@
 {
   "code": "T114",
   "slug": "shimmer",
-  "name": "لمعة على النص",
+  "name": "لمعة على الكلام",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "لمعة ضوء بتعدي على النص من اليمين للشمال. حلوة للعناوين والعروض.",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "لمعة نور بتعدّي على الكلام من اليمين للشمال. حلوة للعناوين والعروض.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -16,7 +16,7 @@
   "params": {
     "text": "عرض لفترة محدودة"
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — text-shimmer / gloss-sweep",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): text-shimmer / gloss-sweep",
   "path": "motions/T114-shimmer/index.html",
   "addedIn": "v1"
 }

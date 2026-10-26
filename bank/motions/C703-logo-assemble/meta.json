@@ -3,8 +3,8 @@
   "slug": "logo-assemble",
   "name": "لوجو بيتجمع",
   "category": "C",
-  "categoryName": "دعوة لإجراء ولوجو ونهايات",
-  "description": "أشكال هندسية بتطير من الأركان وتتجمع في لوجو، فلاش، واسم البراند.",
+  "categoryName": "لوجو ونهايات وزراير",
+  "description": "أشكال بتطير من الأركان وتتجمع في اللوجو، فلاش، واسم البراند.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -16,7 +16,7 @@
   "params": {
     "brand": "اسم البراند"
   },
-  "source": "مستوحاة من HyperFrames (Apache-2.0) — logo-sting / logo-assemble-lockup",
+  "source": "مستوحاة من HyperFrames (Apache-2.0): logo-sting / logo-assemble-lockup",
   "path": "motions/C703-logo-assemble/index.html",
   "addedIn": "v1"
 }

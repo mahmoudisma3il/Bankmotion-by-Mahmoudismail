@@ -1,10 +1,10 @@
 {
   "code": "U511",
   "slug": "lower-third",
-  "name": "اسم ووظيفة (Lower third)",
+  "name": "اسم ووظيفة",
   "category": "U",
   "categoryName": "واجهات وإشعارات",
-  "description": "شريط ملون بيتمد وبعدين الاسم والوظيفة بيطلعوا من ورا ماسك. لأي حد بيتكلم في الفيديو.",
+  "description": "شريط ملوّن بيتمد، والاسم والوظيفة بيطلعوا من وراه. لأي حد بيتكلم في الفيديو (Lower third).",
   "duration": 4,
   "size": "1080x1920",
   "theme": "light",
@@ -17,7 +17,7 @@
     "name": "محمود إسماعيل",
     "role": "Creative Director"
   },
-  "source": "مستوحاة من HyperFrames registry (Apache-2.0) — lt-side-rule / lt-mask-reveal",
+  "source": "مستوحاة من HyperFrames registry (Apache-2.0): lt-side-rule / lt-mask-reveal",
   "path": "motions/U511-lower-third/index.html",
   "addedIn": "v1"
 }

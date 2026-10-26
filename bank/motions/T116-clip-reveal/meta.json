@@ -1,10 +1,10 @@
 {
   "code": "T116",
   "slug": "clip-reveal",
-  "name": "كشف بالماسك",
+  "name": "عنوان بينكشف",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "العنوان بينكشف من تحت لفوق بماسك، وبعدين خط تحته يتمد.",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "العنوان بينكشف من تحت لفوق، وبعدين خط تحته بيتمد.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -17,7 +17,7 @@
     "title": "عنوان قوي",
     "sub": "وسطر يشرح بسرعة"
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — svg-mask-reveal / curtain-reveal",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): svg-mask-reveal / curtain-reveal",
   "path": "motions/T116-clip-reveal/index.html",
   "addedIn": "v1"
 }

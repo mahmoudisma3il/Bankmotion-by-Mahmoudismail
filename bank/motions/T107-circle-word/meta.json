@@ -1,10 +1,10 @@
 {
   "code": "T107",
   "slug": "circle-word",
-  "name": "دائرة حوالين الكلمة",
+  "name": "دايرة حوالين الكلمة",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "دائرة بخط اليد بتترسم حوالين الكلمة عشان تلفت النظر ليها.",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "دايرة بإيد بتترسم حوالين الكلمة عشان العين تروحلها.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "light",
@@ -18,7 +18,7 @@
     "pre": "ركز على",
     "kw": "السعر"
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — hw-callout-circle",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): hw-callout-circle",
   "path": "motions/T107-circle-word/index.html",
   "addedIn": "v1"
 }

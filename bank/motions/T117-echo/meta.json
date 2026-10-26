@@ -1,10 +1,10 @@
 {
   "code": "T117",
   "slug": "echo",
-  "name": "صدى",
+  "name": "صدى الكلمة",
   "category": "T",
-  "categoryName": "نصوص وتايبوجرافي",
-  "description": "نسخ من الكلمة بتتجمع فوق بعض وتعمل إحساس سرعة وصدى.",
+  "categoryName": "كلام وتايبوجرافي",
+  "description": "نسخ من الكلمة بتتجمع فوق بعض وتدّي إحساس سرعة.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -16,7 +16,7 @@
   "params": {
     "text": "بسرعة"
   },
-  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0) — echo-trail",
+  "source": "مستوحاة من HyperFrames (heygen-com/hyperframes, Apache-2.0): echo-trail",
   "path": "motions/T117-echo/index.html",
   "addedIn": "v1"
 }

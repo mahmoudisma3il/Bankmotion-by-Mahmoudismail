@@ -14,7 +14,8 @@ const skills = fs.existsSync(path.join(ROOT, "src", "skills.json")) ? JSON.parse
 const hf = JSON.parse(fs.readFileSync(path.join(ROOT, "src", "hyperframes-registry.json"), "utf8"));
 
 const broken = fs.existsSync(path.join(ROOT, "src", "hf-broken-media.json")) ? JSON.parse(fs.readFileSync(path.join(ROOT, "src", "hf-broken-media.json"), "utf8")) : { video: [], poster: [] };
-const hfItems = hf.items.map((h) => { const x = { ...h }; if (broken.video.includes(x.code)) delete x.video; if (broken.poster.includes(x.code)) delete x.poster; return x; });
+const hfAr = fs.existsSync(path.join(ROOT, "src", "hf-ar.json")) ? JSON.parse(fs.readFileSync(path.join(ROOT, "src", "hf-ar.json"), "utf8")) : {};
+const hfItems = hf.items.map((h) => { const x = { ...h }; x.title = String(x.title).replace(/\s*—\s*/g, " · "); if (hfAr[x.code]) { x.descriptionEn = x.description; x.description = hfAr[x.code]; } if (broken.video.includes(x.code)) delete x.video; if (broken.poster.includes(x.code)) delete x.poster; return x; });
 const catalog = {
   name: cfg.name, version: cfg.version, updated: cfg.updated, repo: cfg.repo, highlights: cfg.highlights || [],
   howToResolve: "Find the code in motions[] (own motions, folder = dir) or hyperframes[] (install with the `install` command). Codes never change.",

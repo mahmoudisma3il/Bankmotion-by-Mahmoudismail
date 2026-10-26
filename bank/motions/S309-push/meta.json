@@ -1,10 +1,10 @@
 {
   "code": "S309",
   "slug": "push",
-  "name": "دفع",
+  "name": "زقّة",
   "category": "S",
   "categoryName": "انتقالات",
-  "description": "المشهد الجديد بيزق القديم ويطلعه بره الشاشة.",
+  "description": "المشهد الجديد بيزق القديم لبره الشاشة.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -18,7 +18,7 @@
     "b": "المشهد ٢",
     "at": 1.2
   },
-  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — push slide",
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0): push slide",
   "path": "motions/S309-push/index.html",
   "addedIn": "v1"
 }

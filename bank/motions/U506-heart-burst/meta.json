@@ -1,10 +1,10 @@
 {
   "code": "U506",
   "slug": "heart-burst",
-  "name": "قلب لايك",
+  "name": "لايك",
   "category": "U",
   "categoryName": "واجهات وإشعارات",
-  "description": "قلب لايك بيتضغط وينفجر منه دواير صغيرة، وعدد اللايكات يزيد.",
+  "description": "قلب اللايك بيتداس ويطلع منه دواير صغيرة، وعدد اللايكات بيزيد.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -18,7 +18,7 @@
     "from": 999,
     "to": 1000
   },
-  "source": "مستوحاة من HyperFrames registry (Apache-2.0) — particle-burst / physics-press-reaction",
+  "source": "مستوحاة من HyperFrames registry (Apache-2.0): particle-burst / physics-press-reaction",
   "path": "motions/U506-heart-burst/index.html",
   "addedIn": "v1"
 }

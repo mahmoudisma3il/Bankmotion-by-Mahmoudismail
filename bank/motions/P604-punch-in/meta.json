@@ -1,10 +1,10 @@
 {
   "code": "P604",
   "slug": "punch-in",
-  "name": "زووم على نقطة",
+  "name": "زوم على حتة",
   "category": "P",
-  "categoryName": "صور وأشخاص وكاميرا",
-  "description": "دايرة تحديد بتظهر على حتة معينة، والكاميرا بتزوم عليها وبعدين ترجع.",
+  "categoryName": "صور وناس وكاميرا",
+  "description": "دايرة بتظهر على حتة في الصورة، والكاميرا بتقرّب عليها وبعدين ترجع.",
   "duration": 3.5,
   "size": "1080x1920",
   "theme": "light",
@@ -19,7 +19,7 @@
     "y": 560,
     "zoom": 2.4
   },
-  "source": "مستوحاة من HyperFrames (Apache-2.0) — coordinate-target-zoom / push-in",
+  "source": "مستوحاة من HyperFrames (Apache-2.0): coordinate-target-zoom / push-in",
   "path": "motions/P604-punch-in/index.html",
   "addedIn": "v1"
 }

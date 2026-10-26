@@ -1,10 +1,10 @@
 {
   "code": "U505",
   "slug": "search-typing",
-  "name": "بحث بيتكتب",
+  "name": "بحث",
   "category": "U",
   "categoryName": "واجهات وإشعارات",
-  "description": "خانة بحث بتظهر، كلمة البحث بتتكتب، والنتايج تنزل تحتها ورا بعض.",
+  "description": "خانة بحث بتظهر، الكلمة بتتكتب، والنتايج بتنزل تحتها ورا بعض.",
   "duration": 4,
   "size": "1080x1920",
   "theme": "light",
@@ -17,7 +17,7 @@
     "query": "شقة للإيجار في المعادي",
     "results": "شقة ٣ غرف – المعادي|شقة مفروشة – دجلة|استوديو – المعادي الجديدة"
   },
-  "source": "مستوحاة من HyperFrames registry (Apache-2.0) — typed-prompt / input-feedback",
+  "source": "مستوحاة من HyperFrames registry (Apache-2.0): typed-prompt / input-feedback",
   "path": "motions/U505-search-typing/index.html",
   "addedIn": "v1"
 }

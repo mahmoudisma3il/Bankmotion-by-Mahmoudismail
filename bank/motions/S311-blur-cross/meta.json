@@ -1,10 +1,10 @@
 {
   "code": "S311",
   "slug": "blur-cross",
-  "name": "بلور كروس",
+  "name": "دوبان بالضباب",
   "category": "S",
   "categoryName": "انتقالات",
-  "description": "المشهدين بيدوبوا في بعض مع ضباب. انتقال هادي ومريح.",
+  "description": "المشهدين بيدوبوا في بعض بضباب خفيف. انتقال هادي.",
   "duration": 3,
   "size": "1080x1920",
   "theme": "dark",
@@ -18,7 +18,7 @@
     "b": "المشهد ٢",
     "at": 1.2
   },
-  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0) — blur crossfade",
+  "source": "مستوحاة من HyperFrames transitions catalog (Apache-2.0): blur crossfade",
   "path": "motions/S311-blur-cross/index.html",
   "addedIn": "v1"
 }
