@@ -98,6 +98,9 @@ footer a{color:inherit}
 .howuse{margin-top:14px;background:rgba(91,79,219,.08);border:1px solid rgba(91,79,219,.2);border-radius:14px;padding:12px 14px;font-size:14px;line-height:1.7}
 .howuse .ht{color:var(--accent);font-size:15px;font-weight:800}.howuse ol{margin:4px 0 6px;padding-inline-start:20px}.howuse small{color:var(--muted)}
 .btn .who{font-weight:600;opacity:.8;font-size:.85em}
+.noprev{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:14px;text-align:center;background:linear-gradient(160deg,#ECEBFB,#DCD9F6);color:#2d2a5c}
+.noprev b{font-size:15px;direction:ltr}.noprev span{font-size:12px;opacity:.8}.noprev small{font-size:11px;color:var(--accent);font-weight:700}
+.noprev.big b{font-size:26px}.noprev.big span{font-size:15px}.noprev.big small{font-size:14px}
 .tagnew{background:var(--ink);color:#fff;font-size:11px;font-weight:800;padding:1px 8px;border-radius:999px;margin-inline-start:6px}
 .skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
 .skill{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--shadow)}
@@ -165,7 +168,7 @@ function chips() {
 function card(m) {
   const isH = m.code.startsWith("H"), p = picks[m.code];
   const thumb = isH
-    ? `<div class="thumb ${m.size && m.size.startsWith("1920") ? "wide" : ""}" data-open="${m.code}">${m.poster ? `<img loading="lazy" src="${esc(m.poster)}" alt="">` : ""}<span class="num">${m.code}</span>${m.video ? '<span class="dur">▶</span>' : ""}</div>`
+    ? `<div class="thumb ${m.size && m.size.startsWith("1920") ? "wide" : ""}" data-open="${m.code}">${m.poster ? `<img loading="lazy" src="${esc(m.poster)}" alt="">` : m.video ? `<video muted playsinline preload="metadata" src="${esc(m.video)}#t=1"></video>` : `<div class="noprev"><b>${esc(m.title)}</b><span>${m.type === "block" ? "مشهد كامل" : "عنصر"} · مفيش معاينة</span><small>اطلبه من الـAI بالكود</small></div>`}<span class="num">${m.code}</span>${m.video ? '<span class="dur">▶</span>' : ""}</div>`
     : `<div class="thumb" data-open="${m.code}"><img loading="lazy" src="${esc(m.dir)}/poster.jpg" alt=""><span class="num">${m.code}</span>${isNew(m) ? '<span class="new">جديد</span>' : ""}<span class="dur">${m.duration}s</span></div>`;
   return `<article class="card ${p === 1 ? "yes" : p === 0 ? "no" : ""}" data-code="${m.code}">${thumb}
   <div class="body"><div class="ttl"><span>${esc(isH ? m.title : m.name)}</span><span class="c">${m.code}</span></div>
@@ -220,7 +223,7 @@ function openDlg(code) {
   const m = all().find((x) => x.code === code); if (!m) return; stopPreview();
   const isH = code.startsWith("H"), d = $("#dlg");
   const params = !isH && Object.keys(m.params || {}).length ? `<table>${Object.entries(m.params).map(([k, v]) => `<tr><td class="mono">${esc(k)}</td><td>${esc(typeof v === "string" ? v : JSON.stringify(v))}</td></tr>`).join("")}</table>` : "";
-  const stage = isH ? (m.video ? `<video src="${esc(m.video)}" autoplay muted loop playsinline></video>` : m.poster ? `<img src="${esc(m.poster)}" alt="">` : "")
+  const stage = isH ? (m.video ? `<video src="${esc(m.video)}" autoplay muted loop playsinline></video>` : m.poster ? `<img src="${esc(m.poster)}" alt="">` : `<div class="noprev big"><b>${esc(m.title)}</b><span>مكتبة HyperFrames مش موفّرة معاينة للعنصر ده.</span><small>انسخ للـAI وهو هيركّبه ويوريك شكله.</small></div>`)
                     : `<iframe src="${esc(m.dir)}/index.html?play" title="${esc(m.name)}"></iframe>`;
   d.innerHTML = `<div class="dlg"><div class="stagebox" id="sb">${stage}<button class="close" id="x" aria-label="اقفل">×</button></div><div class="info">
     <div class="mono" style="color:var(--accent);font-weight:900">${m.code}</div><h3>${esc(isH ? m.title : m.name)}</h3>

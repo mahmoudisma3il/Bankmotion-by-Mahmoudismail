@@ -3710,7 +3710,6 @@
     "apple",
     "apple-terminal"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/blocks/code-snippet-apple-terminal-pro.png",
    "video": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/blocks/code-snippet-apple-terminal-pro.mp4",
    "size": "1920x1080",
    "duration": 12,
@@ -5421,8 +5420,6 @@
     "showcase",
     "retro"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/blocks/oscilloscope-trace.png",
-   "video": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/blocks/oscilloscope-trace.mp4",
    "size": "1920x1080",
    "duration": 6,
    "install": "npx hyperframes add oscilloscope-trace",
@@ -5703,8 +5700,6 @@
     "media-treatment-overlay",
     "loopable"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/blocks/snow.png",
-   "video": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/blocks/snow.mp4",
    "size": "1920x1080",
    "duration": 6,
    "install": "npx hyperframes add snow",
@@ -5831,8 +5826,6 @@
     "media-treatment-overlay",
     "loopable"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/blocks/starfield.png",
-   "video": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/blocks/starfield.mp4",
    "size": "1920x1080",
    "duration": 6,
    "install": "npx hyperframes add starfield",
@@ -6846,7 +6839,6 @@
    "tags": [
     "data"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/animated-bar-chart.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -6865,7 +6857,6 @@
     "gsap-plugin",
     "hyperframes-native"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/arc-motion-path.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -6968,7 +6959,6 @@
     "avatar",
     "hover"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/avatar-group-hover.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -6988,7 +6978,6 @@
     "badge",
     "microinteraction"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/badge-pop.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -7092,7 +7081,6 @@
     "blur-in",
     "text-effect"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/blur-in.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -7109,7 +7097,6 @@
     "motion-primitive",
     "typography"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/blur-out-up.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -7128,7 +7115,6 @@
     "letters",
     "reveal"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/bottom-up-letters.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -7167,7 +7153,6 @@
     "advanced-motion",
     "hyperframes-native"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/camera-rig-depth-stack.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -7567,7 +7552,6 @@
     "card",
     "layout"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/card-resize.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -7689,7 +7673,6 @@
     "video-primitive",
     "transition-primitive"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/chromatic-aberration-wipe.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -7769,7 +7752,6 @@
    "tags": [
     "effect"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/confetti.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -8142,7 +8124,6 @@
    "tags": [
     "transition-primitive"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/directional-wipe.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -8183,7 +8164,6 @@
     "grid",
     "ui"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/dynamic-grid.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -8269,7 +8249,6 @@
     "crossfade",
     "scene"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/fade-through.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -8311,7 +8290,6 @@
     "motion-primitive",
     "typography"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/focus-blur-resolve.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -8672,7 +8650,6 @@
     "icon",
     "swap"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/icon-swap.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -8713,7 +8690,6 @@
     "highlight",
     "caption"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/inline-highlight.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -8732,7 +8708,6 @@
     "input",
     "feedback"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/input-feedback.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -8771,7 +8746,6 @@
     "anime-inspired",
     "hyperframes-native"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/keyframe-scrub-stack.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -8849,7 +8823,6 @@
     "motion-primitive",
     "typography"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/line-by-line-slide.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -9050,7 +9023,6 @@
     "motion-primitive",
     "typography"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/matrix-decode.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -9070,7 +9042,6 @@
     "menu",
     "morph"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/menu-morph.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -9086,7 +9057,6 @@
    "tags": [
     "effect"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/mesh-gradient-bg.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -9107,7 +9077,6 @@
     "transition",
     "microinteraction"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/micro-transitions.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -9375,7 +9344,6 @@
     "number",
     "pop"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/number-pop-in.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -9395,7 +9363,6 @@
     "counter",
     "data"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/number-wheel.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -9433,7 +9400,6 @@
     "onboarding",
     "stepper"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/onboarding-stepper-flow.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -9535,7 +9501,6 @@
     "page",
     "slide"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/page-slide.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -9576,7 +9541,6 @@
     "panel",
     "reveal"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/panel-reveal.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -9721,7 +9685,6 @@
     "settle",
     "reveal"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/pendulum-swing.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -9738,7 +9701,6 @@
     "motion-primitive",
     "typography"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/per-word-crossfade.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -9775,7 +9737,6 @@
     "motion-primitive",
     "typography"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/perspective-marquee.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -9918,7 +9879,6 @@
     "motion-primitive",
     "typography"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/rgb-glitch-text.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10083,7 +10043,6 @@
     "separator",
     "layout"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/separator.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10101,7 +10060,6 @@
     "settings",
     "toggle"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/settings-toggle-flow.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10118,7 +10076,6 @@
     "motion-primitive",
     "typography"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/shared-axis-y.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10135,7 +10092,6 @@
     "motion-primitive",
     "typography"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/shared-axis-z.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10195,7 +10151,6 @@
     "slam",
     "animation"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/shutter-slam.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10213,7 +10168,6 @@
     "signup",
     "form"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/signup-flow.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10233,7 +10187,6 @@
     "skeleton",
     "reveal"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/skeleton-reveal.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10272,7 +10225,6 @@
     "motion-primitive",
     "typography"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/slot-machine-roll.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10332,7 +10284,6 @@
     "reveal",
     "blur"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/soft-blur-in.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10370,7 +10321,6 @@
    "tags": [
     "effect"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/spotlight-card.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10449,7 +10399,6 @@
     "anime-inspired",
     "hyperframes-native"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/stagger-lattice.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10467,7 +10416,6 @@
     "motion-primitive",
     "typography"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/staggered-fade-up.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10630,7 +10578,6 @@
     "motion-primitive",
     "typography"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/strikethrough-replace.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10650,7 +10597,6 @@
     "success",
     "check"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/success-check.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10669,7 +10615,6 @@
     "anime-inspired",
     "hyperframes-native"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/svg-line-draw-loader.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10751,7 +10696,6 @@
     "tabs",
     "indicator"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/tabs-slide-indicator.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10787,7 +10731,6 @@
    "tags": [
     "code-animation"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/terminal-simulator.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10890,7 +10833,6 @@
     "text",
     "stagger"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/text-stagger.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10910,7 +10852,6 @@
     "text",
     "swap"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/text-state-swap.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10949,7 +10890,6 @@
     "webgl",
     "hyperframes-native"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/three-orbiting-cards.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -10990,7 +10930,6 @@
     "card",
     "tilt"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/tilt-card.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -11070,7 +11009,6 @@
     "motion-primitive",
     "typography"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/top-down-letters.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -11152,7 +11090,6 @@
     "reveal",
     "typography"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/tracking-in.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -11230,7 +11167,6 @@
     "motion-primitive",
     "typography"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/typewriter.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -11475,7 +11411,6 @@
    "tags": [
     "social-overlay"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/x-follow-card.png",
    "video": null,
    "size": null,
    "duration": null,
@@ -11565,7 +11500,6 @@
    "tags": [
     "transition-primitive"
    ],
-   "poster": "https://static.heygen.ai/hyperframes-oss/docs/images/catalog/components/zoom-through-transition.png",
    "video": null,
    "size": null,
    "duration": null,

@@ -13,13 +13,15 @@ const motions = fs.readdirSync(path.join(ROOT, "motions")).filter((d) => fs.exis
 const skills = fs.existsSync(path.join(ROOT, "src", "skills.json")) ? JSON.parse(fs.readFileSync(path.join(ROOT, "src", "skills.json"), "utf8")).items : [];
 const hf = JSON.parse(fs.readFileSync(path.join(ROOT, "src", "hyperframes-registry.json"), "utf8"));
 
+const broken = fs.existsSync(path.join(ROOT, "src", "hf-broken-media.json")) ? JSON.parse(fs.readFileSync(path.join(ROOT, "src", "hf-broken-media.json"), "utf8")) : { video: [], poster: [] };
+const hfItems = hf.items.map((h) => { const x = { ...h }; if (broken.video.includes(x.code)) delete x.video; if (broken.poster.includes(x.code)) delete x.poster; return x; });
 const catalog = {
   name: cfg.name, version: cfg.version, updated: cfg.updated, repo: cfg.repo, highlights: cfg.highlights || [],
   howToResolve: "Find the code in motions[] (own motions, folder = dir) or hyperframes[] (install with the `install` command). Codes never change.",
   categories: CATEGORIES,
   motions,
   skills,
-  hyperframes: hf.items,
+  hyperframes: hfItems,
 };
 fs.writeFileSync(path.join(ROOT, "catalog.json"), JSON.stringify(catalog, null, 1));
 
