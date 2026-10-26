@@ -6,15 +6,21 @@
 <title>بنك الحركات — BanKmotion By Mahmoud Ismail</title>
 <meta name="description" content="مكتبة حركات موشن جاهزة بالكود (HyperFrames + GSAP) للريلز والفيديوهات القصيرة 9:16 — كل حركة ليها كود ثابت زي S302.">
 <style>
-@font-face{font-family:"Cairo";src:url("fonts/cairo-arabic-wght-normal.woff2") format("woff2");font-weight:200 1000;unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F}
-@font-face{font-family:"Cairo";src:url("fonts/cairo-latin-wght-normal.woff2") format("woff2");font-weight:200 1000;unicode-range:U+0000-00FF,U+2000-206F}
-:root{--bg:#F1EBDF;--panel:#FBF8F2;--ink:#1D1A17;--muted:#7C7268;--line:#E2D9CB;--accent:#E8572A;--accent-soft:#FBE3D9;--ok:#2E7D5B;--ok-soft:#DCEFE5;--no:#B4443A;--shadow:0 1px 2px rgba(40,30,20,.06),0 8px 24px rgba(40,30,20,.06)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121113;--panel:#1B1A1D;--ink:#F3EFE9;--muted:#9C958C;--line:#2C2A2E;--accent:#FF6A33;--accent-soft:#3A2219;--ok:#5CC28F;--ok-soft:#173226;--no:#E07065;--shadow:0 1px 2px rgba(0,0,0,.4)}}
-:root[data-theme="dark"]{--bg:#121113;--panel:#1B1A1D;--ink:#F3EFE9;--muted:#9C958C;--line:#2C2A2E;--accent:#FF6A33;--accent-soft:#3A2219;--ok:#5CC28F;--ok-soft:#173226;--no:#E07065;--shadow:0 1px 2px rgba(0,0,0,.4)}
+@font-face{font-family:"Dubai";src:url("fonts/Dubai-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Dubai";src:url("fonts/Dubai-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Dubai";src:url("fonts/Dubai-Bold.woff2") format("woff2");font-weight:700 900;font-display:swap}
+:root{--bg:#E8E8E8;--panel:#F0F0F0;--ink:#131313;--muted:#5c5c5c;--line:#d6d6d6;--accent:#5B4FDB;--accent-soft:#E4E1FA;--dark:#6D6D6D;--ok:#2E7D5B;--ok-soft:#DCEFE5;--no:#B4443A;--shadow:0 1px 2px rgba(0,0,0,.05),0 8px 24px rgba(0,0,0,.06)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Cairo",system-ui,sans-serif;font-size:15px;line-height:1.6}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Dubai",system-ui,sans-serif;font-size:15px;line-height:1.6}
 .wrap{max-width:1400px;margin:0 auto;padding:0 16px}
-header{padding:36px 0 18px}
+header{padding:10px 0 18px}
+.site{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0 22px}
+.site .logo img{height:42px;width:auto;display:block}
+.site nav{display:flex;gap:4px;flex-wrap:nowrap}
+.site nav a{text-decoration:none;color:var(--ink);font-weight:700;font-size:15px;padding:6px 14px;border-radius:999px;white-space:nowrap}
+.site nav a:hover,.site nav a[aria-current="page"]{background:var(--panel)}
+.site nav a.work{background:var(--accent);color:#fff}
+@media (max-width:480px){.site .logo img{height:34px}.site nav a{padding:5px 9px;font-size:14px}}
 .brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
 h1{font-size:clamp(30px,5vw,48px);font-weight:900;margin:0;line-height:1.1}
 h1 b{color:var(--accent)}
@@ -88,6 +94,10 @@ footer a{color:inherit}
 </style>
 </head>
 <body>
+<div class="wrap"><div class="site">
+  <a class="logo" href="../" aria-label="الرئيسية"><img src="../site/img/logo-BK.svg" alt="Mahmoud Ismail" width="76" height="42"></a>
+  <nav><a href="../#bank" aria-current="page">بنك الحركات</a><a href="../#videos">الفيديوهات</a><a class="work" href="https://mahmoud-ismaiil.vercel.app" target="_blank" rel="noopener">شغلي ↗</a></nav>
+</div></div>
 <header class="wrap">
   <div class="brand"><h1>BanK<b>motion</b></h1><span class="en">By Mahmoud Ismail · بنك الحركات</span><span class="ver" id="ver"></span></div>
   <p class="lead">مكتبة حركات موشن جاهزة بالكود للريلز والفيديوهات القصيرة (9:16). كل حركة ليها <b>كود ثابت</b> زي <code>S302</code>، فتقدر تقول لأي AI (Claude أو Codex) «استخدم حركة S302» ويعرف يجيبها من البنك على طول.</p>
@@ -216,7 +226,7 @@ $("#onlyYes").addEventListener("click", (e) => { onlyYes = !onlyYes; e.currentTa
 $("#copySel").onclick = () => copy(promptFor(Object.keys(picks).filter((k) => picks[k] === 1).sort()));
 $("#clearSel").onclick = () => { picks = {}; save(); render(); };
 $("#foot").innerHTML = `${DATA.motions.length} حركة أصلية + ${DATA.hyperframes.length} من مكتبة HyperFrames · النسخة ${esc(DATA.version)} · آخر تحديث ${esc(DATA.updated)}<br>
-الحركات مكتوبة بـ HTML + GSAP كـ <a href="https://github.com/heygen-com/hyperframes">HyperFrames compositions</a>. كتير منها مستوحى من HyperFrames (Apache-2.0) وRemotion templates، والمصدر مكتوب في كل حركة. الخط: Cairo (OFL).<br>
+الحركات مكتوبة بـ HTML + GSAP كـ <a href="https://github.com/heygen-com/hyperframes">HyperFrames compositions</a>. كتير منها مستوحى من HyperFrames (Apache-2.0) وRemotion templates، والمصدر مكتوب في كل حركة. الخط: Dubai.<br>
 <a href="${esc(DATA.repo)}">${esc(DATA.repo)}</a>`;
 render();
 </script>
