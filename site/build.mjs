@@ -46,7 +46,9 @@ const head = (title, desc, base) => `<!doctype html>
 <meta name="description" content="${esc(desc)}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
-<link rel="icon" href="${base}site/img/logo-BK.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="${base}site/img/favicon-64.png">
+<link rel="icon" type="image/png" sizes="32x32" href="${base}site/img/favicon-32.png">
+<link rel="apple-touch-icon" href="${base}site/img/apple-touch-icon.png">
 <link rel="stylesheet" href="${base}site/site.css?v=${CSS_V}">
 </head>
 <body>
