@@ -29,7 +29,7 @@
 }
 ```
 
-4. شغّل من جذر الريبو: `node site/build.mjs` — بيطلّع `index.html` وصفحة `videos/<slug>/index.html`.
+4. شغّل من جذر الريبو: `node site/build.mjs` — بيطلّع الصفحة الأساسية (`index.html`) وصفحة الفيديوهات (`videos/index.html`) وصفحة الأدوات (`tools/index.html`) وصفحة الفيديو (`videos/<slug>/index.html`).
 5. Commit: `site: add video <slug>` وPush. GitHub Pages بيحدّث الموقع لوحده خلال دقيقة أو اتنين.
 
 ## لما البنك يتحدّث (v2…)

@@ -3,7 +3,7 @@
 //   videos/<slug>/index.html — one page per video
 // Run from the repo root:  node site/build.mjs
 // Never touches the bank version folders (v1/, v2/, ...).
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const read = (p) => readFileSync(ROOT + p, "utf8");
@@ -56,8 +56,8 @@ const header = (base, current) => `
   <nav class="nav">
     <a href="${base}"${current === "home" ? ' aria-current="page"' : ""}>الصفحة الأساسية</a>
     <a href="${base}${LATEST}/">بنك الحركات</a>
-    <a href="${base}#videos"${current === "videos" ? ' aria-current="page"' : ""}>الفيديوهات</a>
-    <a href="${base}#tools"${current === "tools" ? ' aria-current="page"' : ""}>الأدوات</a>
+    <a href="${base}videos/"${current === "videos" ? ' aria-current="page"' : ""}>الفيديوهات</a>
+    <a href="${base}tools/"${current === "tools" ? ' aria-current="page"' : ""}>الأدوات</a>
     <a class="work" href="${SITE.portfolio}" target="_blank" rel="noopener">شغلي ↗</a>
   </nav>
 </header>`;
@@ -80,10 +80,10 @@ const footer = () => `
 
 const tagList = (v) => (v.tools || []).slice(0, 4).map((t) => `<span class="tag">${esc(t.name)}</span>`).join("");
 
-const videoCard = (v, i) => `
-  <a class="vcard" href="videos/${esc(v.slug)}/">
+const videoCard = (v, i, pre = "videos/") => `
+  <a class="vcard" href="${pre}${esc(v.slug)}/">
     <div class="thumb">
-      ${v.poster ? `<img src="videos/${esc(v.slug)}/${esc(v.poster)}" alt="" loading="lazy">` : ""}
+      ${v.poster ? `<img src="${pre}${esc(v.slug)}/${esc(v.poster)}" alt="" loading="lazy">` : ""}
       <span class="num">${String(videos.length - i).padStart(2, "0")}</span>
     </div>
     <div class="body">
@@ -110,40 +110,58 @@ ${header("", "home")}
 
 <p class="note">مش هقولك اكتب كومنت وهبعتلك. كل حاجة هنا — خش وشوف براحتك انت محتاج إيه.</p>
 
-${(catalog.highlights || []).length ? `<section class="news" aria-label="الجديد">
-  <div class="news-h"><b>الجديد</b><span class="en" style="text-transform:none">BanKmotion ${esc(BANK_VERSION)} · ${esc(catalog.updated || "")}</span></div>
-  <div class="news-stats">${newMotions ? `<span><b>+${newMotions}</b> حركة جديدة</span>` : ""}${newSkills ? `<span><b>+${newSkills}</b> سكيل</span>` : ""}${tools.length ? `<span><b>${tools.length}</b> أداة</span>` : ""}</div>
-  <ul>${catalog.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>
-  <a class="btn ghost" href="${esc(LATEST)}/">شوف الجديد في البنك ←</a>
-</section>` : ""}
+${(catalog.highlights || []).length ? `<a class="news-mini" href="${esc(LATEST)}/">
+  <b>الجديد</b><span class="en" style="text-transform:none">BanKmotion ${esc(BANK_VERSION)} · ${esc(catalog.updated || "")}</span>
+  <span class="news-stats">${newMotions ? `<span><b>+${newMotions}</b> حركة جديدة</span>` : ""}${newSkills ? `<span><b>+${newSkills}</b> سكيل</span>` : ""}</span>
+  <span class="go">شوف الجديد ←</span>
+</a>` : ""}
 
-<div class="sec" id="bank"><h2>بنك الحركات</h2><span class="en" style="text-transform:none">BanKmotion · ${esc(BANK_VERSION)}</span></div>
-<a class="bank" href="${esc(LATEST)}/">
-  <div class="txt">
-    <span class="en" style="text-transform:none;letter-spacing:.04em;font-size:13px">BanKmotion By Mahmoud Ismail</span>
-    <h3>مكتبة حركات موشن جاهزة بالكود</h3>
-    <p>كل حركة ليها كود ثابت زي <code>${esc(sampleCodes[0] || "S302")}</code> — تطلبه من Claude أو Codex وهو يركّبها في الفيديو بتاعك.</p>
-    <div class="stats">
-      <div><b>${motions.length}</b><span>حركة أصلية</span></div>
-      ${hfCount ? `<div><b>${hfCount}</b><span>عنصر HyperFrames</span></div>` : ""}
-      ${catCount ? `<div><b>${catCount}</b><span>أقسام</span></div>` : ""}
-    </div>
-    <span class="btn">افتح البنك ←</span>
-  </div>
-  <div class="codes" aria-hidden="true">${sampleCodes.map((c) => `<span class="mono">${esc(c)}</span>`).join("")}</div>
-</a>
-
-<div class="sec" id="videos"><h2>الفيديوهات</h2><span class="en">Videos · How they were made</span></div>
-${videos.length
-  ? `<div class="grid">${videos.map(videoCard).join("")}</div>`
-  : `<div class="empty"><b>أول فيديو نازل قريب</b>كل فيديو بنزّله هيبقى ليه صفحة هنا: الفيديو، الطريقة، والأدوات.</div>`}
-
-<div class="sec" id="tools"><h2>الأدوات</h2><span class="en">Tools I use</span></div>
-<p class="sub">الأدوات اللي بستخدمها مع البنك في الفيديوهات. (السكيلز والحركات جوه <a href="${esc(LATEST)}/">البنك</a>.)</p>
-<div class="tools">${tools.map((t) => `<a class="tool" href="${esc(t.url)}" target="_blank" rel="noopener"><span class="en">${esc(t.type)}${t.addedIn === latestTool && latestTool ? " · new" : ""}</span><b>${esc(t.name)}</b><span>${esc(t.use)}</span></a>`).join("")}</div>
+<div class="sec"><h2>الأقسام</h2><span class="en">Sections</span></div>
+<div class="sections">
+  <a class="scard dark" href="${esc(LATEST)}/">
+    <span class="en" style="text-transform:none">BanKmotion · ${esc(BANK_VERSION)}</span>
+    <h3>بنك الحركات</h3>
+    <p>مكتبة حركات موشن جاهزة بالكود. كل حركة ليها كود ثابت تطلبه من Claude أو Codex.</p>
+    <div class="nums"><span><b>${motions.length}</b> حركة</span>${(catalog.skills || []).length ? `<span><b>${catalog.skills.length}</b> سكيل</span>` : ""}${hfCount ? `<span><b>${hfCount}</b> HyperFrames</span>` : ""}</div>
+    <span class="go">ادخل البنك ←</span>
+  </a>
+  <a class="scard" href="videos/">
+    <span class="en">Videos</span>
+    <h3>الفيديوهات</h3>
+    <p>كل فيديو بنزّله ليه صفحة: الفيديو، الطريقة خطوة بخطوة، والأدوات والحركات اللي اتعمل بيها.</p>
+    <div class="nums">${videos.length ? `<span><b>${videos.length}</b> فيديو</span>` : `<span>أول فيديو نازل قريب</span>`}</div>
+    <span class="go">شوف الفيديوهات ←</span>
+  </a>
+  <a class="scard" href="tools/">
+    <span class="en">Tools</span>
+    <h3>الأدوات</h3>
+    <p>الأدوات اللي بستخدمها مع البنك: صوت وصور و3D وفيزيا وأنيميشن.</p>
+    <div class="nums"><span><b>${tools.length}</b> أداة</span></div>
+    <span class="go">شوف الأدوات ←</span>
+  </a>
+</div>
 ${footer()}`;
 
 writeFileSync(ROOT + "index.html", home);
+
+// ---- videos page ----
+const videosPage = `${head("الفيديوهات — " + SITE.name, "كل فيديو: الفيديو، الطريقة، والأدوات.", "../")}
+${header("../", "videos")}
+<div class="pagehead"><span class="en">Videos · How they were made</span><h1>الفيديوهات</h1><p>كل فيديو بنزّله ليه صفحة: الفيديو نفسه، الطريقة خطوة بخطوة، والأدوات والحركات اللي اتعمل بيها.</p></div>
+${videos.length
+  ? `<div class="grid">${videos.map((v, i) => videoCard(v, i, "")).join("")}</div>`
+  : `<div class="empty"><b>أول فيديو نازل قريب</b>كل فيديو بنزّله هيبقى ليه صفحة هنا.</div>`}
+${footer()}`;
+writeFileSync(ROOT + "videos/index.html", videosPage);
+
+// ---- tools page ----
+mkdirSync(ROOT + "tools", { recursive: true });
+const toolsPage = `${head("الأدوات — " + SITE.name, "الأدوات اللي بستخدمها مع البنك في الفيديوهات.", "../")}
+${header("../", "tools")}
+<div class="pagehead"><span class="en">Tools I use</span><h1>الأدوات</h1><p>الأدوات اللي بستخدمها مع البنك في الفيديوهات. السكيلز والحركات مكانها جوه <a href="../${esc(LATEST)}/">البنك</a>.</p></div>
+<div class="tools">${tools.map((t) => `<a class="tool" href="${esc(t.url)}" target="_blank" rel="noopener"><span class="en">${esc(t.type)}${t.addedIn === latestTool && latestTool ? " · new" : ""}</span><b>${esc(t.name)}</b><span>${esc(t.use)}</span></a>`).join("")}</div>
+${footer()}`;
+writeFileSync(ROOT + "tools/index.html", toolsPage);
 
 const bankLink = (code) => `../../${LATEST}/#${encodeURIComponent(code)}`;
 
@@ -170,7 +188,7 @@ ${header("../../", "videos")}
     ${(v.motions || []).length ? `<h2>الحركات من البنك</h2>
     <div class="codes-inline">${v.motions.map((c) => `<a class="mono" href="${bankLink(c)}">${esc(c)}</a>`).join("")}</div>` : ""}
 
-    <p><a class="back" href="../../#videos">→ كل الفيديوهات</a></p>
+    <p><a class="back" href="../">→ كل الفيديوهات</a></p>
   </div>
 </article>
 ${footer()}`;
