@@ -105,9 +105,19 @@ sampleCodes.length = Math.min(sampleCodes.length, 8);
 const home = `${head(SITE.title, SITE.desc, "")}
 ${header("", "home")}
 <figure class="teaser">
-  <video src="site/teaser/teaser.mp4" poster="site/teaser/poster.jpg" autoplay muted loop playsinline preload="auto" width="1920" height="1080" aria-label="تيزر بنك الحركات — كل لقطة فيه حركة من البنك بكودها"></video>
+  <video poster="site/teaser/poster.jpg" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture preload="auto" width="1920" height="1080" aria-label="تيزر بنك الحركات — كل لقطة فيه حركة من البنك بكودها">
+    <source src="site/teaser/teaser-720.mp4" type="video/mp4" media="(max-width: 900px)">
+    <source src="site/teaser/teaser.mp4" type="video/mp4">
+  </video>
 </figure>
-<script>(function(){var v=document.querySelector(".teaser video");if(v&&window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches){v.removeAttribute("autoplay");v.pause();}})();</script>
+<script>(function(){var v=document.querySelector(".teaser video");if(!v)return;
+v.muted=true;v.defaultMuted=true;v.setAttribute("muted","");
+if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches){v.removeAttribute("autoplay");v.pause();return;}
+function go(){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+go();v.addEventListener("loadeddata",go);
+/* phones in low-power mode / in-app browsers block autoplay: start on the first touch or scroll */
+["touchstart","pointerdown","scroll","keydown"].forEach(function(e){window.addEventListener(e,function h(){if(v.paused)go();window.removeEventListener(e,h);},{passive:true});});
+document.addEventListener("visibilitychange",function(){if(!document.hidden&&v.paused)go();});})();</script>
 <section class="hero">
   <img class="me" src="site/img/me.webp" alt="محمود إسماعيل" width="132" height="132">
   <div>
