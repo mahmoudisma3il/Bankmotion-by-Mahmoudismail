@@ -104,6 +104,10 @@ sampleCodes.length = Math.min(sampleCodes.length, 8);
 
 const home = `${head(SITE.title, SITE.desc, "")}
 ${header("", "home")}
+<figure class="teaser">
+  <video src="site/teaser/teaser.mp4" poster="site/teaser/poster.jpg" autoplay muted loop playsinline preload="auto" width="1920" height="1080" aria-label="تيزر بنك الحركات — كل لقطة فيه حركة من البنك بكودها"></video>
+</figure>
+<script>(function(){var v=document.querySelector(".teaser video");if(v&&window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches){v.removeAttribute("autoplay");v.pause();}})();</script>
 <section class="hero">
   <img class="me" src="site/img/me.webp" alt="محمود إسماعيل" width="132" height="132">
   <div>
