@@ -58,18 +58,32 @@
       "addedIn": "2026-10"
     },
     {
-      "name": "Magnific",
-      "type": "Images",
-      "use": "صور وخلفيات للفيديو",
-      "url": "https://magnific.ai",
-      "addedIn": "2026-10"
-    },
-    {
       "name": "Openverse",
       "type": "Audio",
       "use": "أصوات ومؤثرات مجانية بترخيص مفتوح",
       "url": "https://openverse.org",
       "addedIn": "2026-10"
+    },
+    {
+      "name": "ChatGPT",
+      "type": "Images",
+      "use": "صور وخلفيات للفيديو",
+      "url": "https://chatgpt.com",
+      "addedIn": "2026-11"
+    },
+    {
+      "name": "Google Flow",
+      "type": "Video",
+      "use": "لقطات فيديو بالـAI",
+      "url": "https://labs.google/fx/tools/flow",
+      "addedIn": "2026-11"
+    },
+    {
+      "name": "CapCut",
+      "type": "Edit",
+      "use": "لمسات أخيرة على المونتاج",
+      "url": "https://www.capcut.com",
+      "addedIn": "2026-11"
     }
   ]
 }
