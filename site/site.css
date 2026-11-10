@@ -130,3 +130,9 @@ footer small{color:var(--muted)}
 .scard .go{margin-inline-start:0;margin-top:6px}
 @media (max-width:860px){.sections{grid-template-columns:1fr}}
 .pagehead{padding:18px 0 26px}.pagehead h1{font-size:clamp(32px,5vw,48px);margin:2px 0 6px;line-height:1.2}.pagehead p{margin:0;color:var(--muted);max-width:680px}.pagehead .en{color:var(--muted)}
+.howto{display:grid;gap:26px}
+.howto h3{font-size:19px;margin:0 0 8px}
+.howto p{margin:0 0 10px;line-height:1.9}
+.howto figure{margin:12px 0 0}
+.howto figure img{display:block;width:100%;height:auto;border-radius:14px;background:var(--card)}
+.howto figcaption{color:var(--muted);font-size:14px;margin-top:6px}

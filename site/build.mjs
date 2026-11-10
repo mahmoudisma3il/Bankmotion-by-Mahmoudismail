@@ -197,6 +197,13 @@ ${header("../../", "videos")}
     <h1>${esc(v.title)}</h1>
     ${v.summary ? `<p class="lead">${esc(v.summary)}</p>` : ""}
 
+    ${(v.article || []).length ? `<h2>إزاي اتعمل</h2>
+    <div class="howto">${v.article.map((s) => `<section>
+      ${s.h ? `<h3>${esc(s.h)}</h3>` : ""}
+      ${[].concat(s.p || []).map((p) => `<p>${esc(p)}</p>`).join("")}
+      ${s.img ? `<figure><img src="${esc(s.img)}" alt="${esc(s.cap || "")}" loading="lazy">${s.cap ? `<figcaption>${esc(s.cap)}</figcaption>` : ""}</figure>` : ""}
+    </section>`).join("")}</div>` : ""}
+
     ${(v.steps || []).length ? `<h2>الطريقة</h2>
     <ol class="steps">${v.steps.map((s) => `<li><div><b>${esc(s.title)}</b>${esc(s.text || "")}</div></li>`).join("")}</ol>` : ""}
 

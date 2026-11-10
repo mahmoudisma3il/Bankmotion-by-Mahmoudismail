@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ريل العدّاد — ٤ أدوات + Claude بيعملوا ريل كامل · Mahmoud Ismail</title>
+<meta name="description" content="ريل ٥١ ثانية محدش فتح فيه بريمير. الصوت والصور والشاشات والحركة كلهم طالعين من ٤ أدوات، وClaude بيركّبهم مع بعض.">
+<meta property="og:title" content="ريل العدّاد — ٤ أدوات + Claude بيعملوا ريل كامل · Mahmoud Ismail">
+<meta property="og:description" content="ريل ٥١ ثانية محدش فتح فيه بريمير. الصوت والصور والشاشات والحركة كلهم طالعين من ٤ أدوات، وClaude بيركّبهم مع بعض.">
+<link rel="icon" type="image/png" sizes="64x64" href="../../site/img/favicon-64.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../site/img/favicon-32.png">
+<link rel="apple-touch-icon" href="../../site/img/apple-touch-icon.png">
+<link rel="stylesheet" href="../../site/site.css?v=0236c37c">
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <a class="logo" href="../../" aria-label="الرئيسية"><img src="../../site/img/logo-BK.svg" alt="Mahmoud Ismail" width="80" height="44"></a>
+  <nav class="nav">
+    <a href="../../">الصفحة الأساسية</a>
+    <a href="../../bank/">بنك الحركات</a>
+    <a href="../../videos/" aria-current="page">الفيديوهات</a>
+    <a href="../../tools/">الأدوات</a>
+    <a class="work" href="https://mahmoud-ismaiil.vercel.app" target="_blank" rel="noopener">شغلي ↗</a>
+  </nav>
+</header>
+<article class="vpage">
+  <div class="player">
+    <video src="video.mp4" poster="poster.jpg" controls playsinline preload="metadata"></video>
+  </div>
+  <div>
+    <span class="en">2026-11</span>
+    <h1>ريل العدّاد — ٤ أدوات + Claude بيعملوا ريل كامل</h1>
+    <p class="lead">ريل ٥١ ثانية محدش فتح فيه بريمير. الصوت والصور والشاشات والحركة كلهم طالعين من ٤ أدوات، وClaude بيركّبهم مع بعض.</p>
+
+    <h2>إزاي اتعمل</h2>
+    <div class="howto"><section>
+      <h3>الفكرة</h3>
+      <p>شفت ريل فيه شريط «إضافات» بيتملي أداة ورا أداة، وكل ما أداة تتوصل العدّاد يزيد. عجبتني الفكرة، فعملتها بهويتي: ألوان البراند، خط Dubai للعربي وBankGothic للأرقام، وخلفية غامقة المرة دي.</p><p>والتحدي إن الريل نفسه يتعمل بالأربع أدوات اللي بيتكلم عنهم. يعني اللي بتشوفه هو الإثبات.</p>
+      
+    </section><section>
+      <h3>١. الصوت: ElevenLabs</h3>
+      <p>كتبت السكريبت بالمصري، وقريته بالصوت اللي عاملُه كلون لصوتي على ElevenLabs (موديل Eleven v4). طلّعت نسخة واحدة بس من غير ما أعيد.</p><p>بعدها حوّلت الصوت لنص بتوقيت كل كلمة (Speech to Text). الملف ده هو اللي ماشي عليه كل حاجة: الكابشن، ودخول كل أداة، والكلمة اللي بتنوّر.</p>
+      <figure><img src="img/elevenlabs.jpg" alt="سكريبت الريل نفسه جوه ElevenLabs بالصوت بتاعي." loading="lazy"><figcaption>سكريبت الريل نفسه جوه ElevenLabs بالصوت بتاعي.</figcaption></figure>
+    </section><section>
+      <h3>٢. الصور: ChatGPT</h3>
+      <p>كل خلفية اتعملت بـ ChatGPT بستايل واحد: إضاءة ستوديو غامقة، ولمعة بنفسجي من لون البراند على حرف الحاجة. كيبورد عليه تراب للهوك (البريمير اللي محدش فتحه)، وأدراج أرشيف قديمة للبنك، وموبايل داخل فيه ٤ كابلات للنهاية.</p><p>الصورة لوحدها ساكنة. اللي بيديها حياة هو الحركة والإضاءة والكلام اللي فوقها.</p>
+      <figure><img src="img/hook-before-after.jpg" alt="يمين: الصورة زي ما طلعت من ChatGPT. شمال: نفس الفريم في الريل." loading="lazy"><figcaption>يمين: الصورة زي ما طلعت من ChatGPT. شمال: نفس الفريم في الريل.</figcaption></figure>
+    </section><section>
+      
+      <p>أهم قاعدة مع ChatGPT: البرومبت يتكتب في فقرة واحدة، فيها الستايل واللون بالكود (#5B4FDB) والمقاس 9:16 و«من غير كلام». كده كل الصور بتطلع شبه بعض كأنها جلسة تصوير واحدة.</p>
+      <figure><img src="img/chatgpt.jpg" alt="البرومبت في فقرة واحدة، بالستايل واللون والمقاس." loading="lazy"><figcaption>البرومبت في فقرة واحدة، بالستايل واللون والمقاس.</figcaption></figure>
+    </section><section>
+      <h3>٣. الشاشات: Claude في Chrome</h3>
+      <p>مفيش ولا شاشة في الريل موك أب. Claude فتح ElevenLabs وChatGPT وموقع البنك بنفسه من Chrome وصوّرهم، والصور دي هي اللي جوه الشبابيك الزجاج.</p>
+      <figure><img src="img/bank-site.jpg" alt="موقع البنك زي ما Claude صوّره." loading="lazy"><figcaption>موقع البنك زي ما Claude صوّره.</figcaption></figure>
+    </section><section>
+      <h3>٤. الحركة: البنك + GSAP</h3>
+      <p>المشهد كله صفحة HTML بتتحرك بـ GSAP، وClaude كتب الكود وهو ماشي على حركات البنك: شريط الإضافات فوق بأربع خانات بيتملوا (U513)، ورقم كبير لكل أداة (T125)، ودياجرام Claude ← MCP ← الأداة بنقطة ماشية بينهم (U514)، والخلفية بتغيّر لونها مع كل أداة.</p><p>في الآخر الأربع أيقونات بيتجمعوا حوالين الموبايل ويظهر 4/4 INSTALLED، وبعدها الـ CTA: صندوق الكومنت بيتشطب (T108) ويطلع «كل حاجة في البايو».</p>
+      <figure><img src="img/tools-frames.jpg" alt="أداة ١ متوصلة، أداة ٤ (البنك)، والختام ٤/٤." loading="lazy"><figcaption>أداة ١ متوصلة، أداة ٤ (البنك)، والختام ٤/٤.</figcaption></figure>
+    </section><section>
+      <h3>٥. الصوت والرندر</h3>
+      <p>المؤثرات (ووش، خبطة، تيك) متحطة على كل انتقال، ومزيكا خفيفة تحت الصوت على ١٥٪.</p><p>الرندر: كل فريم بيتصوّر من المتصفح وبيتجمع بـ ffmpeg فيديو 1080×1920 على ٣٠ فريم. بيترندر على جزئين في نفس الوقت وبعدين يتلزقوا، وأخيرًا يتحط عليهم الصوت.</p>
+      
+    </section></div>
+
+    
+
+    <h2>الأدوات</h2>
+    <div class="tools"><a class="tool" href="https://claude.ai" target="_blank" rel="noopener"><span class="en">AI</span><b>Claude</b><span>كتب كود الحركة وركّب الريل كله</span></a><a class="tool" href="https://elevenlabs.io" target="_blank" rel="noopener"><span class="en">Voice</span><b>ElevenLabs</b><span>الصوت (كلون لصوتي) وتوقيت كل كلمة</span></a><a class="tool" href="https://chatgpt.com" target="_blank" rel="noopener"><span class="en">Images</span><b>ChatGPT</b><span>كل الخلفيات والصور</span></a><a class="tool" href="https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn" target="_blank" rel="noopener"><span class="en">Browser</span><b>Claude in Chrome</b><span>فتح المواقع وصوّر الشاشات الحقيقية</span></a><a class="tool" href="../../bank/" target="_blank" rel="noopener"><span class="en">Motion</span><b>BankMotion</b><span>الحركات اللي الريل ماشي عليها</span></a><a class="tool" href="https://gsap.com" target="_blank" rel="noopener"><span class="en">Animation</span><b>GSAP</b><span>التايم لاين اللي بيحرّك كل حاجة</span></a></div>
+
+    <h2>الحركات من البنك</h2>
+    <div class="codes-inline"><a class="mono" href="../../bank/#U513">U513</a><a class="mono" href="../../bank/#U514">U514</a><a class="mono" href="../../bank/#T125">T125</a><a class="mono" href="../../bank/#T126">T126</a><a class="mono" href="../../bank/#T108">T108</a><a class="mono" href="../../bank/#P613">P613</a><a class="mono" href="../../bank/#B801">B801</a><a class="mono" href="../../bank/#B802">B802</a></div>
+
+    <p><a class="back" href="../">→ كل الفيديوهات</a></p>
+  </div>
+</article>
+
+<footer>
+  <div class="links">
+    <a href="https://mahmoud-ismaiil.vercel.app" target="_blank" rel="noopener">Portfolio<small>mahmoud-ismaiil.vercel.app</small></a>
+    <a href="https://www.instagram.com/mahmoudismail.creative/" target="_blank" rel="noopener">Instagram<small>@mahmoudismail.creative</small></a>
+    <a href="https://www.facebook.com/mahmoudismail.creative/" target="_blank" rel="noopener">Facebook<small>@mahmoudismail.creative</small></a>
+    <a href="https://www.linkedin.com/in/mahmoud-ismaiil" target="_blank" rel="noopener">LinkedIn<small>in/mahmoud-ismaiil</small></a>
+    <a href="https://behance.net/mahmoud_ismaiil" target="_blank" rel="noopener">Behance<small>mahmoud_ismaiil</small></a>
+  </div>
+  <small>© 2026 Mahmoud Ismail Creative</small>
+</footer>
+</div>
+</body>
+</html>
