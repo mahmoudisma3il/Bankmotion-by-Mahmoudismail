@@ -1,0 +1,17 @@
+{
+  "name": "Leen Studio",
+  "handle": "@leen.studio",
+  "logo": "logo.svg",
+  "colors": {
+    "bg": "#F3EDE4",
+    "card": "#FBF7F1",
+    "text": "#2B211A",
+    "muted": "#8A7A6C",
+    "accent": "#C2603A"
+  },
+  "fonts": {
+    "main": "Dubai",
+    "latin": "Dubai",
+    "mono": "ui-monospace"
+  }
+}

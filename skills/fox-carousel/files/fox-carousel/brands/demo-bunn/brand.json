@@ -1,0 +1,17 @@
+{
+  "name": "Bunn Coffee",
+  "handle": "@bunn.coffee",
+  "logo": "logo.svg",
+  "colors": {
+    "bg": "#1B1410",
+    "card": "#2A201A",
+    "text": "#F5EDE4",
+    "muted": "#BBA898",
+    "accent": "#E08A3C"
+  },
+  "fonts": {
+    "main": "Dubai",
+    "latin": "Dubai",
+    "mono": "ui-monospace"
+  }
+}

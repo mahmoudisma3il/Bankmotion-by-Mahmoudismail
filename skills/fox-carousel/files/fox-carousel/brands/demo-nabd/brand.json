@@ -1,0 +1,17 @@
+{
+  "name": "Nabd",
+  "handle": "@nabd.app",
+  "logo": "logo.svg",
+  "colors": {
+    "bg": "#0E1116",
+    "card": "#181D25",
+    "text": "#F1F5F9",
+    "muted": "#94A3B8",
+    "accent": "#C6F432"
+  },
+  "fonts": {
+    "main": "Dubai",
+    "latin": "Dubai",
+    "mono": "ui-monospace"
+  }
+}

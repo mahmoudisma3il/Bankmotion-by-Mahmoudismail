@@ -1,0 +1,15 @@
+{
+  "name": "Mahmoud Ismail",
+  "handle": "@mahmoudismail.creative",
+  "logo": "logo.svg",
+  "avatar": "avatar.webp",
+  "colors": {
+    "bg": "#E8E8E8",
+    "card": "#F0F0F0",
+    "text": "#131313",
+    "muted": "#6D6D6D",
+    "accent": "#5B4FDB"
+  },
+  "fonts": { "main": "Dubai", "latin": "Dubai", "mono": "ui-monospace" },
+  "voice": "مصري، بسيط ومباشر، كلام مصمم لمصممين ومونتيرين. من غير مبالغة."
+}

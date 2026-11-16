@@ -1,0 +1,137 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Dubai;src:url(assets/fonts/Dubai-Regular.woff2);font-weight:400}
+@font-face{font-family:Dubai;src:url(assets/fonts/Dubai-Medium.woff2);font-weight:500}
+@font-face{font-family:Dubai;src:url(assets/fonts/Dubai-Bold.woff2);font-weight:700}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#000}
+#s{position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--bg);color:var(--text);
+  font-family:var(--font),Dubai,sans-serif;-webkit-font-smoothing:antialiased}
+#s::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(var(--dot) 1.6px,transparent 1.7px);background-size:36px 36px;opacity:.55}
+#s::after{content:"";position:absolute;width:900px;height:900px;border-radius:50%;pointer-events:none;
+  background:radial-gradient(var(--glow),transparent 65%);top:var(--gy,-300px);left:var(--gx,420px);opacity:.9}
+.en{font-family:var(--font-en),var(--font),sans-serif;direction:ltr;unicode-bidi:isolate;display:inline-block}
+.mono{font-family:var(--font-mono),ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase}
+.a{color:var(--accent)}
+.hl{background:var(--accent);color:var(--on-accent);padding:0 .22em;border-radius:.18em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.st{text-decoration:line-through;text-decoration-color:var(--bad);text-decoration-thickness:.09em;opacity:.55}
+/* frame */
+.top,.bot{position:absolute;left:72px;right:72px;display:flex;align-items:center;justify-content:space-between;z-index:3}
+.top{top:58px;height:64px}.bot{bottom:54px;height:56px}
+.logo{height:56px;width:auto;display:block}
+.logo.txt{font-weight:700;font-size:34px}
+.count{font-size:22px;color:var(--muted)}
+.count b{color:var(--text);font-weight:700}
+.handle{display:flex;align-items:center;gap:14px;font-size:24px;color:var(--muted)}
+.handle img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--card)}
+.swipe{display:flex;align-items:center;gap:12px;font-size:24px;font-weight:500;color:var(--text)}
+.swipe i{display:inline-flex;width:52px;height:52px;border-radius:50%;background:var(--accent);color:var(--on-accent);
+  align-items:center;justify-content:center;font-style:normal;font-size:28px}
+.bar{position:absolute;left:72px;right:72px;top:136px;height:6px;border-radius:6px;background:var(--line);z-index:3}
+.bar span{display:block;height:100%;border-radius:6px;background:var(--accent)}
+/* body */
+.body{position:absolute;left:72px;right:72px;top:190px;bottom:140px;display:flex;flex-direction:column;justify-content:center;gap:40px;z-index:2}
+.kicker{font-weight:500;display:inline-flex;align-self:flex-start;align-items:center;gap:14px;font-size:22px;color:var(--muted);
+  padding:14px 26px;border-radius:999px;background:var(--card);box-shadow:var(--shadow)}
+.kicker::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--accent)}
+h1{font-weight:700;line-height:1.12;font-size:var(--h,96px);letter-spacing:-.005em}
+h2{font-weight:700;line-height:1.18;font-size:var(--h,88px)}
+p.t{font-size:var(--p,42px);line-height:1.55;color:var(--muted);font-weight:500;max-width:880px}
+.card{background:var(--card);border-radius:36px;box-shadow:var(--shadow);padding:44px 48px}
+.num{align-self:flex-start;font-weight:700;font-size:200px;line-height:.8;color:transparent;-webkit-text-stroke:3px var(--accent)}
+.row{display:flex;gap:28px;align-items:stretch}
+.row>.card{flex:1}
+.tag{display:inline-block;font-size:22px;padding:8px 18px;border-radius:999px;background:var(--bg);color:var(--muted);margin-bottom:22px}
+.bad .tag{color:var(--bad)}.good .tag{background:var(--accent);color:var(--on-accent)}
+.cmp{font-size:40px;line-height:1.5;font-weight:500}
+.bad .cmp{color:var(--muted)}
+ul.l{list-style:none;display:flex;flex-direction:column;gap:22px}
+ul.l li{display:flex;gap:26px;align-items:center;background:var(--card);border-radius:28px;padding:28px 34px;box-shadow:var(--shadow);font-size:38px;font-weight:500;line-height:1.35}
+ul.l li b{flex:none;width:64px;height:64px;border-radius:20px;background:var(--accent);color:var(--on-accent);display:flex;align-items:center;justify-content:center;font-size:30px}
+.big{align-self:flex-start;font-weight:700;font-size:260px;line-height:.9;color:var(--accent);letter-spacing:-.02em}
+.q{align-self:flex-start;font-size:220px;line-height:.5;color:var(--accent);font-weight:700;height:90px}
+/* ui mock */
+.ui{background:var(--card);border-radius:32px;box-shadow:var(--shadow);overflow:hidden}
+.ui .hd{display:flex;gap:10px;padding:22px 28px;border-bottom:2px solid var(--line);align-items:center}
+.ui .hd i{width:16px;height:16px;border-radius:50%;background:var(--line)}
+.ui .hd span{margin-inline-start:auto;font-size:20px;color:var(--muted)}
+.ui .bd{padding:30px 34px;display:flex;flex-direction:column;gap:18px}
+.msg{font-size:32px;line-height:1.45;padding:20px 26px;border-radius:24px;max-width:88%;font-weight:500}
+.msg.me{align-self:flex-start;background:var(--accent);color:var(--on-accent)}
+.msg.ai{align-self:flex-end;background:var(--bg)}
+.code{font-family:var(--font-mono),ui-monospace,monospace;direction:ltr;text-align:left;font-size:28px;line-height:1.6;color:var(--text)}
+.code .c{color:var(--muted)}.code .k{color:var(--accent)}
+.img{width:100%;border-radius:32px;box-shadow:var(--shadow);object-fit:cover;display:block}
+/* cover */
+.cover .body{justify-content:flex-end;padding-bottom:30px}
+.cover h1{font-size:var(--h,104px)}
+.stack .tag{font-size:24px;margin:0}
+.stack{position:absolute;top:200px;left:72px;right:72px;height:400px;z-index:1}
+.stack .card{position:absolute;width:380px;height:280px;padding:34px 36px}
+.stack .card:nth-child(1){right:0;top:70px;transform:rotate(6deg);z-index:1}
+.stack .card:nth-child(2){left:278px;top:20px;transform:rotate(-2deg);z-index:2}
+.stack .card:nth-child(3){left:0;top:90px;transform:rotate(-8deg);z-index:3}
+.stack .card b{display:block;font-size:44px;line-height:1.2;margin-top:18px}
+.stack .card .ln{height:16px;border-radius:8px;background:var(--line);margin-top:18px}
+.cta .body{align-items:center;text-align:center;justify-content:center}
+.cta .kicker{align-self:center}
+.pill{display:inline-flex;align-items:center;gap:20px;padding:22px 34px 22px 24px;border-radius:999px;background:var(--card);box-shadow:var(--shadow);font-size:36px;font-weight:700}
+.pill img{width:84px;height:84px;border-radius:50%;object-fit:cover}
+.btn{display:inline-block;padding:26px 54px;border-radius:999px;background:var(--accent);color:var(--on-accent);font-size:38px;font-weight:700}
+</style></head>
+<body><div id="s"></div>
+<script>
+const esc=s=>String(s??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+// inline markup: *accent*  ==highlight==  ~~strike~~  [en]latin[/en]  \n = line break
+const md=s=>esc(s).replace(/==(.+?)==/g,'<span class="hl">$1</span>').replace(/~~(.+?)~~/g,'<span class="st">$1</span>')
+  .replace(/\*(.+?)\*/g,'<span class="a">$1</span>').replace(/\[en\](.+?)\[\/en\]/g,'<span class="en">$1</span>').replace(/\n/g,'<br>');
+function hexLum(h){h=h.replace('#','');if(h.length==3)h=h.split('').map(x=>x+x).join('');const n=parseInt(h,16);
+  const c=[n>>16&255,n>>8&255,n&255].map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*c[0]+.7152*c[1]+.0722*c[2]}
+function ui(u){if(!u)return'';
+  const hd=`<div class="hd"><i></i><i></i><i></i><span class="en">${esc(u.title||'Claude')}</span></div>`;
+  if(u.type==='code')return`<div class="ui">${hd}<div class="bd code">${(u.lines||[]).map(l=>`<div>${esc(l).replace(/(#.*)$/,'<span class="c">$1</span>').replace(/^(\$|&gt;)/,'<span class="k">$1</span>')}</div>`).join('')}</div></div>`;
+  return`<div class="ui">${hd}<div class="bd">${(u.lines||[]).map(m=>`<div class="msg ${m.from==='me'?'me':'ai'}">${md(m.text)}</div>`).join('')}</div></div>`}
+window.render=function(D){
+  const b=D.brand,c=b.colors,s=D.slide,i=D.index,n=D.total,R=document.documentElement;
+  const dark=hexLum(c.bg)<.25;
+  const v={bg:c.bg,card:c.card||(dark?'#1E1E22':'#F6F6F6'),text:c.text,muted:c.muted||(dark?'#A6A6AE':'#6D6D6D'),accent:c.accent,
+    'on-accent':c.onAccent||(hexLum(c.accent)>.45?'#131313':'#FFFFFF'),bad:c.bad||'#E5484D',
+    line:c.line||(dark?'rgba(255,255,255,.10)':'rgba(0,0,0,.08)'),dot:c.dot||(dark?'rgba(255,255,255,.07)':'rgba(0,0,0,.07)'),
+    glow:c.glow||(c.accent+(dark?'38':'22')),shadow:dark?'0 20px 60px rgba(0,0,0,.45)':'0 24px 60px rgba(19,19,19,.08), 0 2px 6px rgba(19,19,19,.05)',
+    font:b.fonts?.main||'Dubai','font-en':b.fonts?.latin||b.fonts?.main||'Dubai','font-mono':b.fonts?.mono||'ui-monospace'};
+  for(const k in v)R.style.setProperty('--'+k,v[k]);
+  if(b.fontFaces)for(const f of b.fontFaces){const st=document.createElement('style');st.textContent=`@font-face{font-family:"${f.family}";src:url("${f.src}");font-weight:${f.weight||400}}`;document.head.appendChild(st)}
+  const S=document.getElementById('s');S.dir=D.dir||'rtl';S.className=s.type;
+  const gp=[[420,-320],[-380,500],[500,620],[-300,-260]][i%4];S.style.setProperty('--gx',gp[0]+'px');S.style.setProperty('--gy',gp[1]+'px');
+  const logo=b.logo?`<img class="logo" src="${b.logo}">`:`<div class="logo txt">${esc(b.name||'')}</div>`;
+  const pad=x=>String(x).padStart(2,'0');
+  const last=i===n-1;
+  let top=`<div class="top">${logo}<div class="count mono en"><b>${pad(i+1)}</b> / ${pad(n)}</div></div>`;
+  let bar=`<div class="bar"><span style="width:${(i+1)/n*100}%"></span></div>`;
+  let bot=`<div class="bot"><div class="handle">${b.avatar?`<img src="${b.avatar}">`:''}<span class="en">${esc(b.handle||'')}</span></div>${last?'':`<div class="swipe">${esc(D.swipe||'اسحب')}<i>${(D.dir||'rtl')==='rtl'?'←':'→'}</i></div>`}</div>`;
+  const K=s.kicker?`<div class="kicker">${md(s.kicker)}</div>`:'';
+  const P=s.text?`<p class="t">${md(s.text)}</p>`:'';
+  let body='',extra='';
+  switch(s.type){
+    case'cover':
+      extra=`<div class="stack">${(s.cards||['','','']).slice(0,3).map((t,k)=>`<div class="card"><div class="tag mono en">${pad(k+1)}</div><b>${md(t)}</b><div class="ln" style="width:80%"></div><div class="ln" style="width:55%"></div></div>`).join('')}</div>`;
+      if(s.image)extra=`<div class="stack"><img class="img" style="height:430px" src="${s.image}"></div>`;
+      body=`${K}<h1>${md(s.title)}</h1>${P}`;break;
+    case'point':body=`<div class="num en">${pad(s.n??i)}</div>${K}<h2>${md(s.title)}</h2>${P}${s.tip?`<div class="card" style="font-size:32px;font-weight:500">💡 ${md(s.tip)}</div>`:''}`;break;
+    case'step':body=`${K}<h2>${md(s.title)}</h2>${P}${ui(s.ui)}${s.image?`<img class="img" style="max-height:520px" src="${s.image}">`:''}`;break;
+    case'compare':body=`${K}<h2>${md(s.title)}</h2><div class="row"><div class="card bad"><div class="tag">${esc(s.beforeLabel||'قبل')}</div><div class="cmp">${md(s.before)}</div></div><div class="card good"><div class="tag">${esc(s.afterLabel||'بعد')}</div><div class="cmp">${md(s.after)}</div></div></div>${P}`;break;
+    case'list':body=`${K}<h2>${md(s.title)}</h2><ul class="l">${(s.items||[]).map((t,j)=>`<li><b class="en">${j+1}</b><span>${md(t)}</span></li>`).join('')}</ul>`;break;
+    case'stat':body=`${K}<div class="big en">${md(s.value)}</div><h2>${md(s.title)}</h2>${P}`;break;
+    case'quote':body=`<div class="q en">“</div><h2>${md(s.title)}</h2>${s.by?`<p class="t">— ${md(s.by)}</p>`:''}`;break;
+    case'cta':body=`${K}<h2>${md(s.title)}</h2>${P}${b.handle?`<div style="display:flex;justify-content:center"><div class="pill">${b.avatar?`<img src="${b.avatar}">`:''}<span class="en">${esc(b.handle)}</span></div></div>`:''}${s.button?`<div><span class="btn">${md(s.button)}</span></div>`:''}`;break;
+    default:body=`${K}<h2>${md(s.title)}</h2>${P}`}
+  S.innerHTML=top+bar+extra+`<div class="body">${body}</div>`+bot;
+};
+// shrink headings/paragraphs until the body fits; returns true if it fits
+window.fit=function(){const B=document.querySelector('.body');if(!B)return true;const R=document.getElementById('s');
+  let h=parseFloat(getComputedStyle(B.querySelector('h1,h2')||B).fontSize)||90,p=40,k=0;
+  while(B.scrollHeight>B.clientHeight+2&&k<40){h*=.95;p=Math.max(28,p*.97);R.style.setProperty('--h',h+'px');R.style.setProperty('--p',p+'px');k++}
+  return B.scrollHeight<=B.clientHeight+2};
+</script></body></html>

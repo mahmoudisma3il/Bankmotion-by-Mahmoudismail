@@ -1,0 +1,34 @@
+{
+  "_howto": "كل سكيل = فولدر skills/<slug>/ فيه files/<slug>/ (ملفات السكيل) و<slug>.zip وimg/. ضيف عنصر في أول القايمة وشغّل node site/build.mjs.",
+  "skills": [
+    {
+      "slug": "fox-carousel",
+      "name": "fox-carousel",
+      "title": "سكيل الكاروسيل — كاروسيل كامل بهويتك من سطر واحد",
+      "by": "Mahmoud Ismail",
+      "date": "2026-11",
+      "summary": "تدّي Claude الموضوع، يسألك عن البراند بتاعك (اللوجو والألوان)، ويطلّعلك كاروسيل كامل صور PNG جاهزة للنشر. من غير فوتوشوب ولا كانفا.",
+      "cover": "img/fox/slide-01.jpg",
+      "zip": "fox-carousel.zip",
+      "files": "files/fox-carousel/",
+      "steps": [
+        { "h": "١. الموضوع", "p": "قول لـ Claude: «اعملي كاروسيل عن…» في سطر واحد. هو بيكتب الكلام الأول ويوريهولك، وانت تعدّل أو توافق." },
+        { "h": "٢. البراند", "p": "أول مرة بيسألك عن اللوجو والهاندل و٣ ألوان، ويحفظهم. المرة الجاية بيستخدمهم على طول. ولو الخلفية غامقة، التصميم كله بيقلب Dark." },
+        { "h": "٣. الصور", "p": "بيرندر كل سلايد PNG مقاس 1080×1350، وبيبص عليها بنفسه قبل ما يسلّمها: لو كلام طالع برا السلايد بيقصّره ويرندر تاني." }
+      ],
+      "layouts": ["Cover", "Point", "Step", "Compare", "List", "Stat", "Quote", "CTA"],
+      "prompt": "اعملي كاروسيل عن ٥ أخطاء بتبوّظ المونتاج، بالبراند بتاعي",
+      "decks": [
+        { "dir": "fox", "name": "Mahmoud Ismail", "note": "البراند بتاعي (حقيقي)", "n": 7 },
+        { "dir": "bunn-coffee", "name": "Bunn Coffee", "note": "براند وهمي للعرض", "n": 6 },
+        { "dir": "nabd-fitness", "name": "Nabd", "note": "براند وهمي للعرض", "n": 5 },
+        { "dir": "leen-interior", "name": "Leen Studio", "note": "براند وهمي للعرض", "n": 6 }
+      ],
+      "tools": [
+        { "name": "Claude", "type": "AI", "use": "بيكتب الكلام وبيشغّل السكيل", "url": "https://claude.ai" },
+        { "name": "Playwright", "type": "Render", "use": "بيصوّر كل سلايد PNG", "url": "https://playwright.dev" },
+        { "name": "Dubai", "type": "Font", "use": "الخط العربي (جوه السكيل)", "url": "https://dubaifont.com" }
+      ]
+    }
+  ]
+}

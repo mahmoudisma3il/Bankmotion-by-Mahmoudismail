@@ -19,6 +19,7 @@ const hfCount = Array.isArray(catalog.hyperframes) ? catalog.hyperframes.length
 const catCount = Array.isArray(catalog.categories) ? catalog.categories.length
   : Object.keys(catalog.categories || {}).length;
 const { videos = [] } = JSON.parse(read("videos/videos.json"));
+const skillsList = existsSync(ROOT + "skills/skills.json") ? JSON.parse(read("skills/skills.json")).skills || [] : [];
 const tools = existsSync(ROOT + "site/tools.json") ? JSON.parse(read("site/tools.json")).items || [] : [];
 const latestTool = tools.reduce((a, t) => (t.addedIn > a ? t.addedIn : a), "");
 const newMotions = motions.filter((m) => m.addedIn === BANK_VERSION).length;
@@ -61,6 +62,7 @@ const header = (base, current) => `
     <a href="${base}"${current === "home" ? ' aria-current="page"' : ""}>الصفحة الأساسية</a>
     <a href="${base}${LATEST}/">بنك الحركات</a>
     <a href="${base}videos/"${current === "videos" ? ' aria-current="page"' : ""}>الفيديوهات</a>
+    <a href="${base}skills/"${current === "skills" ? ' aria-current="page"' : ""}>السكيلز</a>
     <a href="${base}tools/"${current === "tools" ? ' aria-current="page"' : ""}>الأدوات</a>
     <a class="work" href="${SITE.portfolio}" target="_blank" rel="noopener">شغلي ↗</a>
   </nav>
@@ -150,6 +152,13 @@ ${(catalog.highlights || []).length ? `<section class="news" aria-label="الج�
     <div class="nums">${videos.length ? `<span><b>${videos.length}</b> فيديو</span>` : `<span>أول فيديو نازل قريب</span>`}</div>
     <span class="go">شوف الفيديوهات ←</span>
   </a>
+  <a class="scard" href="skills/">
+    <span class="en">Skills</span>
+    <h3>السكيلز</h3>
+    <p>سكيلز بعملها لـ Claude، تنزّلها وتركّبها وهو يشتغل بطريقتي: كاروسيل، موشن، وأكتر.</p>
+    <div class="nums"><span><b>${skillsList.length + (catalog.skills || []).length}</b> سكيل</span></div>
+    <span class="go">شوف السكيلز ←</span>
+  </a>
   <a class="scard" href="tools/">
     <span class="en">Tools</span>
     <h3>الأدوات</h3>
@@ -180,6 +189,54 @@ ${header("../", "tools")}
 <div class="tools">${tools.map((t) => `<a class="tool" href="${esc(t.url)}" target="_blank" rel="noopener"><span class="en">${esc(t.type)}${t.addedIn === latestTool && latestTool ? " · new" : ""}</span><b>${esc(t.name)}</b><span>${esc(t.use)}</span></a>`).join("")}</div>
 ${footer()}`;
 writeFileSync(ROOT + "tools/index.html", toolsPage);
+
+
+// ---- skills ----
+mkdirSync(ROOT + "skills", { recursive: true });
+const extSkills = (catalog.skills || []);
+const skillCard = (k) => `
+  <a class="kcard" href="${esc(k.slug)}/">
+    <div class="kthumb">${k.cover ? `<img src="${esc(k.slug)}/${esc(k.cover)}" alt="" loading="lazy">` : ""}</div>
+    <div class="body"><span class="en">${esc(k.name)} · by ${esc(k.by || "")}</span><h3>${esc(k.title)}</h3><p>${esc(k.summary || "")}</p></div>
+  </a>`;
+const skillsPage = `${head("السكيلز · " + SITE.name, "سكيلز لـ Claude بتخليه يشتغل بطريقتي.", "../")}
+${header("../", "skills")}
+<div class="pagehead"><span class="en">Skills for Claude</span><h1>السكيلز</h1><p>السكيل ملف تعليمات بتركّبه في Claude، فيعرف يعمل حاجة معيّنة بطريقة ثابتة. دي السكيلز اللي عملتها، ومعاها اللي بستخدمها مع البنك.</p></div>
+<div class="kgrid">${skillsList.map(skillCard).join("")}</div>
+${extSkills.length ? `<div class="sec"><h2>سكيلز بستخدمها مع البنك</h2><span class="en">From others</span></div>
+<div class="tools">${extSkills.map((k) => `<a class="tool" href="${esc(k.url)}" target="_blank" rel="noopener"><span class="en">${esc(k.code)} · ${esc(k.by || "")}</span><b>${esc(k.name)}</b><span>${esc(k.description || "")}</span></a>`).join("")}</div>` : ""}
+${footer()}`;
+writeFileSync(ROOT + "skills/index.html", skillsPage);
+
+for (const k of skillsList) {
+  const dir = `skills/${k.slug}`;
+  if (!existsSync(ROOT + dir)) { console.warn(`! missing folder ${dir}`); continue; }
+  const deck = (d) => `<div class="deck"><div class="deck-h"><b>${esc(d.name)}</b><span>${esc(d.note || "")}</span></div>
+    <div class="strip">${Array.from({ length: d.n }, (_, i) => `<img src="img/${esc(d.dir)}/slide-${String(i + 1).padStart(2, "0")}.jpg" alt="${esc(d.name)} ${i + 1}" loading="lazy">`).join("")}</div></div>`;
+  const page = `${head(`${k.title} · ${SITE.name}`, k.summary || SITE.desc, "../../")}
+${header("../../", "skills")}
+<article class="kpage">
+  <span class="en">${esc(k.name)} · ${esc(k.date || "")}</span>
+  <h1>${esc(k.title)}</h1>
+  ${k.summary ? `<p class="lead">${esc(k.summary)}</p>` : ""}
+  <div class="kbtns">${k.zip ? `<a class="btn" href="${esc(k.zip)}" download>نزّل السكيل (zip) ↓</a>` : ""}${k.files ? `<a class="btn ghost" href="${esc(k.files)}SKILL.md" target="_blank" rel="noopener">اقرا SKILL.md</a>` : ""}</div>
+  ${(k.decks || []).length ? `<h2>كاروسيلات طلعت منها</h2>${k.decks.map(deck).join("")}` : ""}
+  ${(k.steps || []).length ? `<h2>بتشتغل إزاي</h2><div class="howto">${k.steps.map((s) => `<section><h3>${esc(s.h)}</h3><p>${esc(s.p)}</p></section>`).join("")}</div>` : ""}
+  ${k.prompt ? `<h2>جرّبها كده</h2><div class="prompt">${esc(k.prompt)}</div>` : ""}
+  ${(k.layouts || []).length ? `<h2>أنواع السلايدات</h2><div class="codes-inline">${k.layouts.map((l) => `<span class="mono">${esc(l)}</span>`).join("")}</div>` : ""}
+  <h2>التركيب</h2>
+  <ol class="steps">
+    <li><div><b>نزّل الملف</b>دوس «نزّل السكيل» فوق، هينزل ملف ${esc(k.slug)}.zip.</div></li>
+    <li><div><b>في تطبيق Claude</b>من الإعدادات، افتح جزء الـ Skills وارفع ملف الـ zip زي ما هو.</div></li>
+    <li><div><b>في Claude Code</b>فك الضغط وحط فولدر ${esc(k.slug)} جوه <span class="mono">~/.claude/skills/</span>.</div></li>
+    <li><div><b>ابدأ</b>اكتب لـ Claude الموضوع، وهو هيسألك عن البراند أول مرة بس.</div></li>
+  </ol>
+  ${(k.tools || []).length ? `<h2>الأدوات</h2><div class="tools">${k.tools.map((t) => `<a class="tool" href="${esc(t.url || "#")}" target="_blank" rel="noopener"><span class="en">${esc(t.type || "")}</span><b>${esc(t.name)}</b><span>${esc(t.use || "")}</span></a>`).join("")}</div>` : ""}
+  <p><a class="back" href="../">→ كل السكيلز</a></p>
+</article>
+${footer()}`;
+  writeFileSync(ROOT + dir + "/index.html", page);
+}
 
 const bankLink = (code) => `../../${LATEST}/#${encodeURIComponent(code)}`;
 
