@@ -20,6 +20,7 @@ const catCount = Array.isArray(catalog.categories) ? catalog.categories.length
   : Object.keys(catalog.categories || {}).length;
 const { videos = [] } = JSON.parse(read("videos/videos.json"));
 const skillsList = existsSync(ROOT + "skills/skills.json") ? JSON.parse(read("skills/skills.json")).skills || [] : [];
+const extList = existsSync(ROOT + "skills/skills.json") ? JSON.parse(read("skills/skills.json")).external || [] : [];
 const tools = existsSync(ROOT + "site/tools.json") ? JSON.parse(read("site/tools.json")).items || [] : [];
 const latestTool = tools.reduce((a, t) => (t.addedIn > a ? t.addedIn : a), "");
 const newMotions = motions.filter((m) => m.addedIn === BANK_VERSION).length;
@@ -156,7 +157,7 @@ ${(catalog.highlights || []).length ? `<section class="news" aria-label="الج�
     <span class="en">Skills</span>
     <h3>السكيلز</h3>
     <p>سكيلز بعملها لـ Claude، تنزّلها وتركّبها وهو يشتغل بطريقتي: كاروسيل، موشن، وأكتر.</p>
-    <div class="nums"><span><b>${skillsList.length + (catalog.skills || []).length}</b> سكيل</span></div>
+    <div class="nums"><span><b>${skillsList.length + (catalog.skills || []).length + extList.reduce((a,k)=>a+13,0)}</b> سكيل</span></div>
     <span class="go">شوف السكيلز ←</span>
   </a>
   <a class="scard" href="tools/">
@@ -203,6 +204,9 @@ const skillsPage = `${head("السكيلز · " + SITE.name, "سكيلز لـ Cl
 ${header("../", "skills")}
 <div class="pagehead"><span class="en">Skills for Claude</span><h1>السكيلز</h1><p>السكيل ملف تعليمات بتركّبه في Claude، فيعرف يعمل حاجة معيّنة بطريقة ثابتة. دي السكيلز اللي عملتها، ومعاها اللي بستخدمها مع البنك.</p></div>
 <div class="kgrid">${skillsList.map(skillCard).join("")}</div>
+${extList.map((k) => `<div class="sec"><h2>${esc(k.name)}</h2><span class="en">by ${esc(k.by)} · ${esc(k.license)}</span></div>
+<div class="extk"><p>${esc(k.summary)}</p><div class="tools">${(k.items||[]).map(([n,u]) => `<div class="tool"><span class="en">${esc(n)}</span><b dir="ltr" style="text-align:right">/${esc(n)}</b><span>${esc(u)}</span></div>`).join("")}</div>
+<p><a class="btn" href="${esc(k.url)}" target="_blank" rel="noopener">الكود على GitHub ↗</a></p>${k.install ? `<div class="prompt mono" style="direction:ltr;text-align:left;font-size:14px">${esc(k.install)}</div>` : ""}</div>`).join("")}
 ${extSkills.length ? `<div class="sec"><h2>سكيلز بستخدمها مع البنك</h2><span class="en">From others</span></div>
 <div class="tools">${extSkills.map((k) => `<a class="tool" href="${esc(k.url)}" target="_blank" rel="noopener"><span class="en">${esc(k.code)} · ${esc(k.by || "")}</span><b>${esc(k.name)}</b><span>${esc(k.description || "")}</span></a>`).join("")}</div>` : ""}
 ${footer()}`;

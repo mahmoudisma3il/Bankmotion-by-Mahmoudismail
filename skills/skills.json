@@ -12,23 +12,112 @@
       "zip": "fox-carousel.zip",
       "files": "files/fox-carousel/",
       "steps": [
-        { "h": "١. الموضوع", "p": "قول لـ Claude: «اعملي كاروسيل عن…» في سطر واحد. هو بيكتب الكلام الأول ويوريهولك، وانت تعدّل أو توافق." },
-        { "h": "٢. البراند", "p": "أول مرة بيسألك عن اللوجو والهاندل و٣ ألوان، ويحفظهم. المرة الجاية بيستخدمهم على طول. ولو الخلفية غامقة، التصميم كله بيقلب Dark." },
-        { "h": "٣. الصور", "p": "بيرندر كل سلايد PNG مقاس 1080×1350، وبيبص عليها بنفسه قبل ما يسلّمها: لو كلام طالع برا السلايد بيقصّره ويرندر تاني." }
+        {
+          "h": "١. الموضوع",
+          "p": "قول لـ Claude: «اعملي كاروسيل عن…» في سطر واحد. هو بيكتب الكلام الأول ويوريهولك، وانت تعدّل أو توافق."
+        },
+        {
+          "h": "٢. البراند",
+          "p": "أول مرة بيسألك عن اللوجو والهاندل و٣ ألوان، ويحفظهم. المرة الجاية بيستخدمهم على طول. ولو الخلفية غامقة، التصميم كله بيقلب Dark."
+        },
+        {
+          "h": "٣. الصور",
+          "p": "بيرندر كل سلايد PNG مقاس 1080×1350، وبيبص عليها بنفسه قبل ما يسلّمها: لو كلام طالع برا السلايد بيقصّره ويرندر تاني."
+        }
       ],
-      "layouts": ["Cover", "Point", "Step", "Compare", "List", "Stat", "Quote", "CTA"],
+      "layouts": [
+        "Cover",
+        "Point",
+        "Step",
+        "Compare",
+        "List",
+        "Stat",
+        "Quote",
+        "CTA"
+      ],
       "prompt": "اعملي كاروسيل عن ٥ أخطاء بتبوّظ المونتاج، بالبراند بتاعي",
       "decks": [
-        { "dir": "fox", "name": "Mahmoud Ismail", "note": "البراند بتاعي (حقيقي)", "n": 7 },
-        { "dir": "bunn-coffee", "name": "Bunn Coffee", "note": "براند وهمي للعرض", "n": 6 },
-        { "dir": "nabd-fitness", "name": "Nabd", "note": "براند وهمي للعرض", "n": 5 },
-        { "dir": "leen-interior", "name": "Leen Studio", "note": "براند وهمي للعرض", "n": 6 }
+        {
+          "dir": "fox",
+          "name": "Mahmoud Ismail",
+          "note": "البراند بتاعي (حقيقي)",
+          "n": 7
+        },
+        {
+          "dir": "bunn-coffee",
+          "name": "Bunn Coffee",
+          "note": "براند وهمي للعرض",
+          "n": 6
+        },
+        {
+          "dir": "nabd-fitness",
+          "name": "Nabd",
+          "note": "براند وهمي للعرض",
+          "n": 5
+        },
+        {
+          "dir": "leen-interior",
+          "name": "Leen Studio",
+          "note": "براند وهمي للعرض",
+          "n": 6
+        }
       ],
       "tools": [
-        { "name": "Claude", "type": "AI", "use": "بيكتب الكلام وبيشغّل السكيل", "url": "https://claude.ai" },
-        { "name": "Playwright", "type": "Render", "use": "بيصوّر كل سلايد PNG", "url": "https://playwright.dev" },
-        { "name": "Dubai", "type": "Font", "use": "الخط العربي (جوه السكيل)", "url": "https://dubaifont.com" }
+        {
+          "name": "Claude",
+          "type": "AI",
+          "use": "بيكتب الكلام وبيشغّل السكيل",
+          "url": "https://claude.ai"
+        },
+        {
+          "name": "Playwright",
+          "type": "Render",
+          "use": "بيصوّر كل سلايد PNG",
+          "url": "https://playwright.dev"
+        },
+        {
+          "name": "Dubai",
+          "type": "Font",
+          "use": "الخط العربي (جوه السكيل)",
+          "url": "https://dubaifont.com"
+        }
       ]
+    }
+  ],
+  "external": [
+    {
+      "name": "Instagram agent skill",
+      "by": "Jake Schincariol",
+      "license": "MIT",
+      "url": "https://github.com/Jakeschincariol/instagram-agent-skill",
+      "summary": "13 سكيل لـ Claude بيمسكوا حساب انستجرام: بيكتبوا الريل والكابشن، وبيردوا على الكومنتات، وبيقيّموا البروفايل من 100، وبيخططوا الأسبوع، وبيدوّروا على الريلز اللي ضاربة في مجالك. هما بيكتبوا بس، والنشر عليك.",
+      "items": [
+        [
+          "ig-viral",
+          "بيدوّر على الريلز اللي ضاربة في مجالك ويقولك ليه نجحت"
+        ],
+        [
+          "ig-reel",
+          "بيحوّل الفكرة لريل: 3 هوكات بدرجات، وسكريبت، ونص الشاشة بالتوقيت"
+        ],
+        [
+          "ig-caption",
+          "الكابشن، وبيوريك أول 125 حرف اللي بيبانوا"
+        ],
+        [
+          "ig-profile",
+          "بيقيّم البروفايل من 100 ويصلّح الضعيف"
+        ],
+        [
+          "ig-plan",
+          "خطة الأسبوع: تنزّل إيه وإمتى"
+        ],
+        [
+          "ig-human",
+          "بيشيل أي حاجة باينة إنها مكتوبة بالـ AI"
+        ]
+      ],
+      "install": "git clone https://github.com/Jakeschincariol/instagram-agent-skill.git && cp -r instagram-agent-skill/skills/ig-* ~/.claude/skills/"
     }
   ]
 }
